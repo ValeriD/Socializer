@@ -1,0 +1,15 @@
+
+# BEGIN WordPress
+# Директивите (редовете) между `BEGIN WordPress` и `END WordPress` са
+# динамично генерирани и трябва да се променят само чрез WordPress филтри.
+# Всяка промяна на директивите между тези маркери ще бъде презаписана.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /socializer/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /socializer/index.php [L]
+</IfModule>
+
+# END WordPress

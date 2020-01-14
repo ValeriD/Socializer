@@ -1,0 +1,19 @@
+{
+    "name": "admin/vd-socializer",
+    "description": "Plugin for social networks",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "ValeriD",
+            "email": "valeri.dobrev10@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    }
+}
