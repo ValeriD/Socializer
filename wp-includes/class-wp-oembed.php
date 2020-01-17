@@ -178,7 +178,7 @@ class WP_oEmbed {
 		 * | Speaker Deck | speakerdeck.com                           | 4.4.0   |
 		 * | Twitter      | twitter.com/timelines                     | 4.5.0   |
 		 * | Twitter      | twitter.com/moments                       | 4.5.0   |
-		 * | Facebook     | facebook.com                              | 4.7.0   |
+		 * | facebook_sdk     | facebook.com                              | 4.7.0   |
 		 * | Twitter      | twitter.com/user                          | 4.7.0   |
 		 * | Twitter      | twitter.com/likes                         | 4.7.0   |
 		 * | Twitter      | twitter.com/lists                         | 4.7.0   |

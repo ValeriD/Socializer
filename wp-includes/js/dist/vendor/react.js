@@ -1,7 +1,7 @@
 /** @license React v16.9.0
  * react.development.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) facebook_sdk, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -1717,7 +1717,7 @@ function withSuspenseConfig(scope, config) {
 }
 
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -1730,7 +1730,7 @@ var ReactPropTypesSecret$1 = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 var ReactPropTypesSecret_1 = ReactPropTypesSecret$1;
 
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.

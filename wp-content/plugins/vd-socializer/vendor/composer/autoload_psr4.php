@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Inc\\' => array($baseDir . '/inc'),
+    'Facebook\\' => array($vendorDir . '/facebook/graph-sdk/src/Facebook', $vendorDir . '/facebook/php-sdk-v4/src/Facebook'),
 );

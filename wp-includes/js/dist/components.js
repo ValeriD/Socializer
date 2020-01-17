@@ -559,7 +559,7 @@ function _typeof(obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -715,7 +715,7 @@ module.exports =  true ? __webpack_require__(271) : undefined;
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * Copyright (c) 2014-present, Facebook, Inc.
+ * Copyright (c) 2014-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -5499,7 +5499,7 @@ function normalizeColor(color) {
 
   if (typeof color === 'number') {
     return color >>> 0 === color && color >= 0 && color <= 0xffffffff ? color : null;
-  } // Ordered based on occurrences on Facebook codebase
+  } // Ordered based on occurrences on facebook_sdk codebase
 
 
   if (match = hex6.exec(color)) return parseInt(match[1] + 'ff', 16) >>> 0;
@@ -5966,7 +5966,7 @@ module.exports = function callBoundIntrinsic(name, allowMissing) {
 
 "use strict";
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -6179,7 +6179,7 @@ module.exports = bytesToUuid;
 
 "use strict";
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -6250,7 +6250,7 @@ module.exports = function() {
 
 "use strict";
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -24559,7 +24559,7 @@ module.exports = function shimAssign() {
 
 "use strict";
 /**
- * Copyright (c) 2013-present, Facebook, Inc.
+ * Copyright (c) 2013-present, facebook_sdk, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -24961,7 +24961,7 @@ if (true) {
 /** @license React v16.8.6
  * react-is.production.min.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) facebook_sdk, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.

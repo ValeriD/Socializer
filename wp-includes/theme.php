@@ -2151,7 +2151,7 @@ function get_theme_starter_content() {
 				'url'   => 'mailto:wordpress@example.com',
 			),
 			'link_facebook'   => array(
-				'title' => _x( 'Facebook', 'Theme starter content' ),
+				'title' => _x( 'facebook_sdk', 'Theme starter content' ),
 				'url'   => 'https://www.facebook.com/wordpress',
 			),
 			'link_foursquare' => array(

@@ -2950,9 +2950,9 @@ var common = [{
 }, {
   name: 'core-embed/facebook',
   settings: {
-    title: 'Facebook',
+    title: 'facebook_sdk',
     icon: embedFacebookIcon,
-    description: Object(external_this_wp_i18n_["__"])('Embed a Facebook post.')
+    description: Object(external_this_wp_i18n_["__"])('Embed a facebook_sdk post.')
   },
   patterns: [/^https?:\/\/www\.facebook.com\/.+/i]
 }, {

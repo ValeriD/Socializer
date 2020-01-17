@@ -1,8 +1,8 @@
 
 # BEGIN WordPress
-# Директивите (редовете) между `BEGIN WordPress` и `END WordPress` са
-# динамично генерирани и трябва да се променят само чрез WordPress филтри.
-# Всяка промяна на директивите между тези маркери ще бъде презаписана.
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /socializer/

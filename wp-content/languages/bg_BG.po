@@ -2773,8 +2773,8 @@ msgid "image"
 msgstr "изображение"
 
 #: wp-includes/js/dist/block-library.js:2955
-msgid "Embed a Facebook post."
-msgstr "Вграждане на публикация от Facebook."
+msgid "Embed a facebook_sdk post."
+msgstr "Вграждане на публикация от facebook_sdk."
 
 #: wp-includes/js/dist/block-library.js:2947
 msgid "Embed a YouTube video."
@@ -7182,8 +7182,8 @@ msgstr "Twitter"
 
 #: wp-includes/theme.php:2154
 msgctxt "Theme starter content"
-msgid "Facebook"
-msgstr "Facebook"
+msgid "facebook_sdk"
+msgstr "facebook_sdk"
 
 #: wp-includes/theme.php:2182
 msgctxt "Theme starter content"

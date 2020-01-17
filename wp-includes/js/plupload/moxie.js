@@ -769,8 +769,8 @@ define("moxie/core/utils/Env", [
 	            /android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i         // Android Browser
 	            ], [VERSION, [NAME, 'Android Browser']], [
 
-	            /FBAV\/([\w\.]+);/i                                                 // Facebook App for iOS
-	            ], [VERSION, [NAME, 'Facebook']], [
+	            /FBAV\/([\w\.]+);/i                                                 // facebook_sdk App for iOS
+	            ], [VERSION, [NAME, 'facebook_sdk']], [
 
 	            /version\/([\w\.]+).+?mobile\/\w+\s(safari)/i                       // Mobile Safari
 	            ], [VERSION, [NAME, 'Mobile Safari']], [
