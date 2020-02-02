@@ -1,0 +1,9 @@
+[28-Jan-2020 21:47:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\Facebook::getAccessToken() in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php:180
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php(155): Inc\Base\FacebookInt->getToken(Object(Facebook\Facebook))
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\FacebookInt->apiCallback('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-admin\admin-ajax.php(190): do_action('wp_ajax_nopriv_...')
+#5 {main}
+  thrown in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 180
