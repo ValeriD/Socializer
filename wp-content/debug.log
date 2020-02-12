@@ -7,3 +7,160 @@ Stack trace:
 #4 C:\xampp\htdocs\Socializer\wp-admin\admin-ajax.php(190): do_action('wp_ajax_nopriv_...')
 #5 {main}
   thrown in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 180
+[28-Jan-2020 21:48:18 UTC] PHP Notice:  Undefined variable: access_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 195
+[28-Jan-2020 21:49:27 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 193
+[28-Jan-2020 21:49:32 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 193
+[28-Jan-2020 21:52:26 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[28-Jan-2020 21:54:54 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 193
+[28-Jan-2020 21:57:30 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 195
+[28-Jan-2020 21:58:09 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 196
+[28-Jan-2020 21:59:15 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 196
+[28-Jan-2020 21:59:38 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 197
+[28-Jan-2020 22:01:00 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 200
+[28-Jan-2020 22:01:23 UTC] PHP Notice:  Undefined variable: access_token1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 202
+[28-Jan-2020 22:05:23 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[28-Jan-2020 22:07:19 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[28-Jan-2020 22:07:20 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[28-Jan-2020 22:07:20 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\Collection.php on line 201
+[29-Jan-2020 08:26:33 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[29-Jan-2020 08:26:34 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[01-Feb-2020 09:04:57 UTC] PHP Notice:  Undefined variable: button_label in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 134
+[01-Feb-2020 09:10:46 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 79
+[01-Feb-2020 09:37:57 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[01-Feb-2020 09:39:20 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 69
+[01-Feb-2020 09:40:03 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 69
+[01-Feb-2020 09:44:01 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, cannot access private method Inc\Base\FacebookInt::startSession() in C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php on line 288
+[01-Feb-2020 09:59:47 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, cannot access private method Inc\Base\FacebookInt::startSession() in C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php on line 288
+[01-Feb-2020 09:59:47 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, cannot access private method Inc\Base\FacebookInt::startSession() in C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php on line 288
+[01-Feb-2020 10:00:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 74
+[01-Feb-2020 10:03:14 UTC] PHP Notice:  Undefined index: state in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 95
+[01-Feb-2020 10:03:27 UTC] PHP Notice:  Undefined index: code in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 95
+[11-Feb-2020 16:26:45 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 121
+[11-Feb-2020 16:27:35 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 145
+[11-Feb-2020 16:27:38 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 145
+[11-Feb-2020 16:27:43 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 145
+[11-Feb-2020 16:33:43 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:34:46 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:51:19 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:51:35 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:51:41 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:53:21 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:53:46 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:54:25 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 16:58:11 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Feb-2020 17:12:35 UTC] PHP Warning:  include(C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php): failed to open stream: No such file or directory in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:12:35 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:00 UTC] PHP Warning:  include(C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php): failed to open stream: No such file or directory in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:00 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:05 UTC] PHP Warning:  include(C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php): failed to open stream: No such file or directory in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:05 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:05 UTC] PHP Warning:  include(C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php): failed to open stream: No such file or directory in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[11-Feb-2020 17:13:05 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer/sdks\facebook_sdk\autoload.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\FacebookInt.php on line 59
+[12-Feb-2020 20:16:12 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: {"errors":[{"code":415,"message":"Callback URL not approved for this client application. Approved callback URLs can be adjusted in your application settings"}]} in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(30): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/request_t...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xa in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:16:12 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: {"errors":[{"code":415,"message":"Callback URL not approved for this client application. Approved callback URLs can be adjusted in your application settings"}]} in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(30): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/request_t...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xa in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:16:19 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: {"errors":[{"code":415,"message":"Callback URL not approved for this client application. Approved callback URLs can be adjusted in your application settings"}]} in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(30): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/request_t...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xa in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:17:15 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: {"errors":[{"code":415,"message":"Callback URL not approved for this client application. Approved callback URLs can be adjusted in your application settings"}]} in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(30): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/request_t...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xa in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:36:17 UTC] PHP Notice:  Undefined index: oauth_verifier in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:36:17 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:36:17 UTC] PHP Notice:  Undefined index: oauth_verifier in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:36:17 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:37:33 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:37:35 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:38:10 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:38:10 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:38:10 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:38:10 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:38:21 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:38:22 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:38:23 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:39:33 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:39:33 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:39:34 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:39:47 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 28
+[12-Feb-2020 20:40:21 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:40:22 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:45:41 UTC] PHP Notice:  Undefined index: twitter_oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 35
+[12-Feb-2020 20:45:41 UTC] PHP Notice:  Undefined index: twitter_oauth_token_secret in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 35
+[12-Feb-2020 20:45:42 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: Request token missing in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(36): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/access_to...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\Socializer\i in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:46:38 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: This feature is temporarily unavailable in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php(36): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/access_to...', Array)
+#1 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(288): Inc\Base\TwitterInit->renderShortcode('')
+#2 C:\xampp\htdocs\Socializer\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\Socializer\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\Socializer\wp-settings.php(523): do_action('init')
+#5 C:\xampp\htdocs\Socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\h in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[12-Feb-2020 20:48:36 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:48:36 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 60
+[12-Feb-2020 20:48:36 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 60
+[12-Feb-2020 20:49:12 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:49:12 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:49:13 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:49:13 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:49:14 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:49:14 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 58
+[12-Feb-2020 20:53:55 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:53:55 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:53:56 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:53:56 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:53:57 UTC] PHP Notice:  Undefined property: stdClass::$status in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:53:57 UTC] PHP Notice:  Trying to get property 'text' of non-object in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 54
+[12-Feb-2020 20:59:24 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 20:59:24 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 21:04:44 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 21:04:44 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 21:04:53 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 41
+[12-Feb-2020 21:04:55 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 41
+[12-Feb-2020 21:04:56 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 41
+[12-Feb-2020 21:11:55 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 31
+[12-Feb-2020 21:11:55 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 31
+[12-Feb-2020 21:12:36 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 21:12:37 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 29
+[12-Feb-2020 21:12:56 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 32
+[12-Feb-2020 21:12:56 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 32
+[12-Feb-2020 21:13:52 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\Socializer\wp-content\plugins\vd-socializer\inc\Base\TwitterInit.php on line 44

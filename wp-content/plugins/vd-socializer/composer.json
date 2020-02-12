@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "facebook/php-sdk-v4" : "5.*",
-        "facebook/graph-sdk": "5.5.*"
+        "facebook/graph-sdk": "5.5.*",
+        "abraham/twitteroauth": "dev-master"
     },
     "autoload": {
         "psr-4": {

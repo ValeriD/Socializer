@@ -20,6 +20,10 @@ class ComposerStaticInit558e4abe801764dd54bcef8406643f27
         array (
             'Facebook\\' => 9,
         ),
+        'A' => 
+        array (
+            'Abraham\\TwitterOAuth\\' => 21,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -31,6 +35,10 @@ class ComposerStaticInit558e4abe801764dd54bcef8406643f27
         array (
             0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
             1 => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook',
+        ),
+        'Abraham\\TwitterOAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/abraham/twitteroauth/src',
         ),
     );
 

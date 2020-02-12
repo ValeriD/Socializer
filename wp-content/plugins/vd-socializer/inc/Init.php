@@ -7,6 +7,7 @@ namespace Inc;
 
 
 use Inc\Base\FacebookInt;
+use Inc\Base\TwitterInit;
 
 final class Init{
 
@@ -16,7 +17,8 @@ final class Init{
 	 */
 	public static function get_services(){
 		return [
-			FacebookInt::class
+			FacebookInt::class,
+			TwitterInit::class
 		];
 	}
 

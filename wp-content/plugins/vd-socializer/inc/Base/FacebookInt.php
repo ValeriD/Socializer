@@ -63,20 +63,16 @@ class FacebookInt{
 
 		add_shortcode('facebook', array($this,'renderShortcode'));
 
-//		//Callback URL
-//		add_action('socializer_facebook', array($this, 'apiCallback'));
-//		add_action( 'wp_ajax_nopriv_socializer_facebook', array($this, 'apiCallback'));
 
 	}
 
 	public function startSession(){
-		if(!isset($_SESSION)){
+		if(!session_id()){
 			session_start();
 		}
 	}
 
 	public function renderShortcode() {
-
 		$html='';
 		// No need for the button if the user is already logged
 
@@ -85,40 +81,41 @@ class FacebookInt{
 
 		$helper = $fb->getRedirectLoginHelper();
 
+
 		$permissions = [ 'email' ];
 
-
 		if ( isset( $_SESSION['facebook_access_token'] ) ) {
-			$accessToken = $_SESSION['facebook_access_token'];
+			$this->access_token = $_SESSION['facebook_access_token'];
 
 		} else {
 			try {
-				$helper = $fb->getRedirectLoginHelper();
 
-				$accessToken = $helper->getAccessToken();
-							} catch ( FacebookSDKException $e ) {
+				$this->access_token = $helper->getAccessToken();
+			} catch ( FacebookSDKException $e ) {
 				echo 'Graph returned error: ' . $e->getMessage();
 			}
 		}
 
-		if ( isset( $accessToken ) ) {
-			if ( isset( $_SESSION['facebook_access_token'] ) ) {
-				$fb->setDefaultAccessToken( $_SESSION['facebook_access_token'] );
-			} else {
-				$_SESSION['facebook_access_token'] = $accessToken;
+
+		if ( isset( $this->access_token ) ) {
+			if ( !isset( $_SESSION['facebook_access_token'] ) ) {
+				$_SESSION['facebook_access_token'] = $this->access_token;
 
 				$oAuth2Client = $fb->getOAuth2Client();
+				$tokenMeta = $oAuth2Client->debugToken($this->access_token);
 
-				try {
-					$longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken( $_SESSION['facebook_access_token'] );
-				} catch ( FacebookSDKException $e ) {
-					echo $e->getMessage();
-				}
+//				try {
+//					$longLivedAccessToken = $oAuth2Client->getLongLivedAccessToken( $_SESSION['facebook_access_token'] );
+//				} catch ( FacebookSDKException $e ) {
+//					echo $e->getMessage();
+//				}
 
-				$_SESSION['facebook_access_token'] = $longLivedAccessToken;
+				//$_SESSION['facebook_access_token'] = $longLivedAccessToken;
 
-				$fb->setDefaultAccessToken( $_SESSION['facebook_access_token'] );
+
 			}
+			$fb->setDefaultAccessToken( $_SESSION['facebook_access_token'] );
+
 
 
 			if ( isset( $_GET['code'] ) ) {
@@ -135,17 +132,16 @@ class FacebookInt{
 				header( 'Location: ./' );
 			}
 
-			var_dump( $profile );
 
 			return $html;
 		}
 
+
 	else{
 
 			// Button markup
-			$loginUrl = $helper->getLoginUrl('https://30522694.ngrok.io/socializer/accounts', $permissions);
+			$loginUrl = $helper->getLoginUrl('https://localhost/socializer/accounts', $permissions);
 			$html = '<div>';
-			//var_dump('<div>'. '<a href="'.$loginUrl.'" class="btn" ></a>'. '</div>' );
 			$html .= '<a href="'.$loginUrl.'" class="btn">Login with Facebook</a>';
 
 			$html .= '</div>';
