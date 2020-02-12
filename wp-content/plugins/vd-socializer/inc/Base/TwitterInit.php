@@ -30,34 +30,46 @@ class TwitterInit {
 
 		var_dump($_SESSION['oauth_token']);
 
+		//Checks if there is sent a verifier and compare oauth_tokens from the Request and the Session (they are different and I don't know why :)
 		if(isset($_REQUEST['oauth_verifier'], $_REQUEST['oauth_token']) && $_REQUEST['oauth_token']==$_SESSION['oauth_token']) {
+			//getting the oauth_token and its secret so we can get an access token
 			$requestToken = [];
 			$requestToken['oauth_token'] = $_SESSION['oauth_token'];
 			$requestToken['oauth_token_secret']  = $_SESSION['oauth_token_secret'];
 			$connection                          = new TwitterOAuth( $this->customerKey, $this->customerSecret, $requestToken['oauth_token'], $requestToken['oauth_token_secret'] );
 			try {
+				//getting the access token
 				$accessToken = $connection->oauth( "oauth/access_token", array( "oauth_verifier" => $_REQUEST['oauth_verifier'] ) );
 			} catch ( TwitterOAuthException $e ) {
 				var_dump($e->getMessage());
 			}
+			//saving it in the session
 			$_SESSION['access_token']    = $accessToken;
 			var_dump( 'verified...' );
 		}
+		//if token not set in session => the user visit the site for the first time
 		if ( ! isset( $_SESSION['access_token'] ) ) {
 			var_dump( 'not set accessToken' );
-			$connection                             = new TwitterOAuth( $this->customerKey, $this->customerSecret );
+			//getting the oauth token
+			$connection = new TwitterOAuth( $this->customerKey, $this->customerSecret );
 			try {
-				$requsetToken = $connection->oauth( 'oauth/request_token', array( 'oauth_callback' => $this->callback ) );
+				$requestToken = $connection->oauth( 'oauth/request_token', array( 'oauth_callback' => $this->callback ) );
 			} catch ( TwitterOAuthException $e ) {
 				var_dump($e->getMessage());
 			}
-			$_SESSION['oauth_token']        = $requsetToken['oauth_token'];
-			$_SESSION['oauth_token_secret'] = $requsetToken['oauth_token_secret'];
-			$url = $connection->url( 'oauth/authorize', array( 'oauth_token' => $requsetToken['oauth_token'] ) );
+			//saving the oauth token in the session
+			$_SESSION['oauth_token']        = $requestToken['oauth_token'];
+			$_SESSION['oauth_token_secret'] = $requestToken['oauth_token_secret'];
+
+			//getting the authorization url
+			$url = $connection->url( 'oauth/authorize', array( 'oauth_token' => $requestToken['oauth_token'] ) );
+
+			//Button for the logging
 			$html = '<div>';
 			$html .= '<a href="' . $url . '" class="btn">Login with Twitter</a>';
 
 			$html .= '</div>';
+
 			return $html;
 		}
 		else{
