@@ -6,8 +6,10 @@
 namespace Inc;
 
 
+use Inc\Admin\AdminMenu;
 use Inc\Base\Session;
 use Inc\FacebookConf\FacebookAuth;
+use Inc\LinkedIn\LinkedInAuth;
 use Inc\Twitter\TwitterAuth;
 
 final class Init{
@@ -20,7 +22,9 @@ final class Init{
 		return [
 			Session::class,
 			FacebookAuth::class,
-			TwitterAuth::class
+			TwitterAuth::class,
+			LinkedInAuth::class,
+			AdminMenu::class
 		];
 	}
 

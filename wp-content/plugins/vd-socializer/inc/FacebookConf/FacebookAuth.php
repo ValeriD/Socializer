@@ -38,9 +38,13 @@ class FacebookAuth {
 	 * @var
 	 */
 	protected $response;
+	protected $app_id;
+	protected $app_secret;
 
 
 	public function __construct() {
+		$this->app_id = get_option('vd_facebook_app');
+		$this->app_secret = get_option('vd_facebook_secret');
 
 
 		try {
@@ -77,8 +81,8 @@ class FacebookAuth {
 
 	public function apiInit(){
 		$this->client = new Facebook([
-			'app_id' => "2187669774872877",
-			'app_secret' => "ce5ec9e50a0d4a39629208c6facdc0b7",
+			'app_id' => $this->app_id,
+			'app_secret' => $this->app_secret,
 			'default_graph_version' => "v2.8",
 		]);
 	}
@@ -92,9 +96,9 @@ class FacebookAuth {
 		try {
 			$accesstoken = $this->helper->getAccessToken();
 
-		} catch (Facebook\Exceptions\FacebookResponseException $e) {
+		} catch (FacebookResponseException $e) {
 			var_dump('phase 1: error in processing your request while fetching token'); // you can add here your own error handling
-		} catch (Facebook\Exceptions\FacebookSDKException $e) {
+		} catch (FacebookSDKException $e) {
 			var_dump('phase 2: error in processing your request with fetching token');
 		}
 		$this->setFacebookAccessToken($accesstoken);

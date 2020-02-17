@@ -37,6 +37,9 @@ class TwitterAuth {
 	 */
 	public function __construct()
 	{
+		$this->app_id = get_option('vd_twitter_app');
+		$this->app_secret = get_option('vd_twitter_secret');
+
 		$this->client = new TwitterOAuth($this->app_id,$this->app_secret);
 		add_shortcode('twitter', array($this, 'renderShortcode'));
 	}
