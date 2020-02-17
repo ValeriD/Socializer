@@ -6,8 +6,9 @@
 namespace Inc;
 
 
-use Inc\Base\FacebookInt;
-use Inc\Base\TwitterInit;
+use Inc\Base\Session;
+use Inc\FacebookConf\FacebookAuth;
+use Inc\Twitter\TwitterAuth;
 
 final class Init{
 
@@ -17,31 +18,21 @@ final class Init{
 	 */
 	public static function get_services(){
 		return [
-			FacebookInt::class,
-			TwitterInit::class
+			Session::class,
+			FacebookAuth::class,
+			TwitterAuth::class
 		];
 	}
 
 	/**
 	 * Loop through the classes,
 	 * for each creates an instance
-	 * and call the register method
 	 */
 	public static function register_services(){
 		foreach ( self::get_services() as $class ){
-			$service = self::instantiate( $class );
-			if( method_exists($service, 'register') ){
-				$service->register();
-			}
+			 new $class;
 		}
 	}
 
-	/**
-	 * Initializing a class
-	 * @param $class class from the services array
-	 * @return new class instance
-	 */
-	private static function instantiate( $class ){
-		return new $class;
-	}
+
 }

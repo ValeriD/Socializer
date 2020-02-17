@@ -8,7 +8,6 @@ class ComposerStaticInit558e4abe801764dd54bcef8406643f27
 {
     public static $files = array (
         'c65d09b6820da036953a371c8c73a9b1' => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook/polyfills.php',
-        '7e702cccdb9dd904f2ccf22e5f37abae' => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook/polyfills.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -34,7 +33,6 @@ class ComposerStaticInit558e4abe801764dd54bcef8406643f27
         'Facebook\\' => 
         array (
             0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
-            1 => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook',
         ),
         'Abraham\\TwitterOAuth\\' => 
         array (
