@@ -6,13 +6,34 @@ namespace Inc\LinkedIn;
 
 class LinkedInAuth
 {
-	protected $app_id = '';
-	protected $app_secret = '';
-	protected $callback = '';
+	/**
+	 * @var string
+	 */
+	protected $app_id = '86k9q6pmv36gk7';
+	/**
+	 * @var string
+	 */
+	protected $app_secret = 'doDYgWUdFfyNBCGA';
+	/**
+	 * @var string
+	 */
+	protected $callback = 'https://socializer.com/wp-content/plugins/vd-socializer/inc/LinkedIn/callback.php';
+	/**
+	 * @var int
+	 */
 	protected $csrf;
-	protected $scopes = '';
+	/**
+	 * @var array
+	 */
+	protected $scopes = 'r_emailaddress r_basicprofile r_liteprofile w_member_social rw_company_admin w_share';
+	/**
+	 * @var bool
+	 */
 	protected $ssl = false;
 
+	/**
+	 * LinkedInAuth constructor.
+	 */
 	public function __construct()
 	{
 
@@ -24,11 +45,22 @@ class LinkedInAuth
 
 		add_shortcode('linkedIn', array($this,'renderShortcode'));
 	}
+
+	/**
+	 * @return string
+	 */
 	public function getAuthUrl()
 	{
 		$_SESSION['linkedincsrf']  = $this->csrf;
-		return "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=". $this->app_id . "&redirect_uri=".$this->callback ."&state=". $this->csrf."&scope=". $this->scopes ;
+		$result = 'https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id='. $this->app_id . '&redirect_uri='.$this->callback .'&state='. $this->csrf.'&scope='. $this->scopes;
+		return  $result;
 	}
+
+	/**
+	 * @param $code
+	 *
+	 * @return mixed
+	 */
 	public function getAccessToken($code)
 	{
 		$url = "https://www.linkedin.com/oauth/v2/accessToken";
@@ -43,6 +75,12 @@ class LinkedInAuth
 		$accessToken = json_decode($response)->access_token;
 		return $accessToken;
 	}
+
+	/**
+	 * @param $accessToken
+	 *
+	 * @return mixed
+	 */
 	public function getPerson($accessToken)
 	{
 		$url = "https://api.linkedin.com/v2/me?projection=(id,firstName,lastName,profilePicture(displayImage~:playableStreams))&oauth2_access_token=" . $accessToken;
@@ -52,6 +90,9 @@ class LinkedInAuth
 		return $person;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function renderShortcode(){
 		$html = '<div>';
 		if(isset($_SESSION['linkedInAccessToken'])){

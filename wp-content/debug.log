@@ -310,3 +310,19 @@ Stack trace:
 [19-Feb-2020 13:39:54 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
 [19-Feb-2020 13:39:59 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
 [19-Feb-2020 13:40:16 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:32:28 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:44:46 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:45:34 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:45:57 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:52:42 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:53:17 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:53:34 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:54:35 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 19:59:03 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 98
+[19-Feb-2020 20:16:34 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 137
+[19-Feb-2020 20:16:34 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 137
+[19-Feb-2020 21:11:17 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
+[19-Feb-2020 21:11:23 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
+[19-Feb-2020 21:11:44 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
+[19-Feb-2020 21:12:38 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
+[19-Feb-2020 21:13:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 55

@@ -20,15 +20,15 @@ class TwitterAuth {
 	/**
 	 * @var string
 	 */
-	protected $clientCallback = "http://exercise.org"; //TODO
+	protected $clientCallback = "https://socializer.com/accounts"; //TODO
 	/**
 	 * @var string
 	 */
-	protected $app_id = "odGJtUtFaP6urmMDq6SzlsH6Q";
+	protected $app_id = "QJd21c6OVDluWLrTlWziAEtk8";
 	/**
 	 * @var string
 	 */
-	protected $app_secret = "zNliHCE2b3tFjgWGP2jAbc6SW4KgUjmE2W6xHvuXR7MnusBGyl";
+	protected $app_secret = "8Dz6DmAxE38uoojW99qSNgbae8mmZWayvSTK9y4v2n9jmyb8rP";
 
 	/**
 	 * TwitterAuth constructor.
@@ -37,8 +37,8 @@ class TwitterAuth {
 	 */
 	public function __construct()
 	{
-		$this->app_id = get_option('vd_twitter_app');
-		$this->app_secret = get_option('vd_twitter_secret');
+//		$this->app_id = get_option('vd_twitter_app');
+//		$this->app_secret = get_option('vd_twitter_secret');
 
 		$this->client = new TwitterOAuth($this->app_id,$this->app_secret);
 		add_shortcode('twitter', array($this, 'renderShortcode'));
@@ -172,7 +172,7 @@ class TwitterAuth {
 		else {
 			$payload = $_SESSION['TwitterPayload'];
 			var_dump($payload);
-			echo '<br> <a href="">Log Out!</a>';//TODO
+			echo '<br> <a href="https://socializer.com/wp-content/plugins/vd-socializer/inc/Twitter/logout.php">Log Out!</a>';//TODO
 		}
 	}
 
