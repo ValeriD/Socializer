@@ -38,13 +38,13 @@ class FacebookAuth {
 	 * @var
 	 */
 	protected $response;
-	protected $app_id;
-	protected $app_secret;
+	protected $app_id = '2187669774872877' ;
+	protected $app_secret = 'ce5ec9e50a0d4a39629208c6facdc0b7';
 
 
 	public function __construct() {
-		$this->app_id = get_option('vd_facebook_app');
-		$this->app_secret = get_option('vd_facebook_secret');
+//		$this->app_id = get_option('vd_facebook_app');
+//		$this->app_secret = get_option('vd_facebook_secret');
 
 
 		try {
@@ -80,11 +80,15 @@ class FacebookAuth {
 	}
 
 	public function apiInit(){
-		$this->client = new Facebook([
-			'app_id' => $this->app_id,
-			'app_secret' => $this->app_secret,
-			'default_graph_version' => "v2.8",
-		]);
+		try {
+			$this->client = new Facebook( [
+				'app_id'                => $this->app_id,
+				'app_secret'            => $this->app_secret,
+				'default_graph_version' => "v2.8",
+			] );
+		} catch ( FacebookSDKException $e ) {
+			var_dump('Facebook App Init: ' . $e->getMessage());
+		}
 	}
 	/**
 	 * Getting the access token
@@ -144,7 +148,7 @@ class FacebookAuth {
 	 */
 	public function getFacebookAuthUrl()
 	{
-		return $this->loginUrl = $this->helper->getLoginUrl('http://exercise.org/callback.php', $this->permissions);
+		return $this->loginUrl = $this->helper->getLoginUrl('https://socializer.com/wp-content/plugins/vd-socializer/inc/FacebookConf/FacebookCallback.php', $this->permissions);
 	}
 
 	/**

@@ -11,15 +11,14 @@ if (isset($_GET['code'])) {
 }?>
 
 
-<div style="text-align: center; margin-top: 200px;">
+<div>
 	<?php
 
 		$payload = $_SESSION['payload']; // payload is an array.
 		var_dump($payload);
 		echo '<br> <a href="/logout.php">Log Out!</a>';
 
-		//hoping everything is right. Now Lets Try.
-		//Thanks for watching.
+
 	?>
 </div>
 
