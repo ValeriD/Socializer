@@ -38,25 +38,11 @@ class FacebookAuth {
 	 * @var
 	 */
 	protected $response;
-	protected $app_id = '2187669774872877' ;
-	protected $app_secret = 'ce5ec9e50a0d4a39629208c6facdc0b7';
+	protected $app_id ;
+	protected $app_secret;
 
 
 	public function __construct() {
-		if(get_option('vd_facebook_app')!=="" && get_option('vd_facebook_secret')!=="") {
-
-
-		$this->app_id = get_option('vd_facebook_app');
-		$this->app_secret = get_option('vd_facebook_secret');
-
-
-			try {
-				$this->register();
-			} catch ( FacebookSDKException $e ) {
-				var_dump( 'FacebookSDK returned: ' . $e->getMessage() );
-			}
-			add_shortcode( 'facebook', array( $this, 'renderShortcode' ) );
-		}
 
 	}
 
@@ -70,17 +56,26 @@ class FacebookAuth {
 	 */
 	public function register()
 	{
+		if(get_option('vd_facebook_app')!=="" && get_option('vd_facebook_secret')!=="") {
 
-		//Creating a Facebook app
-		$this->apiInit();
-		//Getting the helper
-		$this->helper = $this->client->getRedirectLoginHelper();
-		//Used for CSRF
-		if (isset($_GET['state'])) {
-			$this->helper->getPersistentDataHandler()->set('state', $_GET['state']);
+
+			$this->app_id     = get_option( 'vd_facebook_app' );
+			$this->app_secret = get_option( 'vd_facebook_secret' );
+
+
+			add_shortcode( 'facebook', array( $this, 'renderShortcode' ) );
+
+
+			//Creating a Facebook app
+			$this->apiInit();
+			//Getting the helper
+			$this->helper = $this->client->getRedirectLoginHelper();
+			//Used for CSRF
+			if ( isset( $_GET['state'] ) ) {
+				$this->helper->getPersistentDataHandler()->set( 'state', $_GET['state'] );
+			}
+			$this->permissions = [ 'public_profile', 'email' ]; //you may change it according to your need.
 		}
-		$this->permissions = [ 'public_profile' , 'email' ]; //you may change it according to your need.
-
 	}
 
 	public function apiInit(){

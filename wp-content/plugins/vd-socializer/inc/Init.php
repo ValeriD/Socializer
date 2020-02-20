@@ -34,8 +34,16 @@ final class Init{
 	 */
 	public static function register_services(){
 		foreach ( self::get_services() as $class ){
-			 new $class;
+			 $service = Init::instantiate($class);
+			 if(method_exists($service, 'register')){
+			 	$service->register();
+			 }
+
 		}
+	}
+
+	public static function instantiate($class){
+		return new $class;
 	}
 
 
