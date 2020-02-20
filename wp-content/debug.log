@@ -387,3 +387,15 @@ Stack trace:
 [20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 6
 [20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 7
 [20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 8
+[20-Feb-2020 16:22:59 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[20-Feb-2020 16:22:59 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 105
+[20-Feb-2020 16:22:59 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 106
+[20-Feb-2020 16:22:59 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(130): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(164): Inc\FacebookConf\FacebookAuth->getGraph()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.p in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263

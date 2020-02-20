@@ -40,13 +40,14 @@ class FacebookAuth {
 	protected $response;
 	protected $app_id ;
 	protected $app_secret;
-
+	protected $callback = 'https://socializer.com/wp-content/plugins/vd-socializer/inc/FacebookConf/FacebookCallback.php';
 
 	public function __construct() {
 
 	}
 
 	public function renderShortcode(){
+
 		$html = '<p><a href="' . $this->getFacebookAuthUrl() . '">Sign in with Facebook</a></p>';
 		return $html;
 	}
@@ -147,7 +148,8 @@ class FacebookAuth {
 	 */
 	public function getFacebookAuthUrl()
 	{
-		return $this->loginUrl = $this->helper->getLoginUrl('https://socializer.com/wp-content/plugins/vd-socializer/inc/FacebookConf/FacebookCallback.php', $this->permissions);
+		$this->loginUrl = $this->helper->getLoginUrl($this->callback);
+		return $this->loginUrl;
 	}
 
 	/**
