@@ -9,6 +9,7 @@ if (isset($_GET['code'])) {
 	$graph = $facebook ->getGraph();
 	$_SESSION['payload'] = $graph; //saving facebook fetched data into session.
 }?>
+
 <div>
 	<?php
 

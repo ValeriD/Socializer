@@ -43,21 +43,25 @@ class FacebookAuth {
 
 
 	public function __construct() {
-//		$this->app_id = get_option('vd_facebook_app');
-//		$this->app_secret = get_option('vd_facebook_secret');
+		if(get_option('vd_facebook_app')!=="" && get_option('vd_facebook_secret')!=="") {
 
 
-		try {
-			$this->register();
-		} catch ( FacebookSDKException $e ) {
-			var_dump('FacebookSDK returned: '. $e->getMessage());
+		$this->app_id = get_option('vd_facebook_app');
+		$this->app_secret = get_option('vd_facebook_secret');
+
+
+			try {
+				$this->register();
+			} catch ( FacebookSDKException $e ) {
+				var_dump( 'FacebookSDK returned: ' . $e->getMessage() );
+			}
+			add_shortcode( 'facebook', array( $this, 'renderShortcode' ) );
 		}
-		add_shortcode('facebook', array($this, 'renderShortcode'));
 
 	}
 
 	public function renderShortcode(){
-		$html = '<a href="' . $this->getFacebookAuthUrl() . '">Sign in with Facebook</a>';
+		$html = '<p><a href="' . $this->getFacebookAuthUrl() . '">Sign in with Facebook</a></p>';
 		return $html;
 	}
 	/**

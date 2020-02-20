@@ -326,3 +326,64 @@ Stack trace:
 [19-Feb-2020 21:11:44 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
 [19-Feb-2020 21:12:38 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 30
 [19-Feb-2020 21:13:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\LinkedIn\LinkedInAuth.php on line 55
+[20-Feb-2020 10:19:34 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 2
+[20-Feb-2020 10:21:09 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 2
+[20-Feb-2020 10:26:09 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 2
+[20-Feb-2020 10:29:01 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 2
+[20-Feb-2020 10:51:52 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:51:52 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:51:52 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php:4
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(175): include()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<!-- wp:shortco...')
+#7 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.ph in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 4
+[20-Feb-2020 10:53:28 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:53:28 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:53:28 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php:5
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(175): include()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<!-- wp:shortco...')
+#7 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.ph in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 5
+[20-Feb-2020 10:54:42 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:54:42 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:54:42 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:176
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<!-- wp:shortco...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): requir in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 176
+[20-Feb-2020 10:55:07 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:176
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<!-- wp:shortco...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): requir in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 176
+[20-Feb-2020 10:56:02 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:56:02 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 10:56:03 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 175
+[20-Feb-2020 10:56:27 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 175
+[20-Feb-2020 10:57:26 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 175
+[20-Feb-2020 11:01:51 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 11:01:51 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 139
+[20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 5
+[20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 6
+[20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 7
+[20-Feb-2020 11:01:52 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 8

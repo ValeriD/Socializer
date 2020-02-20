@@ -1,4 +1,6 @@
 <?php
+
+use Inc\Admin\AdminMenu;
 if($_POST['vd_hidden'] == 'Y') {
     //Form data sent
     $dbhost = $_POST['vd_dbhost'];
@@ -53,7 +55,7 @@ else{
 ?>
 
 <div class="wrap">
-    <?php    echo "<h2>" . __( 'Socializer Database Settings', 'vd_trdom' ) . "</h2>"; ?>
+    <?php    echo "<h2>" . __( 'Socializer Settings', 'vd_trdom' ) . "</h2>"; ?>
 
     <form name="vd_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
         <input type="hidden" name="vd_hidden" value="Y">

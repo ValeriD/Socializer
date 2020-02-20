@@ -21,7 +21,7 @@ class AdminMenu {
 	 * Action function for adding a admin menu
 	 */
 	public function add_database_menu(){
-		add_options_page('Database settings', 'Database settings', 'manage_options', 'Database settings', array($this,'database_settings'),1);
+		add_options_page('Socializer settings', 'Socializer settings', 'manage_options', 'Socializer settings', array($this,'database_settings'),1);
 	}
 
 	/**

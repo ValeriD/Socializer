@@ -34,16 +34,18 @@ class LinkedInAuth
 	/**
 	 * LinkedInAuth constructor.
 	 */
-	public function __construct()
-	{
+	public function __construct() {
+		if ( get_option( 'vd_twitter_app' ) !== "" && get_option( 'vd_twitter_secret' ) !== "" ) {
+			$this->app_id = get_option('vd-linkedin_app');
+			$this->app_secret=get_option('vd_linkedin_app');
+			try {
+				$this->csrf = random_int( 111111, 99999999999 );
+			} catch ( \Exception $e ) {
+				var_dump( $e->getMessage() );
+			}
 
-		try {
-			$this->csrf = random_int( 111111, 99999999999 );
-		} catch ( \Exception $e ) {
-			var_dump($e->getMessage());
+			add_shortcode( 'linkedIn', array( $this, 'renderShortcode' ) );
 		}
-
-		add_shortcode('linkedIn', array($this,'renderShortcode'));
 	}
 
 	/**
@@ -99,7 +101,7 @@ class LinkedInAuth
 			$profile = $this->getPerson($_SESSION['linkedInAccessToken']);
 			$html.= '<p>' . $profile . '</p>';
 		}else {
-			$html = '<a href="' . $this->getAuthUrl() . '" >Sign In with LinkedIn</a>';
+			$html = '<p><a href="' . $this->getAuthUrl() . '" >Sign In with LinkedIn</a></p>';
 		}
 		$html.='</div>';
 		return $html;

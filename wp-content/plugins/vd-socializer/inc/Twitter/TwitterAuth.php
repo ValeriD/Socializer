@@ -24,11 +24,13 @@ class TwitterAuth {
 	/**
 	 * @var string
 	 */
-	protected $app_id = "QJd21c6OVDluWLrTlWziAEtk8";
+	protected $app_id ;
 	/**
 	 * @var string
 	 */
-	protected $app_secret = "8Dz6DmAxE38uoojW99qSNgbae8mmZWayvSTK9y4v2n9jmyb8rP";
+	protected $app_secret;
+
+	protected $accessToken;
 
 	/**
 	 * TwitterAuth constructor.
@@ -37,11 +39,13 @@ class TwitterAuth {
 	 */
 	public function __construct()
 	{
-//		$this->app_id = get_option('vd_twitter_app');
-//		$this->app_secret = get_option('vd_twitter_secret');
+		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
+			$this->app_id = get_option('vd_twitter_app');
+			$this->app_secret = get_option('vd_twitter_secret');
 
-		$this->client = new TwitterOAuth($this->app_id,$this->app_secret);
-		add_shortcode('twitter', array($this, 'renderShortcode'));
+			$this->client = new TwitterOAuth($this->app_id,$this->app_secret);
+			add_shortcode('twitter', array($this, 'renderShortcode'));
+		}
 	}
 
 
@@ -166,13 +170,11 @@ class TwitterAuth {
 		}
 
 		if (!$data) {
-			echo '<a href="' . $this->getUrl() . '">Sign In with Twitter</a>';
+			echo '<p><a href="' . $this->getUrl() . '">Sign In with Twitter</a></p>';
 
 		}
 		else {
-			$payload = $_SESSION['TwitterPayload'];
-			var_dump($payload);
-			echo '<br> <a href="https://socializer.com/wp-content/plugins/vd-socializer/inc/Twitter/logout.php">Log Out!</a>';//TODO
+			include(PLUGIN_PATH. '/inc/Twitter/twitterAccount.php');
 		}
 	}
 

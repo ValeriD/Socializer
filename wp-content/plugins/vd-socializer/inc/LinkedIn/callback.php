@@ -15,5 +15,5 @@ if (!$accessToken) {
 
 $_SESSION['linkedInAccessToken'] = $accessToken;
 
-header("location: "); //TODO
+//header("location: ");
 die();
