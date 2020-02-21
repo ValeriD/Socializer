@@ -132,6 +132,9 @@ class Post {
 		$this->commentCount = $commentCount;
 	}
 
+	/**
+	 * @return array
+	 */
 	public function toArray(){
 		return array(
 			'ID' => $this->postId,
@@ -144,18 +147,30 @@ class Post {
 			)
 		);
 	}
+
+	/**
+	 *
+	 */
 	public function savePost(){
 		$error = wp_insert_post($this->toArray());
 		if(!$error){
 			die('Unable to save the post');
 		}
 	}
+
+	/**
+	 *
+	 */
 	public function updatePost(){
 		$error = wp_update_post($this->toArray());
 		if(!$error){
 			die('Unable to update the post');
 		}
 	}
+
+	/**
+	 *
+	 */
 	public function deletePost(){
 		$error = wp_delete_post($this->postId);
 		if(!$error){

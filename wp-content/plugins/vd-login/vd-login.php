@@ -28,11 +28,22 @@ if(!defined('ABSPATH')){
 }
 
 //Defining constants
-define( 'PLUGIN_PATH', plugin_dir_path(__FILE__) );
-define( 'PLUGIN_URL', plugin_dir_url(__FILE__) );
+define( 'VD_LI_PLUGIN_PATH', plugin_dir_path(__FILE__) );
+define( 'VD_LI_PLUGIN_URL', plugin_dir_url(__FILE__) );
 
-//Require once the Composer Autoloader
-if( file_exists(__FILE__) . './vendor/autoload.php' ){
-	require_once dirname(__FILE__) . './vendor/autoload.php';
+include_once VD_LI_PLUGIN_PATH . 'Base\Activator.php';
+
+function vd_activate_plugin(){
+	Activator::activate();
 }
+register_activation_hook(__FILE__, 'vd_activate_plugin');
 
+include_once VD_LI_PLUGIN_PATH . 'Base/Deactivator.php';
+function vd_deactivate_plugin(){
+	Deactivator::deactivate();
+}
+register_activation_hook(__FILE__, 'vd_deactivate_plugin');
+
+if(class_exists(Init::class)){
+	Init::register_services();
+}
