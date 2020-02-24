@@ -768,3 +768,78 @@ Stack trace:
 [24-Feb-2020 19:13:32 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
 [24-Feb-2020 19:13:32 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
 [24-Feb-2020 19:13:32 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 12
+[24-Feb-2020 19:20:16 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:20:16 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:20:16 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:20:16 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 12
+[24-Feb-2020 19:24:44 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: Operation timed out after 5001 milliseconds with 0 out of 0 bytes received in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:549
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php(457): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array, false)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php(408): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array, false)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php(389): Abraham\TwitterOAuth\TwitterOAuth->makeRequests('https://api.twi...', 'GET', Array, false)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php(209): Abrah in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 549
+[24-Feb-2020 19:25:23 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:25:23 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:25:23 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:25:23 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 12
+[24-Feb-2020 19:26:26 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 130
+[24-Feb-2020 19:26:26 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 130
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 178
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 179
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 180
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 181
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 8
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:26:27 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:26:45 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 8
+[24-Feb-2020 19:26:45 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:26:45 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:26:45 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:27:32 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 8
+[24-Feb-2020 19:27:32 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:27:32 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:27:32 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:28:14 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 9
+[24-Feb-2020 19:28:14 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:28:14 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 11
+[24-Feb-2020 19:28:14 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 12
+[24-Feb-2020 19:29:23 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\twitterAccount.php on line 10
+[24-Feb-2020 19:52:03 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:157
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<!-- wp:shortco...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): requir in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 157
+[24-Feb-2020 20:22:37 UTC] PHP Notice:  Undefined index: text in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 187
+[24-Feb-2020 20:23:19 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 187
+[24-Feb-2020 20:24:11 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 187
+[24-Feb-2020 20:41:04 UTC] PHP Fatal error:  Uncaught Abraham\TwitterOAuth\TwitterOAuthException: Request token missing in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php:168
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(198): Abraham\TwitterOAuth\TwitterOAuth->oauth('oauth/access_to...', Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(158): Inc\Twitter\TwitterAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[f in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 168
+[24-Feb-2020 20:48:06 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 136
+[24-Feb-2020 20:48:06 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 136
+[24-Feb-2020 20:48:07 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 189
+[24-Feb-2020 20:48:07 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 190
+[24-Feb-2020 20:48:07 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 191
+[24-Feb-2020 20:48:07 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 192
+[24-Feb-2020 21:02:54 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:203
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(198): Inc\Twitter\TwitterAuth->savePost(Object(stdClass))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(169): Inc\Twitter\TwitterAuth->savePosts(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[facebook]\n\n\n[t...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
+#7 C:\xampp\htdocs\soci in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 203

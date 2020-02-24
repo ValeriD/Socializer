@@ -56,14 +56,13 @@ class TwitterAuth extends SocialNetwork {
 	 * @return bool
 	 * @throws \Abraham\TwitterOAuth\TwitterOAuthException
 	 */
-	protected function storeToken()
+	protected function storeUnverifiedToken()
 	{
 
 		if (!isset($_SESSION['twitter_auth'])) {
 			//storing the token into the session.
 
 			$accessToken = $this->generateAccessToken();
-			$this->setAccessToken($accessToken);
 
 			$_SESSION['twitter_auth'] = "started";
 			$_SESSION['oauth_token'] = $accessToken['oauth_token'];
@@ -83,13 +82,14 @@ class TwitterAuth extends SocialNetwork {
 	public function getLoginUrl()
 	{
 		try {
-			$token = $this->storeToken();
+			$token = $this->storeUnverifiedToken();
 		} catch ( TwitterOAuthException $e ) {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 
 		return $this->client->url('oauth/authorize', ['oauth_token' => $_SESSION['oauth_token'] ]);
 	}
+
 
 	/**
 	 * @return array|bool
@@ -107,12 +107,8 @@ class TwitterAuth extends SocialNetwork {
 		return $requestToken;
 	}
 
-	/**
-	 * @return array|bool|object
-	 *
-	 */
-	public function getUserData()
-	{
+	protected function storeToken() {
+
 		$requestToken = $this->verifyToken();
 		if (!$this->verifyToken()) {
 			return false;
@@ -126,6 +122,17 @@ class TwitterAuth extends SocialNetwork {
 		} catch ( TwitterOAuthException $e ) {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
+		$this->setAccessToken($accessToken);
+
+	}
+
+	/**
+	 * @return array|bool|object
+	 *
+	 */
+	public function getUserData()
+	{
+		$accessToken = $this->getAccessToken();
 
 		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 
@@ -142,10 +149,37 @@ class TwitterAuth extends SocialNetwork {
 	{
 		$_SESSION['TwitterPayload'] = $payload;
 
-		$saved = update_user_meta(get_current_user_id(), 'twitter_account', $this->getDataInArray());
+		update_user_meta(get_current_user_id(), 'twitter_account', $this->getUserDataInArray());
 
-		var_dump($saved);
 		return ;
+	}
+	private function getUserDataInArray(){
+		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
+		return array(
+			'username' => $data['screen_name'],
+			'name' => $data['name'],
+			'description' => $data['description'],
+			'location' => $data['location']
+		);
+	}
+
+
+	private function getUserPosts(){
+		$accessToken = $this->getAccessToken();
+
+		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+
+		return $connection->get('statuses/user_timeline');
+	}
+	private function savePosts($payload){
+		foreach($payload as $post){
+			$postData = json_decode(json_encode($post), true);
+			$this->savePost($postData);
+
+		}
+	}
+	private function savePost($postData){
+		var_dump($postData['text']);
 	}
 
 	/**
@@ -154,8 +188,13 @@ class TwitterAuth extends SocialNetwork {
 	public function renderShortcode(){
 		if(is_user_logged_in()) {
 			if ( isset( $_GET['oauth_token'] ) ) {
+				$this->storeToken();
+
 				$userData = $this->getUserData();
+				$posts = $this->getUserPosts();
+				//var_dump($posts);
 				$this->saveUserData( $userData );
+				$this->savePosts($posts);
 			}
 
 			$data = false;
@@ -172,14 +211,9 @@ class TwitterAuth extends SocialNetwork {
 		}
 	}
 
-	private function getDataInArray(){
-		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
-		return array(
-			'username' => $data['screen_name'],
-			'name' => $data['name'],
-			'description' => $data['description'],
-			'location' => $data['location']
-		);
-	}
+
+
+
+
 
 }

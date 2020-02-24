@@ -23,6 +23,7 @@ class Post {
 	 * @param $description
 	 * @param $likesCount
 	 * @param $commentCount
+	 * @param $postId
 	 */
 	public function __construct( $title, $author, $content, $description, $likesCount, $commentCount, $postId ) {
 		$this->title        = $title;
@@ -152,21 +153,12 @@ class Post {
 	 *
 	 */
 	public function savePost(){
-		$error = wp_insert_post($this->toArray());
+		$error = wp_update_post($this->toArray());
 		if(!$error){
 			die('Unable to save the post');
 		}
 	}
 
-	/**
-	 *
-	 */
-	public function updatePost(){
-		$error = wp_update_post($this->toArray());
-		if(!$error){
-			die('Unable to update the post');
-		}
-	}
 
 	/**
 	 *
