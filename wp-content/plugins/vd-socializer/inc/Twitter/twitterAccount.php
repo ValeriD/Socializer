@@ -1,5 +1,8 @@
 <?php
-$payload = json_decode(json_encode($_SESSION['TwitterPayload']), true);
+include_once 'wp-load.php';
+//$payload = json_decode(json_encode($_SESSION['TwitterPayload']), true);
+$payload =  get_metadata('user', get_current_user_id(), 'twitterAccount');
+var_dump($payload);
 ?>
 <div class = "account-box" >
 	<h4>Account information</h4>

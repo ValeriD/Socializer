@@ -38,7 +38,6 @@ if($_POST['vd_hidden'] == 'Y') {
 }
 else{
     $dbhost = get_option('vd_dbhost');
-    var_dump($dbhost);
     $dbname = get_option('vd_dbname');
     $dbuser = get_option('vd_dbuser');
     $dbpwd = get_option('vd_dbpwd');

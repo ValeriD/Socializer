@@ -6,31 +6,19 @@ namespace Inc\Twitter;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Abraham\TwitterOAuth\TwitterOAuthException;
+use Inc\Base\SocialNetwork;
 
 /**
  * Class TwitterAuth
  * @package Inc\Twitter
  */
 
-class TwitterAuth {
+class TwitterAuth extends SocialNetwork {
 	/**
 	 * @var TwitterOAuth
 	 */
 	protected $client;
-	/**
-	 * @var string
-	 */
-	protected $clientCallback = "https://socializer.com/accounts"; //TODO
-	/**
-	 * @var string
-	 */
-	protected $app_id ;
-	/**
-	 * @var string
-	 */
-	protected $app_secret;
 
-	protected $accessToken;
 
 	/**
 	 * TwitterAuth constructor.
@@ -39,11 +27,11 @@ class TwitterAuth {
 	 */
 	public function __construct()
 	{
-		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
-			$this->app_id = get_option('vd_twitter_app');
-			$this->app_secret = get_option('vd_twitter_secret');
 
-			$this->client = new TwitterOAuth($this->app_id,$this->app_secret);
+		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
+			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
+
+			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
 	}
@@ -57,7 +45,7 @@ class TwitterAuth {
 	protected function generateAccessToken()
 	{
 		if (!isset($_SESSION['twitter_auth'])) {
-			return $this->client->oauth('oauth/request_token', ['oauth_callback' => $this->clientCallback]);
+			return $this->client->oauth('oauth/request_token', ['oauth_callback' => $this->getClientCallback()]);
 		}
 
 		return false;
@@ -75,6 +63,7 @@ class TwitterAuth {
 			//storing the token into the session.
 
 			$accessToken = $this->generateAccessToken();
+			$this->setAccessToken($accessToken);
 
 			$_SESSION['twitter_auth'] = "started";
 			$_SESSION['oauth_token'] = $accessToken['oauth_token'];
@@ -91,7 +80,7 @@ class TwitterAuth {
 	/**
 	 * @return mixed
 	 */
-	public function getUrl()
+	public function getLoginUrl()
 	{
 		try {
 			$token = $this->storeToken();
@@ -122,14 +111,14 @@ class TwitterAuth {
 	 * @return array|bool|object
 	 *
 	 */
-	public function getPayload()
+	public function getUserData()
 	{
 		$requestToken = $this->verifyToken();
 		if (!$this->verifyToken()) {
 			return false;
 		}
 
-		$connection = new TwitterOAuth($this->app_id,$this->app_secret, $requestToken['oauth_token'], $requestToken['oauth_token_secret']);
+		$connection = new TwitterOAuth($this->getAppId(),$this->getAppSecret(), $requestToken['oauth_token'], $requestToken['oauth_token_secret']);
 
 
 		try {
@@ -138,7 +127,7 @@ class TwitterAuth {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 
-		$connection = new TwitterOAuth($this->app_id, $this->app_secret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 
 		$payload = $connection->get('account/verify_credentials', ['include_email' => 'true']);
 		// don't forgot the qoutes over the true.
@@ -149,9 +138,13 @@ class TwitterAuth {
 	/**
 	 * @param $payload
 	 */
-	public function setPayload($payload)
+	public function saveUserData($payload)
 	{
 		$_SESSION['TwitterPayload'] = $payload;
+
+		$saved = update_user_meta(get_current_user_id(), 'twitter_account', $this->getDataInArray());
+
+		var_dump($saved);
 		return ;
 	}
 
@@ -159,23 +152,34 @@ class TwitterAuth {
 	 *
 	 */
 	public function renderShortcode(){
-		if (isset($_GET['oauth_token'])) {
-			$payload = $this->getPayload();
-			$this->setPayload($payload);
-		}
+		if(is_user_logged_in()) {
+			if ( isset( $_GET['oauth_token'] ) ) {
+				$userData = $this->getUserData();
+				$this->saveUserData( $userData );
+			}
 
-		$data = false;
-		if (isset($_SESSION['TwitterPayload'])) {
-			$data = $_SESSION['TwitterPayload'];
-		}
+			$data = false;
+			if ( isset( $_SESSION['TwitterPayload'] ) ) {
+				$data = $_SESSION['TwitterPayload'];
+			}
 
-		if (!$data) {
-			echo '<p><a href="' . $this->getUrl() . '">Sign In with Twitter</a></p>';
+			if ( ! $data ) {
+				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with Twitter</a></p>';
 
+			} else {
+				include( PLUGIN_PATH . '/inc/Twitter/twitterAccount.php' );
+			}
 		}
-		else {
-			include(PLUGIN_PATH. '/inc/Twitter/twitterAccount.php');
-		}
+	}
+
+	private function getDataInArray(){
+		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
+		return array(
+			'username' => $data['screen_name'],
+			'name' => $data['name'],
+			'description' => $data['description'],
+			'location' => $data['location']
+		);
 	}
 
 }

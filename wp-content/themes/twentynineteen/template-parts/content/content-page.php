@@ -8,6 +8,7 @@
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
+include_once 'C:\xampp\htdocs\socializer\wp-load.php';
 
 ?>
 
