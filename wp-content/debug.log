@@ -843,3 +843,20 @@ Stack trace:
 #5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[facebook]\n\n\n[t...')
 #6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[facebook]\n\n\n[t...', Array)
 #7 C:\xampp\htdocs\soci in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 203
+[25-Feb-2020 18:57:35 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 125
+[25-Feb-2020 18:57:35 UTC] PHP Notice:  Undefined index: screen_name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 159
+[25-Feb-2020 18:57:35 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 160
+[25-Feb-2020 18:57:35 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 161
+[25-Feb-2020 18:57:35 UTC] PHP Notice:  Undefined index: location in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 162
+[25-Feb-2020 18:57:35 UTC] PHP Warning:  Illegal string offset 'text' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 182
+[25-Feb-2020 18:57:35 UTC] PHP Warning:  Illegal string offset 'text' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 182
+[25-Feb-2020 19:27:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Inc\Base\Post::setContent(), 0 passed in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 187 and exactly 1 expected in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php:79
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(187): Inc\Base\Post->setContent()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(178): Inc\Twitter\TwitterAuth->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(205): Inc\Twitter\TwitterAuth->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...',  in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 79
+[25-Feb-2020 19:36:35 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157
+[25-Feb-2020 19:36:36 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157

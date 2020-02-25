@@ -17,21 +17,10 @@ class Post {
 	/**
 	 * Post constructor.
 	 *
-	 * @param $title
-	 * @param $author
-	 * @param $content
-	 * @param $description
-	 * @param $likesCount
-	 * @param $commentCount
 	 * @param $postId
 	 */
-	public function __construct( $title, $author, $content, $description, $likesCount, $commentCount, $postId ) {
-		$this->title        = $title;
-		$this->author       = $author;
-		$this->content      = $content;
-		$this->description  = $description;
-		$this->likesCount   = $likesCount;
-		$this->commentCount = $commentCount;
+	public function __construct( $postId ) {
+
 		$this->postId = $postId;
 	}
 
@@ -138,9 +127,10 @@ class Post {
 	 */
 	public function toArray(){
 		return array(
-			'ID' => $this->postId,
+			'post_id' => $this->postId,
 			'post_author' => $this->author,
 			'post_content' => $this->content,
+			'post_type' => 'post',
 			'post_title' => $this->title,
 			'meta_input' => array(
 				'post_likes' => $this->likesCount,
