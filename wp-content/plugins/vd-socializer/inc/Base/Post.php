@@ -13,6 +13,8 @@ class Post {
 	private $description;
 	private $likesCount;
 	private $commentCount;
+	private $imagUrl;
+
 
 	/**
 	 * Post constructor.
@@ -21,10 +23,24 @@ class Post {
 	 */
 	public function __construct( $postId ) {
 
-		$this->postId = $postId;
+		$this->setPostId($postId);
+		$this->setLikesCount(0);
+		$this->setCommentCount(0);
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function getImagUrl() {
+		return $this->imagUrl;
+	}
 
+	/**
+	 * @param mixed $imagUrl
+	 */
+	public function setImagUrl( $imagUrl ) {
+		$this->imagUrl = $imagUrl;
+	}
 	/**
 	 * @return mixed
 	 */
@@ -134,7 +150,8 @@ class Post {
 			'post_title' => $this->title,
 			'meta_input' => array(
 				'post_likes' => $this->likesCount,
-				'post_comments' => $this->commentCount
+				'post_comments' => $this->commentCount,
+				'post_img' => $this->imagUrl
 			)
 		);
 	}
@@ -150,15 +167,7 @@ class Post {
 	}
 
 
-	/**
-	 *
-	 */
-	public function deletePost(){
-		$error = wp_delete_post($this->postId);
-		if(!$error){
-			die('Unable to delete the post');
-		}
-	}
+
 
 
 }

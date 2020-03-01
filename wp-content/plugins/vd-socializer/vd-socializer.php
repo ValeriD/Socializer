@@ -63,3 +63,11 @@ if(class_exists('Inc\\Init')){
 	Inc\Init::register_services();
 }
 
+function vd_get_home_template(){
+	return PLUGIN_PATH . 'inc/Assets/homePage.php';
+}
+add_filter('home_template', 'vd_get_home_template');
+
+
+
+

@@ -185,6 +185,9 @@ class TwitterAuth extends SocialNetwork {
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
+		$media = $postData['entities']['media'][0]['media_url'];
+		//var_dump($media);
+		$post->setImagUrl($media);
 		$post->savePost();
 
 

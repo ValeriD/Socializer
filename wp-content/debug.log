@@ -870,3 +870,44 @@ Stack trace:
 [25-Feb-2020 19:59:17 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157
 [25-Feb-2020 19:59:17 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157
 [25-Feb-2020 20:02:31 UTC] WordPress database error Column 'post_content' cannot be null for query INSERT INTO `wp_posts` (`post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_content_filtered`, `post_title`, `post_excerpt`, `post_status`, `post_type`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_parent`, `menu_order`, `post_mime_type`, `guid`) VALUES (1, '2020-02-25 22:02:31', '0000-00-00 00:00:00', NULL, '', 'This is second test tweet https://t.co/RkzsT7jcem', '', 'draft', 'post', 'open', 'open', '', '', '', '', '2020-02-25 22:02:31', '0000-00-00 00:00:00', 0, 0, '', '') made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/twentytwenty/singular.php'), get_template_part, locate_template, load_template, require('/themes/twentytwenty/template-parts/content.php'), the_content, apply_filters('the_content'), WP_Hook->apply_filters, do_shortcode, preg_replace_callback, do_shortcode_tag, Inc\Twitter\TwitterAuth->renderShortcode, Inc\Twitter\TwitterAuth->savePosts, Inc\Twitter\TwitterAuth->savePost, Inc\Base\Post->savePost, wp_insert_post
+[01-Mar-2020 19:25:48 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 91
+[01-Mar-2020 19:26:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Inc\Base\Post::setImagUrl(), 0 passed in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 190 and exactly 1 expected in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php:28
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(190): Inc\Base\Post->setImagUrl()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(178): Inc\Twitter\TwitterAuth->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(208): Inc\Twitter\TwitterAuth->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(twitte...', 'do_shortcode_ta...',  in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 28
+[01-Mar-2020 20:16:01 UTC] PHP Notice:  register_rest_route was called <strong>incorrectly</strong>. REST API routes must be registered on the <code>rest_api_init</code> action. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.1.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[01-Mar-2020 20:16:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function using_index_permalinks() on null in C:\xampp\htdocs\socializer\wp-includes\rest-api.php:354
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\rest-api.php(414): get_rest_url(NULL, '/wp/v2/posts/{i...', 'rest')
+#1 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\class-wp-rest-posts-controller.php(2268): rest_url('wp/v2/posts/{id...')
+#2 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\class-wp-rest-posts-controller.php(2249): WP_REST_Posts_Controller->get_schema_links()
+#3 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\class-wp-rest-controller.php(356): WP_REST_Posts_Controller->get_item_schema()
+#4 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\class-wp-rest-controller.php(311): WP_REST_Controller->get_context_param()
+#5 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\class-wp-rest-posts-controller.php(2393): WP_REST_Controller->get_collection_params()
+#6 C:\xampp\htdocs\socializer\wp-includes\rest-api\endpoints\c in C:\xampp\htdocs\socializer\wp-includes\rest-api.php on line 354
+[01-Mar-2020 20:39:46 UTC] PHP Fatal error:  Cannot redeclare get_home_template() (previously declared in C:\xampp\htdocs\socializer\wp-includes\template.php:356) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php on line 69
+[01-Mar-2020 20:40:57 UTC] PHP Fatal error:  Cannot redeclare get_home_template() (previously declared in C:\xampp\htdocs\socializer\wp-includes\template.php:356) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php on line 69
+[01-Mar-2020 20:41:06 UTC] PHP Fatal error:  Cannot redeclare get_home_template() (previously declared in C:\xampp\htdocs\socializer\wp-includes\template.php:356) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php on line 69
+[01-Mar-2020 20:50:27 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 23
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:51:46 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 17
+[01-Mar-2020 20:53:59 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 25
+[01-Mar-2020 20:56:59 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157
+[01-Mar-2020 20:56:59 UTC] PHP Notice:  Undefined index: ID in C:\xampp\htdocs\socializer\wp-includes\post.php on line 4157
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
+[01-Mar-2020 21:12:06 UTC] PHP Notice:  get_the_author_ID is <strong>deprecated</strong> since version 2.8.0! Use get_the_author_meta('ID') instead. in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4648
