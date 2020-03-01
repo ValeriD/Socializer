@@ -127,10 +127,10 @@ class Post {
 	 */
 	public function toArray(){
 		return array(
-			'post_id' => $this->postId,
 			'post_author' => $this->author,
 			'post_content' => $this->content,
 			'post_type' => 'post',
+			'post_status' => 'publish',
 			'post_title' => $this->title,
 			'meta_input' => array(
 				'post_likes' => $this->likesCount,
@@ -143,7 +143,7 @@ class Post {
 	 *
 	 */
 	public function savePost(){
-		$error = wp_update_post($this->toArray());
+		$error = wp_insert_post($this->toArray());
 		if(!$error){
 			die('Unable to save the post');
 		}

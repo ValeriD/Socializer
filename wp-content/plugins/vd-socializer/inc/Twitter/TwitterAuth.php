@@ -180,10 +180,11 @@ class TwitterAuth extends SocialNetwork {
 		}
 	}
 	private function savePost($postData){
-		var_dump($postData);
+		//var_dump($postData);
 		$post = new Post($postData['id']);
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);
+		$post->setContent($postData['text']);
 		$post->savePost();
 
 
