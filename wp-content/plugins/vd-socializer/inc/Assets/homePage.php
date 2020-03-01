@@ -5,7 +5,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<div id="content" class="site-content" role="main">
 
 <?php
 	if ( have_posts() ) {
@@ -18,15 +18,19 @@ get_header();
 				<?php if(get_post_meta(get_the_ID(), 'post_img', true)) { ?>
 					 <img src="<?php echo get_post_meta( get_the_ID(), 'post_img', true ); ?>"
 					      style="height:500px; width:600px; position: center ">
+					 <p><?php echo get_post_meta(get_the_ID(), 'post_likes', true)?>; <?php echo get_post_meta(get_the_ID(), 'post_comments', true)?></p>
 					 <?php
 				 }
 			}else{
 			 	die('First you should login');
 			 }
 		}
+	}
+	else{
+		echo 'No posts';
 	}?>
 
-			</main>
+		</div>
 	</div>
 <?php
 
