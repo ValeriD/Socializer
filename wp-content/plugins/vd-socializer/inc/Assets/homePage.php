@@ -18,7 +18,7 @@ get_header();
 				<?php if(get_post_meta(get_the_ID(), 'post_img', true)) { ?>
 					 <img src="<?php echo get_post_meta( get_the_ID(), 'post_img', true ); ?>"
 					      style="height:500px; width:600px; position: center ">
-					 <p><?php echo get_post_meta(get_the_ID(), 'post_likes', true)?>; <?php echo get_post_meta(get_the_ID(), 'post_comments', true)?></p>
+					 <p><?php echo get_post_meta(get_the_ID(), 'post_likes', true); ?></p>
 					 <?php
 				 }
 			}else{

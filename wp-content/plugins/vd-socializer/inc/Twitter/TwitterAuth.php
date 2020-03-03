@@ -188,7 +188,6 @@ class TwitterAuth extends SocialNetwork {
 		$media = $postData['entities']['media'][0]['media_url'];
 		$post->setImagUrl($media);
 		$post->setLikesCount($postData['favorite_count']);
-		$post->setCommentCount($postData['retweet_count']);
 		$post->savePost();
 
 
