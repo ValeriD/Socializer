@@ -6,161 +6,87 @@ namespace Inc\Base;
 
 class Post {
 
-	private $postId;
-	private $title;
-	private $author;
-	private $content;
-	private $description;
-	private $likesCount;
-	private $commentCount;
-	private $imagUrl;
-
-
+	private $data;
+	private $metaData;
 	/**
 	 * Post constructor.
 	 *
 	 * @param $postId
 	 */
 	public function __construct( $postId ) {
+		$this->metaData =array();
+		$this->data = array(
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'meta_input' => array()
+		);
 
-		$this->setPostId($postId);
-		$this->setLikesCount(0);
-		$this->setCommentCount(0);
-	}
-
-	/**
-	 * @return mixed
-	 */
-	public function getImagUrl() {
-		return $this->imagUrl;
+		$this->setMetaData('likesCount', 0);
 	}
 
-	/**
-	 * @param mixed $imagUrl
-	 */
-	public function setImagUrl( $imagUrl ) {
-		$this->imagUrl = $imagUrl;
-	}
-	/**
-	 * @return mixed
-	 */
-	public function getPostId() {
-		return $this->postId;
-	}
 
-	/**
-	 * @param mixed $postId
-	 */
-	public function setPostId( $postId ) {
-		$this->postId = $postId;
-	}
 	/**
 	 * @return mixed
 	 */
 	public function getTitle() {
-		return $this->title;
+		return $this->data['post_title'];
 	}
 
 	/**
 	 * @param mixed $title
 	 */
 	public function setTitle( $title ) {
-		$this->title = $title;
+		$this->data['post_title'] = $title;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getAuthor() {
-		return $this->author;
+		return $this->data['post_author'];
 	}
 
 	/**
 	 * @param mixed $author
 	 */
 	public function setAuthor( $author ) {
-		$this->author = $author;
+		$this->data['post_author'] = $author;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getContent() {
-		return $this->content;
+		return $this->data['post_content'];
 	}
 
 	/**
 	 * @param mixed $content
 	 */
 	public function setContent( $content ) {
-		$this->content = $content;
+		$this->data['post_content'] = $content;
 	}
 
-	/**
-	 * @return mixed
-	 */
-	public function getDescription() {
-		return $this->description;
+	public function getMetaData($key){
+		return $this->data['meta_input'][$key];
 	}
 
-	/**
-	 * @param mixed $description
-	 */
-	public function setDescription( $description ) {
-		$this->description = $description;
-	}
-
-	/**
-	 * @return mixed
-	 */
-	public function getLikesCount() {
-		return $this->likesCount;
-	}
-
-	/**
-	 * @param mixed $likesCount
-	 */
-	public function setLikesCount( $likesCount ) {
-		$this->likesCount = $likesCount;
-	}
-
-	/**
-	 * @return mixed
-	 */
-	public function getCommentCount() {
-		return $this->commentCount;
-	}
-
-	/**
-	 * @param mixed $commentCount
-	 */
-	public function setCommentCount( $commentCount ) {
-		$this->commentCount = $commentCount;
+	public function setMetaData($key, $value){
+		$this->data['meta_input'][$key] = $value;
 	}
 
 	/**
 	 * @return array
 	 */
-	public function toArray(){
-		return array(
-			'post_author' => $this->author,
-			'post_content' => $this->content,
-			'post_type' => 'post',
-			'post_status' => 'publish',
-			'post_title' => $this->title,
-			'meta_input' => array(
-				'post_likes' => $this->likesCount,
-				'post_comments' => $this->commentCount,
-				'post_img' => $this->imagUrl
-			)
-		);
+	public function getData(){
+		return $this->data;
 	}
 
 	/**
 	 *
 	 */
 	public function savePost(){
-		$error = wp_insert_post($this->toArray());
+		$error = wp_insert_post($this->getData());
 		if(!$error){
 			die('Unable to save the post');
 		}

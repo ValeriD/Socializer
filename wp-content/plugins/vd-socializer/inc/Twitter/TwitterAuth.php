@@ -154,6 +154,7 @@ class TwitterAuth extends SocialNetwork {
 
 		return ;
 	}
+
 	private function getUserDataInArray(){
 		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
 		return array(
@@ -172,6 +173,8 @@ class TwitterAuth extends SocialNetwork {
 
 		return $connection->get('statuses/user_timeline');
 	}
+
+
 	private function savePosts($payload){
 		foreach($payload as $post){
 			$postData = json_decode(json_encode($post), true);
@@ -180,16 +183,17 @@ class TwitterAuth extends SocialNetwork {
 		}
 	}
 	private function savePost($postData){
-		//var_dump($postData);
+
 		$post = new Post($postData['id']);
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
-		$media = $postData['entities']['media'][0]['media_url'];
-		$post->setImagUrl($media);
-		$post->setLikesCount($postData['favorite_count']);
-		$post->savePost();
 
+			$media = $postData['entities']['media'][0]['media_url'];
+			$post->setMetaData('post_img', $media);
+
+		$post->setMetaData('post_likes', $postData['favorite_count']);
+		$post->savePost();
 
 	}
 

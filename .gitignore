@@ -2,4 +2,5 @@
 # ignore all logs
 *.log
 # ignore config file
-wp-config.php
+C:\xampp\htdocs\socializer\wp-config.php
+
