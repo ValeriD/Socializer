@@ -1,1 +1,5 @@
 /vendor/
+# ignore all logs
+*.log
+# ignore config file
+wp-config.php
