@@ -1082,3 +1082,393 @@ Stack trace:
 #3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
 #4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
 #5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[04-Mar-2020 17:53:37 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: No project ID was provided, and we were unable to detect a default project ID. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:234
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(100): Google\Cloud\BigQuery\BigQueryClient->detectProjectId(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(16): Google\Cloud\BigQuery\BigQueryClient->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htd in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[04-Mar-2020 17:57:16 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 403,
+    "message": "Request had insufficient authentication scopes.",
+    "errors": [
+      {
+        "message": "Insufficient Permission",
+        "domain": "global",
+        "reason": "insufficientPermissions"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\H in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[04-Mar-2020 17:58:35 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Google_Service_Bigquery_Resource_Datasets::listDatasets(), 0 passed in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 16 and at least 1 expected in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php:93
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(16): Google_Service_Bigquery_Resource_Datasets->listDatasets()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php on line 93
+[04-Mar-2020 18:00:27 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 403,
+    "message": "Request had insufficient authentication scopes.",
+    "errors": [
+      {
+        "message": "Insufficient Permission",
+        "domain": "global",
+        "reason": "insufficientPermissions"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\H in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[04-Mar-2020 18:02:55 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 403,
+    "message": "Request had insufficient authentication scopes.",
+    "errors": [
+      {
+        "message": "Insufficient Permission",
+        "domain": "global",
+        "reason": "insufficientPermissions"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\H in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[04-Mar-2020 18:04:34 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: invalid json token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Client.php:446
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(34): Google_Client->setAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(14): VDBigQuery->getClient()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Client.php on line 446
+[04-Mar-2020 18:07:47 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:11:05 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:15:16 UTC] PHP Warning:  file_get_contents(credentials.json): failed to open stream: No such file or directory in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 17
+[04-Mar-2020 18:15:18 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:15:33 UTC] PHP Warning:  file_get_contents(./credentials.json): failed to open stream: No such file or directory in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 17
+[04-Mar-2020 18:15:35 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:16:25 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:16:52 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:22:54 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:30:13 UTC] PHP Notice:  Undefined variable: projectId in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18
+[04-Mar-2020 18:30:14 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: No project ID was provided, and we were unable to detect a default project ID. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:234
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(100): Google\Cloud\BigQuery\BigQueryClient->detectProjectId(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[04-Mar-2020 18:30:33 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: No project ID was provided, and we were unable to detect a default project ID. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:234
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(100): Google\Cloud\BigQuery\BigQueryClient->detectProjectId(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[04-Mar-2020 18:31:07 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:32:33 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:39:55 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Goog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[04-Mar-2020 18:49:11 UTC] PHP Recoverable fatal error:  Object of class VDBigQuery could not be converted to string in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18
+[04-Mar-2020 18:49:30 UTC] PHP Recoverable fatal error:  Object of class VDBigQuery could not be converted to string in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18
+[04-Mar-2020 18:49:42 UTC] PHP Recoverable fatal error:  Object of class VDBigQuery could not be converted to string in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18
+[04-Mar-2020 18:50:14 UTC] PHP Recoverable fatal error:  Object of class VDBigQuery could not be converted to string in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18
+[04-Mar-2020 18:55:14 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 400,
+    "message": "Required parameter is missing",
+    "errors": [
+      {
+        "message": "Required parameter is missing",
+        "domain": "global",
+        "reason": "required"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(58): Google_Tas in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[04-Mar-2020 18:56:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Google_Service_Bigquery_Resource_Datasets::insert(), 1 passed in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 18 and at least 2 expected in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php:70
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\so in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php on line 70
+[04-Mar-2020 18:57:42 UTC] PHP Fatal error:  Uncaught Google_Exception: (insert) unknown parameter: 'datasetId' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php(74): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...', Object(Google_Service_Bigquery_Dataset), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php on line 147
+[04-Mar-2020 18:58:43 UTC] PHP Fatal error:  Uncaught Google_Exception: (insert) unknown parameter: 'datasetId' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php(74): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...', Object(Google_Service_Bigquery_Dataset), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php on line 147
+[04-Mar-2020 18:59:23 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 400,
+    "message": "Required parameter is missing",
+    "errors": [
+      {
+        "message": "Required parameter is missing",
+        "domain": "global",
+        "reason": "required"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(58): Google_Tas in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[04-Mar-2020 19:18:41 UTC] PHP Fatal error:  Uncaught Google_Exception: (insert) unknown parameter: 'datasetId' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php(74): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...', Object(Google_Service_Bigquery_Dataset), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php on line 147
+[04-Mar-2020 19:39:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function twentynineteen_post_thumbnail() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php:10
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\template-loader.php(98): include()
+#1 C:\xampp\htdocs\socializer\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 10
