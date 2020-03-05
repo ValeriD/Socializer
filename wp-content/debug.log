@@ -1492,3 +1492,149 @@ Stack trace:
 [04-Mar-2020 20:28:01 UTC] PHP Notice:  Undefined index: 'media' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 189
 [04-Mar-2020 20:28:01 UTC] PHP Notice:  Undefined index: 'media' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 189
 [04-Mar-2020 20:30:16 UTC] PHP Notice:  Undefined variable: media in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 192
+[05-Mar-2020 12:48:33 UTC] PHP Fatal error:  Uncaught Google_Exception: (insert) unknown parameter: 'datasetId' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php(74): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...', Object(Google_Service_Bigquery_Dataset), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php on line 147
+[05-Mar-2020 12:48:55 UTC] PHP Fatal error:  Uncaught Google_Exception: (insert) unknown parameter: 'datasetId' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient-services\src\Google\Service\Bigquery\Resource\Datasets.php(74): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google_Service_Bigquery_Resource_Datasets->insert('socializer-2700...', Object(Google_Service_Bigquery_Dataset), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Service\Resource.php on line 147
+[05-Mar-2020 12:49:58 UTC] PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 400,
+    "message": "Required parameter is missing",
+    "errors": [
+      {
+        "message": "Required parameter is missing",
+        "domain": "global",
+        "reason": "required"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php:118
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Task\Runner.php(176): Google_Http_REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php(58): Google_Tas in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+[05-Mar-2020 12:55:55 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: No project ID was provided, and we were unable to detect a default project ID. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:234
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(100): Google\Cloud\BigQuery\BigQueryClient->detectProjectId(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(16): Google\Cloud\BigQuery\BigQueryClient->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htd in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[05-Mar-2020 12:56:42 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: No project ID was provided, and we were unable to detect a default project ID. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:234
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(100): Google\Cloud\BigQuery\BigQueryClient->detectProjectId(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(16): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 234
+[05-Mar-2020 13:01:55 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: Given keyfile path credentials.json does not exist in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:133
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(99): Google\Cloud\BigQuery\BigQueryClient->getKeyFile(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(16): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\s in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 133
+[05-Mar-2020 13:02:41 UTC] PHP Warning:  fopen(/data/my_data.csv): failed to open stream: No such file or directory in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 24
+[05-Mar-2020 13:02:42 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\NotFoundException: {
+  "error": {
+    "code": 404,
+    "message": "Not found: Dataset socializer-270013:my_dataset",
+    "errors": [
+      {
+        "message": "Not found: Dataset socializer-270013:my_dataset",
+        "domain": "global",
+        "reason": "notFound"
+      }
+    ],
+    "status": "NOT_FOUND"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Connection\Rest.php(239): Google\Cloud\BigQ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[05-Mar-2020 13:06:51 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Session.php on line 14
+[05-Mar-2020 13:07:47 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ConflictException: {
+  "error": {
+    "code": 409,
+    "message": "Already Exists: Dataset socializer-270013:SocializerDataset1",
+    "errors": [
+      {
+        "message": "Already Exists: Dataset socializer-270013:SocializerDataset1",
+        "domain": "global",
+        "reason": "duplicate"
+      }
+    ],
+    "status": "ALREADY_EXISTS"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Connection\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[05-Mar-2020 13:08:55 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Session.php on line 14
+[05-Mar-2020 13:10:10 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Session.php on line 14
+[05-Mar-2020 13:17:26 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Session.php on line 14
+[05-Mar-2020 13:17:33 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ConflictException: {
+  "error": {
+    "code": 409,
+    "message": "Already Exists: Table socializer-270013:SocializerDataset1.SocializerPosts",
+    "errors": [
+      {
+        "message": "Already Exists: Table socializer-270013:SocializerDataset1.SocializerPosts",
+        "domain": "global",
+        "reason": "duplicate"
+      }
+    ],
+    "status": "ALREADY_EXISTS"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cl in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[05-Mar-2020 13:21:17 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: A row must have a data key. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Table.php:629
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(28): Google\Cloud\BigQuery\Table->insertRows(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Table.php on line 629
+[05-Mar-2020 13:22:14 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: A row must have a data key. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Table.php:629
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(28): Google\Cloud\BigQuery\Table->insertRows(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(44): VDBigQuery->__construct()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Table.php on line 629

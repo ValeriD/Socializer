@@ -89,10 +89,11 @@ class User {
 		$this->password = $password;
 	}
 	public function loginUser(){
+		wp_login($this->username, $this->password);
 
 	}
 	public function registerUser(){
-
+		wp_create_user($this->username, $this->password, $this->email);
 	}
 
 

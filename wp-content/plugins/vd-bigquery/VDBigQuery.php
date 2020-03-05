@@ -1,51 +1,92 @@
 <?php
 
 
+use Google\Cloud\BigQuery\BigQueryClient;
 
 class VDBigQuery {
 
 	private $client;
-	private $service;
-	private $projectId = 'socializer-270013';
+	private $datasetId;
+	private $tableId;
 	/**
 	 * VDBigQuery constructor.
 	 */
 	public function __construct() {
+		//Authenticating the service account
+		$this->client = new BigQueryClient(array('keyFilePath' => __DIR__.'\credentials.json'));
 
-//		$this->client = $this->getClient();
-//		$this->service = new Google_Service_Bigquery($this->client);
-//		var_dump($this->service->datasets->listDatasets($this->projectId));
-//		$dataset = $this->service->datasets->insert($this->projectId, new Google_Service_Bigquery_Dataset(), ['datasetId'=>'dataset1']);
-//		var_dump(json_decode(json_encode($dataset), true));
-
+		//Default values:
+		$this->datasetId = 'SocializerDataset1';
+		$this->tableId = 'SocializerPosts';
 
 
 	}
-
-
-	private function getClient() {
-		$client = new Google_Client();
-		$client->setApplicationName( 'Socializer' );
-		$client->setScopes( Google_Service_Bigquery::BIGQUERY );
-		try {
-			$client->setAuthConfig( __DIR__ . '/credentials.json' );
-		} catch ( Google_Exception $e ) {
-		}
-		$client->setAccessType( 'offline' );
-		$client->setPrompt( 'select_account consent' );
-
-		if ( isset($_SESSION['google_token']) ) {
-			$accessToken = $_SESSION['google_token'];
-			$client->setAccessToken( $accessToken );
-		}
-		if ( $client->isAccessTokenExpired() ) {
-			if ( $client->getRefreshToken() ) {
-				$client->fetchAccessTokenWithRefreshToken();
-			}
-			$_SESSION['google_token'] = $client->getAccessToken();
-		}
-
-		return $client;
-
+	public function getDefaultDatasetId(){
+		return $this->datasetId;
 	}
+	public function getDefaultTableId(){
+		return $this->datasetId;
+	}
+	public static function registerDatasets(){
+		$vdbq = new VDBigQuery();
+		$vdbq->createDataset($vdbq->getDefaultDatasetId());
+		$vdbq->createTable($vdbq->getDefaultTableId(), $vdbq->getDefaultDatasetId());
+	}
+
+	public function getClient(){
+		return $this->client;
+	}
+
+	private function datasetExist($datasetId){
+		return $this->getClient()->dataset($datasetId)->exists();
+	}
+
+	private function createDataset($datasetId){
+		if(!$this->datasetExist($datasetId)) {
+			$this->getClient()->createDataset( $datasetId );
+		}
+	}
+
+	public function getDataset($datasetId){
+		if($this->datasetExist($datasetId)) {
+			return $this->getClient()->dataset( $datasetId );
+		}
+	}
+	private function deleteDataset($datasetId){
+		if($this->datasetExist($datasetId)){
+			$this->getDataset($datasetId)->delete();
+		}
+	}
+
+
+	private function tableExist($tableId, $datasetId){
+		return $this->getDataset($datasetId)->table($tableId)->exists();
+	}
+	private function createTable($tableId, $datasetId){
+		if(!$this->tableExist($tableId, $datasetId)) {
+			$this->getDataset($datasetId)->createTable( $tableId );
+		}
+	}
+	public function getTable($tableId, $datasetId){
+		if($this->tableExist($tableId, $datasetId)) {
+			return $this->getDataset($datasetId)->table( $tableId );
+		}
+	}
+	public function updateTable($tableId, $datasetId, $metadata){
+		if($this->tableExist($tableId, $datasetId)){
+			$this->getTable($tableId, $datasetId)->update($metadata);
+		}
+	}
+	private function deleteTable($tableId, $datasetId){
+		if($this->tableExist($tableId, $datasetId)){
+			$this->getTable($tableId, $datasetId)->delete();
+		}
+	}
+	public function addInTable($tableId, $datasetId, $row){
+		if($this->tableExist($tableId, $datasetId)){
+			$this->getTable($tableId, $datasetId)->insertRow($row);
+		}
+	}
+
+
 }

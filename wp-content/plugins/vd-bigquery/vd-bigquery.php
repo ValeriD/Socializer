@@ -41,7 +41,7 @@ register_deactivation_hook(__FILE__, 'deactivate');
 require_once 'vendor/autoload.php';
 require_once 'VDBigQuery.php';
 if(class_exists('VDBigQuery')){
-	new VDBigQuery();
+	VDBigQuery::registerDatasets();
 }
 
 

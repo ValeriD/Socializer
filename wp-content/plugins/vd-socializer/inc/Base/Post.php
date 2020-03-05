@@ -21,7 +21,7 @@ class Post {
 			'meta_input' => array()
 		);
 
-		$this->setMetaData('likesCount', 0);
+		$this->setMetaData('post_likes', 0);
 	}
 
 
