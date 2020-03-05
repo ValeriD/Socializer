@@ -19,6 +19,7 @@ class TwitterAuth extends SocialNetwork {
 	 * @var TwitterOAuth
 	 */
 	protected $client;
+	private $bqclient;
 
 
 	/**
@@ -33,6 +34,7 @@ class TwitterAuth extends SocialNetwork {
 			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
 			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
+			$this->bqclient = new \VDBigQuery();
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
 	}
@@ -161,7 +163,8 @@ class TwitterAuth extends SocialNetwork {
 			'username' => $data['screen_name'],
 			'name' => $data['name'],
 			'description' => $data['description'],
-			'location' => $data['location']
+			'location' => $data['location'],
+			'social_network' => 'twitter'
 		);
 	}
 
@@ -189,12 +192,22 @@ class TwitterAuth extends SocialNetwork {
 		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
 
-			$media = $postData['entities']['media'][0]['media_url'];
-			$post->setMetaData('post_img', $media);
-
+		$post->setMetaData('social_id', $postData['id']);
+		$media = $postData['entities']['media'][0]['media_url'];
+		$post->setMetaData('post_img', $media);
 		$post->setMetaData('post_likes', $postData['favorite_count']);
 		$post->savePost();
-
+		$this->bqclient->addInTable($this->bqclient->getTableId(), $this->bqclient->getDatasetId(), $this->serializeDataForBQ($post));
+	}
+	private function serializeDataForBQ(Post $post){
+		return [
+			'social_id' => $post->getMetaData('social_id'),
+			'post_text' => $post->getContent(),
+			'post_author' => get_user_meta($post->getAuthor(), 'username', true),
+			'post_category' => get_user_meta($post->getAuthor(), 'social_network', true),
+			'post_img' => $post->getMetaData('post_img'),
+			'post_likes' => $post->getMetaData('post_likes')
+		];
 	}
 
 	/**

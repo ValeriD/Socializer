@@ -8,6 +8,7 @@ class VDBigQuery {
 	private $client;
 	private $datasetId;
 	private $tableId;
+	private $schema;
 	/**
 	 * VDBigQuery constructor.
 	 */
@@ -16,21 +17,50 @@ class VDBigQuery {
 		$this->client = new BigQueryClient(array('keyFilePath' => __DIR__.'\credentials.json'));
 
 		//Default values:
-		$this->datasetId = 'SocializerDataset1';
-		$this->tableId = 'SocializerPosts';
+		$this->setDatasetId('SocializerDataset1');
+		$this->setTableId( 'SocializerPosts');
+		$fields = [
+			['name' => 'social_id', 'type' => 'integer', 'mode' => 'required'],
+			['name' => 'post_text', 'type' => 'string', 'mode' => 'nullable'],
+			['name' => 'post_author', 'type' => 'string', 'mode' => 'nullable'],
+			['name' => 'post_category', 'type' => 'string', 'mode' => 'nullable'],
+			['name' => 'post_likes', 'type' => 'integer', 'mode' => 'nullable'],
+			['name' => 'post_img', 'type' => 'string', 'mode' => 'nullable']
+		];
+		$this->setSchema($fields);
 
 
 	}
-	public function getDefaultDatasetId(){
-		return $this->datasetId;
-	}
-	public function getDefaultTableId(){
-		return $this->datasetId;
-	}
+
 	public static function registerDatasets(){
 		$vdbq = new VDBigQuery();
-		$vdbq->createDataset($vdbq->getDefaultDatasetId());
-		$vdbq->createTable($vdbq->getDefaultTableId(), $vdbq->getDefaultDatasetId());
+		$vdbq->createDataset($vdbq->getDatasetId());
+		$vdbq->createTable($vdbq->getTableId(), $vdbq->getDatasetId());
+	}
+
+	public function getSchema() {
+		return $this->schema;
+	}
+
+	public function setSchema( $fields ) {
+		$this->schema = ['fields'=>$fields];
+	}
+
+
+
+	public function setDatasetId($datasetId){
+		$this->datasetId=$datasetId;
+	}
+
+	public function setTableId( $tableId ) {
+		$this->tableId = $tableId;
+	}
+
+	public function getDatasetId(){
+		return $this->datasetId;
+	}
+	public function getTableId(){
+		return $this->datasetId;
 	}
 
 	public function getClient(){
@@ -62,9 +92,12 @@ class VDBigQuery {
 	private function tableExist($tableId, $datasetId){
 		return $this->getDataset($datasetId)->table($tableId)->exists();
 	}
+
 	private function createTable($tableId, $datasetId){
 		if(!$this->tableExist($tableId, $datasetId)) {
-			$this->getDataset($datasetId)->createTable( $tableId );
+			$this->getDataset($datasetId)->createTable( $tableId, ['schema' => $this->getSchema()] );
+		}else {
+			$this->getTable($tableId, $datasetId)->update(['schema' => $this->getSchema()]);
 		}
 	}
 	public function getTable($tableId, $datasetId){
@@ -72,11 +105,7 @@ class VDBigQuery {
 			return $this->getDataset($datasetId)->table( $tableId );
 		}
 	}
-	public function updateTable($tableId, $datasetId, $metadata){
-		if($this->tableExist($tableId, $datasetId)){
-			$this->getTable($tableId, $datasetId)->update($metadata);
-		}
-	}
+
 	private function deleteTable($tableId, $datasetId){
 		if($this->tableExist($tableId, $datasetId)){
 			$this->getTable($tableId, $datasetId)->delete();
@@ -84,7 +113,14 @@ class VDBigQuery {
 	}
 	public function addInTable($tableId, $datasetId, $row){
 		if($this->tableExist($tableId, $datasetId)){
-			$this->getTable($tableId, $datasetId)->insertRow($row);
+			//var_dump($row);
+			$insert = $this->getTable($tableId, $datasetId)->insertRows([['data' => $row]]);
+			if($insert->isSuccessful()){
+				var_dump("Success");
+			}
+			else{
+				var_dump($insert->info());
+			}
 		}
 	}
 

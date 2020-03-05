@@ -86,11 +86,13 @@ class Post {
 	 *
 	 */
 	public function savePost(){
-		$error = wp_insert_post($this->getData());
+
+		$error = wp_insert_post( $this->getData() );
 		if(!$error){
 			die('Unable to save the post');
 		}
 	}
+
 
 
 
