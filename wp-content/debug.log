@@ -2943,3 +2943,21 @@ Stack trace:
 #4 [internal function]: do_shortcode_tag(Array)
 #5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 209
 [08-Mar-2020 21:51:58 UTC] PHP Parse error:  syntax error, unexpected '$saved' (T_VARIABLE) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 191
+[08-Mar-2020 22:19:12 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\BadRequestException: {
+  "error": {
+    "code": 400,
+    "message": "Provided Schema does not match Table socializer-270013:SocializerDataset1.SocializerDataset1. Field post_author has changed type from STRING to INTEGER",
+    "errors": [
+      {
+        "message": "Provided Schema does not match Table socializer-270013:SocializerDataset1.SocializerDataset1. Field post_author has changed type from STRING to INTEGER",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94):  in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362

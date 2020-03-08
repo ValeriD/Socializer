@@ -126,6 +126,7 @@ class TwitterAuth extends SocialNetwork {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 		$this->setAccessToken($accessToken);
+
 	}
 
 	/**
@@ -150,13 +151,13 @@ class TwitterAuth extends SocialNetwork {
 	{
 		$_SESSION['TwitterPayload'] = $payload;
 
-		update_user_meta(get_current_user_id(), 'twitter_account', $this->serializeUserData());
+		update_user_meta(get_current_user_id(), 'twitter_account', $this->serializeUserData($payload));
 
-		return ;
+		return;
 	}
 
-	private function serializeUserData(){
-		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
+	private function serializeUserData($payload){
+		$data =  json_decode(json_encode($payload),true);
 		return array(
 			'username' => $data['screen_name'],
 			'name' => $data['name'],

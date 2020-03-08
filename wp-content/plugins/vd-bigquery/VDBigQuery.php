@@ -2,6 +2,7 @@
 
 
 use Google\Cloud\BigQuery\BigQueryClient;
+use Google\Cloud\Core\ExponentialBackoff;
 
 class VDBigQuery {
 
@@ -22,7 +23,7 @@ class VDBigQuery {
 		$fields = [
 			['name' => 'social_id', 'type' => 'integer', 'mode' => 'required'],
 			['name' => 'post_text', 'type' => 'string', 'mode' => 'nullable'],
-			['name' => 'post_author', 'type' => 'string', 'mode' => 'nullable'],
+			['name' => 'post_author', 'type' => 'integer', 'mode' => 'nullable'],
 			['name' => 'post_category', 'type' => 'string', 'mode' => 'nullable'],
 			['name' => 'post_likes', 'type' => 'integer', 'mode' => 'nullable'],
 			['name' => 'post_shares', 'type' => 'integer', 'mode' => 'nullable'],
@@ -47,7 +48,9 @@ class VDBigQuery {
 		$this->schema = ['fields'=>$fields];
 	}
 
-
+	public function getDatasetId(){
+		return $this->datasetId;
+	}
 
 	public function setDatasetId($datasetId){
 		$this->datasetId=$datasetId;
@@ -57,9 +60,6 @@ class VDBigQuery {
 		$this->tableId = $tableId;
 	}
 
-	public function getDatasetId(){
-		return $this->datasetId;
-	}
 	public function getTableId(){
 		return $this->datasetId;
 	}
@@ -118,6 +118,20 @@ class VDBigQuery {
 			$insert = $this->getTable($tableId, $datasetId)->insertRows([['data' => $row]]);
 		}
 	}
+
+	public function runQuery($sql){
+		$jobConfig = $this->client->query($sql);
+		$job = $this->client->startQuery($jobConfig);
+
+		$backOff = new ExponentialBackoff(10);
+		try {
+			$backOff->execute( $job->reload() );
+		} catch ( Exception $e ) {
+		}
+
+		return $job->queryResults();
+	}
+
 
 
 }

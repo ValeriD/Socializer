@@ -43,5 +43,8 @@ require_once 'VDBigQuery.php';
 if(class_exists('VDBigQuery')){
 	VDBigQuery::registerDatasets();
 }
+if(class_exists('VDVisualization')){
+	new VDVisualization();
+}
 
 
