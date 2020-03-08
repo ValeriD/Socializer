@@ -19,7 +19,7 @@ class TwitterAuth extends SocialNetwork {
 	 * @var TwitterOAuth
 	 */
 	protected $client;
-	private $bqclient;
+	private $bqClient;
 
 
 	/**
@@ -34,7 +34,7 @@ class TwitterAuth extends SocialNetwork {
 			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
 			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
-			$this->bqclient = new \VDBigQuery();
+			$this->bqClient = new \VDBigQuery();
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
 	}
@@ -126,7 +126,6 @@ class TwitterAuth extends SocialNetwork {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 		$this->setAccessToken($accessToken);
-
 	}
 
 	/**
@@ -140,7 +139,6 @@ class TwitterAuth extends SocialNetwork {
 		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 
 		$payload = $connection->get('account/verify_credentials', ['include_email' => 'true']);
-		// don't forgot the qoutes over the true.
 
 		return $payload;
 	}
@@ -152,12 +150,12 @@ class TwitterAuth extends SocialNetwork {
 	{
 		$_SESSION['TwitterPayload'] = $payload;
 
-		update_user_meta(get_current_user_id(), 'twitter_account', $this->getUserDataInArray());
+		update_user_meta(get_current_user_id(), 'twitter_account', $this->serializeUserData());
 
 		return ;
 	}
 
-	private function getUserDataInArray(){
+	private function serializeUserData(){
 		$data =  json_decode(json_encode($_SESSION['TwitterPayload']),true);
 		return array(
 			'username' => $data['screen_name'],
@@ -187,7 +185,15 @@ class TwitterAuth extends SocialNetwork {
 	}
 	private function savePost($postData){
 
-		$post = new Post($postData['id']);
+		$post = $this->serializeDataForDB($postData);
+		$saved = $post->savePost();
+
+		if(class_exists('VDBigQuery') and $saved) {
+			$this->bqClient->addInTable( $this->bqClient->getTableId(), $this->bqClient->getDatasetId(), $this->serializeDataForBQ( $post ) );
+		}
+	}
+	public function serializeDataForDB($postData){
+		$post = new Post();
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
@@ -196,17 +202,18 @@ class TwitterAuth extends SocialNetwork {
 		$media = $postData['entities']['media'][0]['media_url'];
 		$post->setMetaData('post_img', $media);
 		$post->setMetaData('post_likes', $postData['favorite_count']);
-		$post->savePost();
-		$this->bqclient->addInTable($this->bqclient->getTableId(), $this->bqclient->getDatasetId(), $this->serializeDataForBQ($post));
+		$post->setMetaData('post_shares', $postData['retweet_count']);
+		return $post;
 	}
 	private function serializeDataForBQ(Post $post){
 		return [
 			'social_id' => $post->getMetaData('social_id'),
 			'post_text' => $post->getContent(),
-			'post_author' => get_user_meta($post->getAuthor(), 'username', true),
-			'post_category' => get_user_meta($post->getAuthor(), 'social_network', true),
+			'post_author' => get_current_user_id(),
+			'post_category' => 'twitter',
 			'post_img' => $post->getMetaData('post_img'),
-			'post_likes' => $post->getMetaData('post_likes')
+			'post_likes' => $post->getMetaData('post_likes'),
+			'post_shares' => $post->getMetaData('post_shares')
 		];
 	}
 
@@ -220,7 +227,7 @@ class TwitterAuth extends SocialNetwork {
 
 				$userData = $this->getUserData();
 				$posts = $this->getUserPosts();
-				//var_dump($posts);
+
 				$this->saveUserData( $userData );
 				$this->savePosts($posts);
 			}
@@ -236,6 +243,9 @@ class TwitterAuth extends SocialNetwork {
 			} else {
 				include( PLUGIN_PATH . '/inc/Twitter/twitterAccount.php' );
 			}
+		}
+		else{
+			wp_redirect(home_url('/login'));
 		}
 	}
 

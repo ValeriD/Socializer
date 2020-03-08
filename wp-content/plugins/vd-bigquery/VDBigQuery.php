@@ -25,6 +25,7 @@ class VDBigQuery {
 			['name' => 'post_author', 'type' => 'string', 'mode' => 'nullable'],
 			['name' => 'post_category', 'type' => 'string', 'mode' => 'nullable'],
 			['name' => 'post_likes', 'type' => 'integer', 'mode' => 'nullable'],
+			['name' => 'post_shares', 'type' => 'integer', 'mode' => 'nullable'],
 			['name' => 'post_img', 'type' => 'string', 'mode' => 'nullable']
 		];
 		$this->setSchema($fields);
@@ -115,12 +116,6 @@ class VDBigQuery {
 		if($this->tableExist($tableId, $datasetId)){
 			//var_dump($row);
 			$insert = $this->getTable($tableId, $datasetId)->insertRows([['data' => $row]]);
-			if($insert->isSuccessful()){
-				var_dump("Success");
-			}
-			else{
-				var_dump($insert->info());
-			}
 		}
 	}
 

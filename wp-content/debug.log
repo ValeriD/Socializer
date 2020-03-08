@@ -2921,3 +2921,25 @@ Stack trace:
 [05-Mar-2020 23:30:10 UTC] PHP Notice:  Undefined index: social_id in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 103
 [05-Mar-2020 23:30:12 UTC] PHP Notice:  Undefined variable: accessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 128
 [05-Mar-2020 23:30:12 UTC] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\TwitterOAuth.php on line 542
+[08-Mar-2020 21:32:51 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 93
+[08-Mar-2020 21:34:14 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 93
+[08-Mar-2020 21:35:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Inc\Base\post_exists() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php:89
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(199): Inc\Base\Post->savePost()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(184): Inc\Twitter\TwitterAuth->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(227): Inc\Twitter\TwitterAuth->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(twitte...', 'do_shortcode_ta...', '[twitter]\n')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n')
+#7 C:\xampp\htdocs\socializer\wp-includes\plugin.p in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 89
+[08-Mar-2020 21:50:52 UTC] PHP Notice:  Undefined variable: post in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 193
+[08-Mar-2020 21:50:52 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Inc\Twitter\TwitterAuth::serializeDataForBQ() must be an instance of Inc\Base\Post, null given, called in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 193 and defined in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:209
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(193): Inc\Twitter\TwitterAuth->serializeDataForBQ(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(184): Inc\Twitter\TwitterAuth->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php(233): Inc\Twitter\TwitterAuth->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\Twitter\TwitterAuth->renderShortcode('', '', 'twitter')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 209
+[08-Mar-2020 21:51:58 UTC] PHP Parse error:  syntax error, unexpected '$saved' (T_VARIABLE) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 191

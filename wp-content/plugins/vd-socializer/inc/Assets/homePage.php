@@ -32,7 +32,7 @@ get_header();
 
 				<?php if(get_post_meta(get_the_ID(), 'post_img', true)) { ?>
 					 <img src="<?php echo get_post_meta( get_the_ID(), 'post_img', true ); ?>" style="display: block; margin-left: auto; margin-right: auto;width: 600px%; height: 400px">
-					 <p>Likes: <?php echo get_post_meta(get_the_ID(), 'post_likes', true); ?></p>
+					 <p>Likes: <?php echo get_post_meta(get_the_ID(), 'post_likes', true); ?> Shares: <?php echo get_post_meta(get_the_ID(), 'post_shares', true);?></p>
 					 <?php
 				 }
 

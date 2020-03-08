@@ -8,13 +8,13 @@ class Post {
 
 	private $data;
 	private $metaData;
-	/**
-	 * Post constructor.
-	 *
-	 * @param $postId
-	 */
-	public function __construct( $postId ) {
+
+
+	public function __construct() {
+		require_once ABSPATH . '/wp-admin/includes/post.php';
+
 		$this->metaData =array();
+
 		$this->data = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
@@ -24,6 +24,9 @@ class Post {
 		$this->setMetaData('post_likes', 0);
 	}
 
+	private function setId($postId){
+		$this->data['ID'] = $postId;
+	}
 
 	/**
 	 * @return mixed
@@ -86,11 +89,18 @@ class Post {
 	 *
 	 */
 	public function savePost(){
-
-		$error = wp_insert_post( $this->getData() );
-		if(!$error){
-			die('Unable to save the post');
+		$postId = post_exists($this->getTitle(), $this->getContent(), null, $this->getData()['post_type']);
+		if($postId > 0){
+			$this->setId($postId);
+			$error = wp_update_post($this->data);
+		}else {
+			$error =  wp_insert_post( $this->getData() );
 		}
+		return $error;
+	}
+
+	public function getMeta(){
+		return $this->data['meta_input'];
 	}
 
 
