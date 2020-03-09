@@ -34,7 +34,9 @@ class TwitterAuth extends SocialNetwork {
 			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
 			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
-			$this->bqClient = new \VDBigQuery();
+			if(class_exists('VDBigQuery')) {
+				$this->bqClient = new \VDBigQuery();
+			}
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
 	}

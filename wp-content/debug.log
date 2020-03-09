@@ -2961,3 +2961,79 @@ Stack trace:
 Stack trace:
 #0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
 #1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94):  in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:53:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:53:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[09-Mar-2020 19:53:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[09-Mar-2020 19:54:15 UTC] PHP Fatal error:  Uncaught Error: Class 'VDBigQuery' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:37
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(46): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(63): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 37
+[09-Mar-2020 19:56:18 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 95
+[09-Mar-2020 20:07:42 UTC] PHP Fatal error:  Uncaught Error: Class 'VDVisualization' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php:62
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once()
+#1 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php on line 62
+[09-Mar-2020 20:08:14 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Google\Cloud\Core\ExponentialBackoff::execute() must be callable, array given, called in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 128 and defined in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ExponentialBackoff.php:71
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(128): Google\Cloud\Core\ExponentialBackoff->execute(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php(19): VDBigQuery->runQuery('SELECT post_cat...')
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): VDVisualization->usageByCategory('', '', 'usageByCategory')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(usageB...', 'do_shortcode_ta...', '\n[usageByCatego...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ExponentialBackoff.php on line 71
+[09-Mar-2020 20:08:44 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php on line 20
+[09-Mar-2020 20:10:08 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Google\Cloud\Core\ExponentialBackoff::execute() must be callable, array given, called in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 128 and defined in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ExponentialBackoff.php:71
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(128): Google\Cloud\Core\ExponentialBackoff->execute(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php(19): VDBigQuery->runQuery('SELECT post_cat...')
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): VDVisualization->usageByCategory('', '', 'usageByCategory')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(usageB...', 'do_shortcode_ta...', '\n[usageByCatego...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ExponentialBackoff.php on line 71
+[09-Mar-2020 20:14:08 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 128
+[09-Mar-2020 20:45:44 UTC] PHP Notice:  Undefined variable: job in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 134
+[09-Mar-2020 20:47:47 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php on line 134
+[09-Mar-2020 20:48:32 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\BadRequestException: {
+  "error": {
+    "code": 400,
+    "message": "SELECT list expression references column post_category which is neither grouped nor aggregated at [1:8]",
+    "errors": [
+      {
+        "message": "SELECT list expression references column post_category which is neither grouped nor aggregated at [1:8]",
+        "domain": "global",
+        "reason": "invalidQuery",
+        "location": "q",
+        "locationType": "parameter"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrap in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362

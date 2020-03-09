@@ -119,17 +119,11 @@ class VDBigQuery {
 		}
 	}
 
-	public function runQuery($sql){
+	public function vdRunQuery($sql){
 		$jobConfig = $this->client->query($sql);
-		$job = $this->client->startQuery($jobConfig);
+		return  $this->client->runQuery($jobConfig);
 
-		$backOff = new ExponentialBackoff(10);
-		try {
-			$backOff->execute( $job->reload() );
-		} catch ( Exception $e ) {
-		}
 
-		return $job->queryResults();
 	}
 
 

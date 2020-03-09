@@ -28,8 +28,23 @@ if(!defined('ABSPATH')){
 	die("Silence is golden");
 }
 
+function createPage(){
+	$page = array(
+		'post_type' => 'page',
+		'post_title' => 'Statistics',
+		'post_name' => 'statistics',
+		'post_status' => 'publish',
+		'guid' => 'https://socializer.com/statistics',
+		'post_author' => get_current_user_id()
+
+	);
+	wp_insert_post($page);
+
+}
+
 function activate(){
 	flush_rewrite_rules();
+	createPage();
 }
 register_activation_hook(__FILE__, 'activate');
 
@@ -40,6 +55,7 @@ register_deactivation_hook(__FILE__, 'deactivate');
 
 require_once 'vendor/autoload.php';
 require_once 'VDBigQuery.php';
+require_once 'VDVisualization.php';
 if(class_exists('VDBigQuery')){
 	VDBigQuery::registerDatasets();
 }
