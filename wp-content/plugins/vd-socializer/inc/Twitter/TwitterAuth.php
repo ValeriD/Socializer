@@ -206,6 +206,8 @@ class TwitterAuth extends SocialNetwork {
 		$post->setMetaData('post_img', $media);
 		$post->setMetaData('post_likes', $postData['favorite_count']);
 		$post->setMetaData('post_shares', $postData['retweet_count']);
+		$date = new \DateTime($postData['created_at']);
+		$post->setMetaData('post_date', $date);
 		return $post;
 	}
 	private function serializeDataForBQ(Post $post){
@@ -216,7 +218,8 @@ class TwitterAuth extends SocialNetwork {
 			'post_category' => 'twitter',
 			'post_img' => $post->getMetaData('post_img'),
 			'post_likes' => $post->getMetaData('post_likes'),
-			'post_shares' => $post->getMetaData('post_shares')
+			'post_shares' => $post->getMetaData('post_shares'),
+			'post_date' => $post->getMetaData('post_date')
 		];
 	}
 

@@ -3037,3 +3037,25 @@ Stack trace:
 Stack trace:
 #0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
 #1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrap in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[10-Mar-2020 22:36:43 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 95
+[10-Mar-2020 22:53:45 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 210
+[10-Mar-2020 23:02:24 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\BadRequestException: {
+  "error": {
+    "code": 400,
+    "message": "Provided Schema does not match Table socializer-270013:SocializerDataset1.SocializerDataset1. Field post_date has changed type from TIMESTAMP to DATETIME",
+    "errors": [
+      {
+        "message": "Provided Schema does not match Table socializer-270013:SocializerDataset1.SocializerDataset1. Field post_date has changed type from TIMESTAMP to DATETIME",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(9 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[10-Mar-2020 23:35:06 UTC] PHP Warning:  date() expects parameter 2 to be int, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php on line 29
+[10-Mar-2020 23:35:06 UTC] PHP Warning:  date() expects parameter 2 to be int, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php on line 29

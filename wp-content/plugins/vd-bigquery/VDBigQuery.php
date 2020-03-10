@@ -27,7 +27,8 @@ class VDBigQuery {
 			['name' => 'post_category', 'type' => 'string', 'mode' => 'nullable'],
 			['name' => 'post_likes', 'type' => 'integer', 'mode' => 'nullable'],
 			['name' => 'post_shares', 'type' => 'integer', 'mode' => 'nullable'],
-			['name' => 'post_img', 'type' => 'string', 'mode' => 'nullable']
+			['name' => 'post_img', 'type' => 'string', 'mode' => 'nullable'],
+			['name' => 'post_date', 'type' => 'datetime', 'mode' => 'nullable']
 		];
 		$this->setSchema($fields);
 
