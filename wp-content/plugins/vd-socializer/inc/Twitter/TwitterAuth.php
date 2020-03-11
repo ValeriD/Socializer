@@ -162,7 +162,7 @@ class TwitterAuth extends SocialNetwork {
 			'name' => $data['name'],
 			'description' => $data['description'],
 			'location' => $data['location'],
-			'social_network' => 'twitter'
+			'user_img' => $data['profile_image_url']
 		);
 	}
 

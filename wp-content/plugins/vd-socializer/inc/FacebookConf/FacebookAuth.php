@@ -44,25 +44,14 @@ class FacebookAuth extends SocialNetwork {
 		}
 	}
 
-	public function renderShortcode(){
-		if(isset($_SESSION['facebook_access_token'])) {
-			$this->client->setDefaultAccessToken($_SESSION['facebook_access_token']);
-			$userData = $this->getUserData();
-			$posts = $this->getUserPosts();
-			$html = '<p><a href="'.PLUGIN_URL.'/inc/FacebookConf/facebookLogout.php">Logout</a></p>';
-		}else {
-			$html = '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';
 
-		}
-		return $html;
-	}
 
 
 	public function apiInit(){
 			return new Facebook( [
 				'app_id'                => $this->getAppId(),
 				'app_secret'            => $this->getAppSecret(),
-				'default_graph_version' => "v2.8",
+				'default_graph_version' => "v5.0",
 			] );
 	}
 
@@ -91,7 +80,7 @@ class FacebookAuth extends SocialNetwork {
 
 	public function getUserData() {
 		try {
-			$this->response = $this->client->get('/me?fields=email,first_name,last_name,verified,picture,gender');
+			$this->response = $this->client->get('/me?fields=email,first_name,last_name,name,picture');
 			$this->userNode = $this->response->getGraphNode();
 		} catch (FacebookResponseException $e) {
 			die('Graph phase 1: error in processing your request while fetching token'); // you can add here your own error handling
@@ -103,25 +92,46 @@ class FacebookAuth extends SocialNetwork {
 	}
 
 	protected function saveUserData( $payload ) {
-
+		update_user_meta(get_current_user_id(), 'facebook_account' ,$this->serializeUserData($payload));
 	}
 
 	protected function serializeUserData( $payload ) {
-		// TODO: Implement serializeUserData() method.
+		return array(
+			'name' => $payload['name'],
+			'social_id' => $payload['id'],
+			'email'=>$payload['email'],
+			'user_img'=>$payload['picture']['url']
+		);
 	}
 
 	protected function getUserPosts() {
 		$response = $this->client->get('/me/feed');
 		$graphNode = $response->getGraphEdge();
-		var_dump($graphNode);
+		//var_dump($graphNode);
 		return $graphNode;
 	}
 
 	public function serializeDataForDB( $postData, Post $post ) {
-		// TODO: Implement serializeDataForDB() method.
+
 	}
 
 	protected function serializeDataForBQ( Post $post ) {
 		// TODO: Implement serializeDataForBQ() method.
+	}
+
+	public function renderShortcode(){
+		if(isset($_SESSION['facebook_access_token'])) {
+			$this->client->setDefaultAccessToken($_SESSION['facebook_access_token']);
+			$userData = $this->getUserData();
+			$posts = $this->getUserPosts();
+
+			$this->saveUserData($userData->asArray());
+			//$this->savePosts($posts);
+
+			include( PLUGIN_PATH . '/inc/FacebookConf/facebookAccount.php' );
+		}else {
+			return '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';
+
+		}
 	}
 }

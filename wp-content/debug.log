@@ -3175,3 +3175,15 @@ Stack trace:
 #1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(289): Facebook\GraphNodes\GraphNodeFactory->makeGraphNode(NULL)
 #2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(115): Facebook\FacebookResponse->getGraphNode()
 #3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(51): Inc\FacebookConf\Faceb in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\GraphNodeFactory.php on line 224
+[11-Mar-2020 22:29:12 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:30:18 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:30:38 UTC] PHP Notice:  Undefined index: items in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 129
+[11-Mar-2020 22:30:38 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:30:58 UTC] PHP Notice:  Undefined index: items in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\Collection.php on line 201
+[11-Mar-2020 22:30:58 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:31:57 UTC] PHP Notice:  Undefined index: items in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\Collection.php on line 201
+[11-Mar-2020 22:31:57 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:32:24 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:35:52 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:36:24 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[11-Mar-2020 22:36:46 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
