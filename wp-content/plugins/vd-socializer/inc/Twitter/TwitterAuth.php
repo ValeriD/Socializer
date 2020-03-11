@@ -19,7 +19,6 @@ class TwitterAuth extends SocialNetwork {
 	 * @var TwitterOAuth
 	 */
 	protected $client;
-	private $bqClient;
 
 
 	/**
@@ -34,9 +33,7 @@ class TwitterAuth extends SocialNetwork {
 			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
 			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
-			if(class_exists('VDBigQuery')) {
-				$this->bqClient = new \VDBigQuery();
-			}
+
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
 	}
@@ -158,7 +155,7 @@ class TwitterAuth extends SocialNetwork {
 		return;
 	}
 
-	private function serializeUserData($payload){
+	protected function serializeUserData($payload){
 		$data =  json_decode(json_encode($payload),true);
 		return array(
 			'username' => $data['screen_name'],
@@ -170,7 +167,7 @@ class TwitterAuth extends SocialNetwork {
 	}
 
 
-	private function getUserPosts(){
+	protected function getUserPosts(){
 		$accessToken = $this->getAccessToken();
 
 		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
@@ -179,24 +176,9 @@ class TwitterAuth extends SocialNetwork {
 	}
 
 
-	private function savePosts($payload){
-		foreach($payload as $post){
-			$postData = json_decode(json_encode($post), true);
-			$this->savePost($postData);
 
-		}
-	}
-	private function savePost($postData){
+	public function serializeDataForDB($postData,Post $post){
 
-		$post = $this->serializeDataForDB($postData);
-		$saved = $post->savePost();
-
-		if(class_exists('VDBigQuery') and $saved) {
-			$this->bqClient->addInTable( $this->bqClient->getTableId(), $this->bqClient->getDatasetId(), $this->serializeDataForBQ( $post ) );
-		}
-	}
-	public function serializeDataForDB($postData){
-		$post = new Post();
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
@@ -208,9 +190,8 @@ class TwitterAuth extends SocialNetwork {
 		$post->setMetaData('post_shares', $postData['retweet_count']);
 		$date = new \DateTime($postData['created_at']);
 		$post->setMetaData('post_date', $date);
-		return $post;
 	}
-	private function serializeDataForBQ(Post $post){
+	protected function serializeDataForBQ(Post $post){
 		return [
 			'social_id' => $post->getMetaData('social_id'),
 			'post_text' => $post->getContent(),

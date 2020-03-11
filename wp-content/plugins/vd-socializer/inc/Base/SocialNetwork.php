@@ -9,9 +9,10 @@ abstract class SocialNetwork{
 	private $clientCallback;
 	private $app_id;
 	private $app_secret;
-
-
 	private $accessToken;
+	private $bqClient;
+
+
 
 	/**
 	 * SocialNetwork constructor.
@@ -24,6 +25,9 @@ abstract class SocialNetwork{
 		$this->clientCallback = $clientCallback;
 		$this->app_id         = $app_id;
 		$this->app_secret     = $app_secret;
+		if(class_exists('VDBigQuery')) {
+			$this->bqClient = new \VDBigQuery();
+		}
 	}
 	/**
 	 * @return string
@@ -80,16 +84,49 @@ abstract class SocialNetwork{
 	public function setAccessToken( $accessToken ) {
 		$this->accessToken = $accessToken;
 	}
+	/**
+	 * @return \VDBigQuery
+	 */
+	public function getBqClient() {
+		return $this->bqClient;
+	}
+
+	/**
+	 * @param \VDBigQuery $bqClient
+	 */
+	public function setBqClient( $bqClient ) {
+		$this->bqClient = $bqClient;
+	}
 
 	protected abstract function generateAccessToken();
-
-	protected abstract function storeToken();
 
 	protected abstract function getLoginUrl();
 
 	public abstract function getUserData();
-
 	protected abstract function saveUserData($payload);
+	protected abstract function serializeUserData($payload);
+
+
+	protected abstract function getUserPosts();
+	protected function savePosts($payload){
+		foreach($payload as $post){
+			$postData = json_decode(json_encode($post), true);
+			$this->savePost($postData);
+
+		}
+	}
+	protected function savePost($postData){
+		$post = new Post();
+		$this->serializeDataForDB($postData, $post);
+		$saved = $post->savePost();
+
+		if(class_exists('VDBigQuery') and $saved) {
+			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
+		}
+	}
+
+	public abstract function serializeDataForDB($postData,Post $post);
+	protected abstract function serializeDataForBQ(Post $post);
 
 	public abstract function renderShortcode();
 

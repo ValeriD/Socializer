@@ -1,4 +1,6 @@
 <?php
+include_once '../../vendor/autoload.php';
+require 'C:\xampp\htdocs\socializer\wp-config.php';
 
 use Inc\FacebookConf\FacebookAuth;
 
@@ -8,18 +10,7 @@ $facebook->apiInit();
 
 if (isset($_GET['code'])) {
 
-	$graph = $facebook ->getGraph();
-	$_SESSION['FacebookPayload'] = $graph; //saving facebook fetched data into session.
-}?>
-
-<div>
-	<?php
-
-		$payload = $_SESSION['FacebookPayload']; // payload is an array.
-		var_dump($payload);
-		echo '<br> <a href="logout.php">Log Out!</a>';
-
-
-	?>
-</div>
-
+    $accessToken = $facebook->generateAccessToken();
+}
+wp_redirect(home_url('accounts'));
+?>

@@ -1,8 +1,5 @@
 <?php
-include_once '../../vendor/autoload.php';
-require 'C:\xampp\htdocs\socializer\wp-config.php';
-use Inc\FacebookConf\FacebookAuth;
+require_once 'C:\xampp\htdocs\socializer\wp-load.php';
 
-$facebook = new FacebookAuth();
-$facebook->facebookLogOut();
-wp_redirect(home_url());
+unset($_SESSION['facebook_access_token']);
+wp_redirect(home_url('/accounts'));

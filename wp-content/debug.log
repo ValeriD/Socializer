@@ -3059,3 +3059,119 @@ Stack trace:
 #1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(9 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
 [10-Mar-2020 23:35:06 UTC] PHP Warning:  date() expects parameter 2 to be int, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php on line 29
 [10-Mar-2020 23:35:06 UTC] PHP Warning:  date() expects parameter 2 to be int, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDVisualization.php on line 29
+[11-Mar-2020 17:10:01 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 4
+[11-Mar-2020 17:39:17 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:39:17 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 83
+[11-Mar-2020 17:39:17 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 84
+[11-Mar-2020 17:39:17 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(108): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(15): Inc\FacebookConf\FacebookAuth->getGraph()
+#2 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 17:43:02 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 83
+[11-Mar-2020 17:43:02 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 84
+[11-Mar-2020 17:43:02 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(108): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(13): Inc\FacebookConf\FacebookAuth->getGraph()
+#2 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 17:43:45 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:43:45 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:45:39 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:45:39 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:48:51 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:48:51 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:50:25 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:50:25 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:54:54 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:54:54 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 17:55:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(116): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(40): Inc\FacebookConf\FacebookAuth->getGraph()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(20 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 17:57:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1265
+[11-Mar-2020 17:57:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\socializer\wp-includes\class.wp-styles.php:346) in C:\xampp\htdocs\socializer\wp-includes\pluggable.php on line 1268
+[11-Mar-2020 18:30:30 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 18:30:30 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php on line 14
+[11-Mar-2020 18:31:12 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:31:12 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:31:12 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:31:12 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:31:12 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(14): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 18:31:37 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:31:37 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:31:37 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(14): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 18:31:47 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:31:47 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:31:47 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(14): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 18:32:43 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:32:43 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:32:43 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(14): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 18:33:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php on line 4
+[11-Mar-2020 18:33:19 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 102
+[11-Mar-2020 18:33:19 UTC] PHP Notice:  Undefined variable: accesstoken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 104
+[11-Mar-2020 18:33:19 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php(14): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 18:34:03 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 18:34:03 UTC] PHP Notice:  Undefined index: FacebookPayload in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php on line 23
+[11-Mar-2020 18:36:45 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 18:38:37 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:19:08 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:21:19 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:22:05 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:23:03 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:24:05 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:25:17 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:25:17 UTC] PHP Notice:  Undefined index: FacebookPayload in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php on line 22
+[11-Mar-2020 21:25:23 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:27:09 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:27:09 UTC] PHP Notice:  Undefined index: FacebookPayload in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookCallback.php on line 22
+[11-Mar-2020 21:27:15 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: The default access token must be of type "string" or Facebook\AccessToken in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:263
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(100): Facebook\Facebook->setDefaultAccessToken(NULL)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(49): Inc\FacebookConf\FacebookAuth->getUserData()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 263
+[11-Mar-2020 21:27:54 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:32:13 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:32:19 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:33:23 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:33:29 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Http\GraphRawResponse.php on line 108
+[11-Mar-2020 21:42:23 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Unable to convert response from Graph to a GraphNode because the response looks like a GraphEdge. Try using GraphNodeFactory::makeGraphEdge() instead. in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\GraphNodeFactory.php:224
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\GraphNodeFactory.php(93): Facebook\GraphNodes\GraphNodeFactory->validateResponseCastableAsGraphNode()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(289): Facebook\GraphNodes\GraphNodeFactory->makeGraphNode(NULL)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(115): Facebook\FacebookResponse->getGraphNode()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(51): Inc\FacebookConf\Faceb in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\GraphNodes\GraphNodeFactory.php on line 224
