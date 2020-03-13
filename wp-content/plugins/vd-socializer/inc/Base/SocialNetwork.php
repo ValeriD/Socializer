@@ -7,6 +7,7 @@ namespace Inc\Base;
 abstract class SocialNetwork{
 
 	private $clientCallback;
+	private $client;
 	private $app_id;
 	private $app_secret;
 	private $accessToken;
@@ -29,6 +30,21 @@ abstract class SocialNetwork{
 			$this->bqClient = new \VDBigQuery();
 		}
 	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getClient() {
+		return $this->client;
+	}
+
+	/**
+	 * @param mixed $client
+	 */
+	public function setClient( $client ) {
+		$this->client = $client;
+	}
+
 	/**
 	 * @return string
 	 */

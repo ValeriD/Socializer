@@ -3187,3 +3187,109 @@ Stack trace:
 [11-Mar-2020 22:35:52 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
 [11-Mar-2020 22:36:24 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
 [11-Mar-2020 22:36:46 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 5
+[12-Mar-2020 19:06:04 UTC] PHP Notice:  Undefined variable: graphNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 120
+[12-Mar-2020 19:06:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:136
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 136
+[12-Mar-2020 19:07:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:136
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 136
+[12-Mar-2020 19:07:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:136
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 136
+[12-Mar-2020 19:12:20 UTC] PHP Notice:  Undefined index: social_id in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[12-Mar-2020 19:12:20 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 114
+[12-Mar-2020 19:12:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getDecodedBody() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:114
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(139): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\w in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 114
+[12-Mar-2020 19:24:33 UTC] PHP Notice:  Undefined variable: graphNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 122
+[13-Mar-2020 19:39:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once()
+#1 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php on line 58
+[13-Mar-2020 19:40:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php:59
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once()
+#1 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php on line 59
+[13-Mar-2020 19:56:58 UTC] PHP Notice:  Undefined variable: userNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 85
+[13-Mar-2020 19:56:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:132
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 132
+[13-Mar-2020 20:05:34 UTC] PHP Notice:  Undefined variable: userNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 84
+[13-Mar-2020 20:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:132
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 132
+[13-Mar-2020 20:11:05 UTC] PHP Notice:  Undefined variable: userNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 84
+[13-Mar-2020 20:11:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:131
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 131
+[13-Mar-2020 20:11:24 UTC] PHP Notice:  Undefined variable: userNode in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 84
+[13-Mar-2020 20:11:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:131
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 131

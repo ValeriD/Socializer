@@ -42,6 +42,11 @@ final class Init{
 		}
 	}
 
+	/**
+	 * @param $class
+	 * Creates an instance of the givven class
+	 * @return mixed
+	 */
 	public static function instantiate($class){
 		return new $class;
 	}

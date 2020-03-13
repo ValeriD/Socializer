@@ -15,16 +15,12 @@ use Inc\Base\SocialNetwork;
  */
 
 class TwitterAuth extends SocialNetwork {
-	/**
-	 * @var TwitterOAuth
-	 */
-	protected $client;
+
 
 
 	/**
 	 * TwitterAuth constructor.
 	 *
-	 * @param TwitterOAuth $client
 	 */
 	public function __construct()
 	{
@@ -32,7 +28,7 @@ class TwitterAuth extends SocialNetwork {
 		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
 			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
-			$this->client = new TwitterOAuth($this->getAppId(),$this->getAppSecret());
+			$this->setClient( new TwitterOAuth($this->getAppId(),$this->getAppSecret()));
 
 			add_shortcode('twitter', array($this, 'renderShortcode'));
 		}
@@ -47,7 +43,7 @@ class TwitterAuth extends SocialNetwork {
 	protected function generateAccessToken()
 	{
 		if (!isset($_SESSION['twitter_auth'])) {
-			return $this->client->oauth('oauth/request_token', ['oauth_callback' => $this->getClientCallback()]);
+			return $this->getClient()->oauth('oauth/request_token', ['oauth_callback' => $this->getClientCallback()]);
 		}
 
 		return false;
@@ -89,7 +85,7 @@ class TwitterAuth extends SocialNetwork {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 
-		return $this->client->url('oauth/authorize', ['oauth_token' => $_SESSION['oauth_token'] ]);
+		return $this->getClient()->url('oauth/authorize', ['oauth_token' => $_SESSION['oauth_token'] ]);
 	}
 
 

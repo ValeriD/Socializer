@@ -11,18 +11,11 @@ use Inc\Base\SocialNetwork;
 
 class FacebookAuth extends SocialNetwork {
 
-	public $client;
 
 	protected $helper;
 
-
 	protected $permissions;
 
-	protected $loginUrl;
-
-	protected $userNode;
-
-	protected $response;
 
 	public function __construct() {
 		if ( get_option( 'vd_facebook_app' ) !== "" && get_option( 'vd_facebook_secret' ) !== "" ) {
@@ -31,12 +24,12 @@ class FacebookAuth extends SocialNetwork {
 
 			add_shortcode( 'facebook', array( $this, 'renderShortcode' ) );
 
-			$this-> client  = $this->apiInit();
+			$this->setClient($this->apiInit());
 
 			//Getting the helper
-			$this->helper = $this->client -> getRedirectLoginHelper();
-			$this->permissions = [ 'public_profile', 'email' , 'user_posts']; //you may change it according to your need.
-
+			$this->helper = $this->getClient() -> getRedirectLoginHelper();
+			$this->permissions = ['public_profile', 'email', 'user_location', 'user_hometown','user_photos']; //you may change it according to your need.
+			var_dump($this->permissions);
 			//Used for CSRF
 			if ( isset( $_GET['state'] ) ) {
 			$this->helper->getPersistentDataHandler()->set( 'state', $_GET['state'] );
@@ -51,7 +44,7 @@ class FacebookAuth extends SocialNetwork {
 			return new Facebook( [
 				'app_id'                => $this->getAppId(),
 				'app_secret'            => $this->getAppSecret(),
-				'default_graph_version' => "v5.0",
+				'default_graph_version' => "v6.0",
 			] );
 	}
 
@@ -74,21 +67,21 @@ class FacebookAuth extends SocialNetwork {
 
 
 	protected function getLoginUrl() {
-		$this->loginUrl = $this->helper->getLoginUrl($this->getClientCallback());
-		return $this->loginUrl;
+		return $this->helper->getLoginUrl($this->getClientCallback(), $this->permissions);
+
 	}
 
 	public function getUserData() {
 		try {
-			$this->response = $this->client->get('/me?fields=email,first_name,last_name,name,picture');
-			$this->userNode = $this->response->getGraphNode();
+			$response = $this->getClient()->get('/me?fields=email,first_name,last_name,name,picture,hometown');
+			$userNode = $response->getGraphNode();
 		} catch (FacebookResponseException $e) {
-			die('Graph phase 1: error in processing your request while fetching token'); // you can add here your own error handling
+			var_dump('Graph phase 1: error in processing your request while fetching token'); // you can add here your own error handling
 		} catch (FacebookSDKException $e) {
-			var_dump('Here' . $e->getMessage());
+			var_dump('Here ' . $e->getMessage());
 		}
 
-		return $this->userNode;
+		return $userNode;
 	}
 
 	protected function saveUserData( $payload ) {
@@ -105,8 +98,17 @@ class FacebookAuth extends SocialNetwork {
 	}
 
 	protected function getUserPosts() {
-		$response = $this->client->get('/me/feed');
-		$graphNode = $response->getGraphEdge();
+		try {
+			$response = $this->getClient()->get( '/me/photos' );
+		} catch ( FacebookSDKException $e ) {
+			var_dump($e->getMessage());
+		}
+		try {
+			$graphNode = $response->getGraphEdge();
+		} catch ( FacebookSDKException $e ) {
+			var_dump($e->getMessage());
+		}
+
 		//var_dump($graphNode);
 		return $graphNode;
 	}
@@ -121,13 +123,15 @@ class FacebookAuth extends SocialNetwork {
 
 	public function renderShortcode(){
 		if(isset($_SESSION['facebook_access_token'])) {
-			$this->client->setDefaultAccessToken($_SESSION['facebook_access_token']);
+			$this->getClient()->setDefaultAccessToken($_SESSION['facebook_access_token']);
 			$userData = $this->getUserData();
-			$posts = $this->getUserPosts();
+			var_dump($userData);
 
+			//var_dump($userData);
 			$this->saveUserData($userData->asArray());
 			//$this->savePosts($posts);
-
+			$posts = $this->getUserPosts();
+			var_dump($posts);
 			include( PLUGIN_PATH . '/inc/FacebookConf/facebookAccount.php' );
 		}else {
 			return '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';
