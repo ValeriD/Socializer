@@ -22,7 +22,7 @@ class VDVisualization {
 	}
 
 	public function likesHoursCurve(){
-		$sql = 'select datetime_trunc(post_date,  HOUR), count(post_likes) from (SELECT distinct social_id, post_likes, post_date FROM `socializer-270013.SocializerDataset1.SocializerDataset1` group by social_id, post_likes, post_date) group by post_date ';
+		$sql = 'select datetime_trunc(post_date,  HOUR), count(post_likes) from (SELECT distinct social_id, post_likes, post_date FROM `socializer-270013.SocializerDataset1.SocializerDataset1` group by social_id, post_likes, post_date) group by post_date order by post_date asc';
 		$data = $this->serializQueryResults($sql);
 		include 'Assets/likesHoursCurve.php';
 	}

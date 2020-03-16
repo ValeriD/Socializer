@@ -3293,3 +3293,683 @@ Stack trace:
 #5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
 #6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
 #7 C:\xampp\htdocs\socializer\wp-includes\template.php(724): in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 131
+[14-Mar-2020 11:59:47 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type Facebook\GraphNodes\Birthday as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[t in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:00:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\Birthday::asArray() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:01:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\Birthday::getProperty() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filter in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:02:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\Birthday::getDecodedBody() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_fil in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:04:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getDecodedBody() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:131
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\w in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 131
+[14-Mar-2020 12:12:50 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type Facebook\GraphNodes\Birthday as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[t in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:15:58 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type Facebook\GraphNodes\Birthday as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:97
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(87): Inc\FacebookConf\FacebookAuth->serializeUserData(Object(Facebook\GraphNodes\GraphNode))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(131): Inc\FacebookConf\FacebookAuth->saveUserData(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\so in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 97
+[14-Mar-2020 12:16:19 UTC] PHP Notice:  Undefined index: birthday in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 13
+[14-Mar-2020 12:20:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getBirthday() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:129
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-i in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 129
+[14-Mar-2020 12:21:39 UTC] PHP Notice:  Undefined index: birthday in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 13
+[14-Mar-2020 12:22:04 UTC] PHP Notice:  Undefined index: birthday in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\facebookAccount.php on line 13
+[14-Mar-2020 12:31:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphEdge::getData() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:135
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-inclu in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[14-Mar-2020 12:32:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphEdge::getDecodedBody() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:135
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\w in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[14-Mar-2020 12:32:22 UTC] PHP Notice:  Undefined index: data in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[14-Mar-2020 14:36:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:121
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(150): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 121
+[14-Mar-2020 14:39:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getId() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:121
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(151): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#7 C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 121
+[14-Mar-2020 14:39:50 UTC] PHP Warning:  file_get_contents(https://graph.facebook.com/106805244281600_106804754281649): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 121
+[14-Mar-2020 14:39:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:122
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(151): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 122
+[14-Mar-2020 14:40:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:122
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(151): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 122
+[14-Mar-2020 14:40:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:123
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(152): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 123
+[14-Mar-2020 14:44:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:123
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(152): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 123
+[14-Mar-2020 14:44:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:153
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#3 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#6 C:\xampp\htdocs\socializer\wp-content\themes\twentytwenty\template-parts\content.php(36): the_content('Continue readin...')
+#7 C:\xampp\htdocs\socializer\wp-includes\template.php(724) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 153
+[14-Mar-2020 14:54:03 UTC] PHP Warning:  hash_hmac() expects parameter 2 to be string, array given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Authentication\AccessToken.php on line 70
+[14-Mar-2020 14:54:04 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookAuthenticationException: Expected access token to be a string, got array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php:106
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(210): Facebook\Exceptions\FacebookResponseException::create(Object(Facebook\FacebookResponse))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(255): Facebook\FacebookResponse->makeException()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(82): Facebook\FacebookResponse->decodeBody()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookClient.php(224): Facebook\FacebookResponse->__construct(Object(Facebook\FacebookReques in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php on line 106
+[14-Mar-2020 20:33:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function array_push() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:124
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(113): Inc\FacebookConf\FacebookAuth->getPosts(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(153): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#2 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+# in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 124
+[14-Mar-2020 20:43:28 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type Inc\Base\Post as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:134
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(136): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Array, Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(130): Inc\Base\SocialNetwork->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(152): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.p in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 134
+[14-Mar-2020 20:46:06 UTC] PHP Notice:  Undefined index: caption in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 132
+[14-Mar-2020 20:46:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function keyExists() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:132
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(136): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Array, Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(130): Inc\Base\SocialNetwork->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(157): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 132
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:05:09 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:06:31 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:07:16 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookAuthenticationException: (#100) Tried accessing nonexisting field (caption) on node type (Photo) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php:106
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(210): Facebook\Exceptions\FacebookResponseException::create(Object(Facebook\FacebookResponse))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(255): Facebook\FacebookResponse->makeException()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(82): Facebook\FacebookResponse->decodeBody()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookClient.php(224): Facebook\FacebookResponse->__construct(Object in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php on line 106
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 138
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 135
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:08:02 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:10:25 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:10:48 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:11:44 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:29 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 137
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:12:59 UTC] PHP Notice:  Undefined index: message in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 139
+[16-Mar-2020 10:52:55 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookThrottleException: (#4) Application request limit reached in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php:117
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(210): Facebook\Exceptions\FacebookResponseException::create(Object(Facebook\FacebookResponse))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(255): Facebook\FacebookResponse->makeException()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(82): Facebook\FacebookResponse->decodeBody()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookClient.php(224): Facebook\FacebookResponse->__construct(Object(Facebook\FacebookRequest), '{"error":{ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php on line 117
+[16-Mar-2020 11:00:16 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookThrottleException: (#4) Application request limit reached in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php:117
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(210): Facebook\Exceptions\FacebookResponseException::create(Object(Facebook\FacebookResponse))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(255): Facebook\FacebookResponse->makeException()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(82): Facebook\FacebookResponse->decodeBody()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookClient.php(224): Facebook\FacebookResponse->__construct(Object(Facebook\FacebookRequest), '{"error":{ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php on line 117
+[16-Mar-2020 16:09:44 UTC] PHP Notice:  Undefined index: summary in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 16:09:44 UTC] PHP Notice:  Undefined index: summary in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 16:09:44 UTC] PHP Notice:  Undefined index: summary in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 16:09:44 UTC] PHP Notice:  Undefined index: summary in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 16:10:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:144
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(136): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Array, Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(130): Inc\Base\SocialNetwork->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(162): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(2 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 16:16:50 UTC] PHP Warning:  hash_hmac() expects parameter 2 to be string, array given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Authentication\AccessToken.php on line 70
+[16-Mar-2020 16:16:50 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookAuthenticationException: Expected access token to be a string, got array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php:106
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(210): Facebook\Exceptions\FacebookResponseException::create(Object(Facebook\FacebookResponse))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(255): Facebook\FacebookResponse->makeException()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookResponse.php(82): Facebook\FacebookResponse->decodeBody()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\FacebookClient.php(224): Facebook\FacebookResponse->__construct(Object(Facebook\FacebookReques in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Exceptions\FacebookResponseException.php on line 106
+[16-Mar-2020 16:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function asArray() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:145
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(136): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Array, Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(130): Inc\Base\SocialNetwork->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(163): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(2 in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 145
+[16-Mar-2020 16:43:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:51:51 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:51:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:109
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(164): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:52:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:52:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:53:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:54:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:56:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:57:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 16:57:53 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:57:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:109
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(164): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:58:15 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:58:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:109
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(164): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 109
+[16-Mar-2020 16:59:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:04:05 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 147
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 140
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 141
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 140
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 141
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 140
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 141
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 140
+[16-Mar-2020 17:04:20 UTC] PHP Notice:  Undefined index: picture in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 141
+[16-Mar-2020 17:09:07 UTC] PHP Notice:  Undefined index: link in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 144
+[16-Mar-2020 17:09:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getField() on array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:147
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(136): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Array, Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(130): Inc\Base\SocialNetwork->savePost(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(175): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#6 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 147
+[16-Mar-2020 17:10:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getTotalLikes() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:113
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(177): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 113
+[16-Mar-2020 17:11:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:11:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:12:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:18:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getCount() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:115
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(182): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htd in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 115
+[16-Mar-2020 17:18:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:19:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:20:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 128
+[16-Mar-2020 17:35:38 UTC] PHP Fatal error:  Declaration of Inc\FacebookConf\FacebookAuth::serializeDataForDB(Facebook\GraphNodes\GraphNode $postData, Inc\Base\Post $post) must be compatible with Inc\Base\SocialNetwork::serializeDataForDB($postData, Inc\Base\Post $post) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 13
+[16-Mar-2020 17:37:14 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type DateTime as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:149
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(181): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 149
+[16-Mar-2020 17:37:40 UTC] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:149
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(149): DateTime->__construct(Object(DateTime))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(181): Inc\Base\SocialNetwork->savePosts(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#5 [internal function]: do in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 149
+[16-Mar-2020 17:43:07 UTC] PHP Fatal error:  Uncaught Exception: DateTime::__construct(): Failed to parse time string (27/09/2019) at position 0 (2): Unexpected character in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:150
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(150): DateTime->__construct('27/09/2019')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(182): Inc\Base\SocialNetwork->savePosts(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebo in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[16-Mar-2020 17:44:11 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[16-Mar-2020 17:45:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DateTime::getDate() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:150
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(183): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face... in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[16-Mar-2020 17:45:18 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type DateTime as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:150
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(183): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[16-Mar-2020 17:45:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DateTime::asArray() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:150
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(183): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face... in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[16-Mar-2020 17:46:12 UTC] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:151
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(151): DateTime->__construct(Object(DateTime))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(183): Inc\Base\SocialNetwork->savePosts(Array)
+#4 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#5 [internal function]: do in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 151
+[16-Mar-2020 17:58:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getShares() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:157
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(176): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta... in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 157
+[16-Mar-2020 18:01:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getShares() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:158
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(177): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta... in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 158
+[16-Mar-2020 18:03:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Facebook\GraphNodes\GraphNode::getShares() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:159
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(135): Inc\FacebookConf\FacebookAuth->serializeDataForDB(Object(Facebook\GraphNodes\GraphNode), Object(Inc\Base\Post))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php(129): Inc\Base\SocialNetwork->savePost(Object(Facebook\GraphNodes\GraphNode))
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(178): Inc\Base\SocialNetwork->savePosts(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta... in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 159
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:04 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:07:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:10:36 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:10:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:110
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(176): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:14:16 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:14:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:110
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(176): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:15:05 UTC] PHP Notice:  Undefined index: post_content in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 63
+[16-Mar-2020 18:15:06 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:17:51 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:17:51 UTC] PHP Notice:  Undefined index: post_title in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\Post.php on line 35
+[16-Mar-2020 18:23:26 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:23:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:110
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(177): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:24:13 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\ServiceException: cURL error 7: Failed to connect to oauth2.googleapis.com port 443: Timed out (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php:362
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php(206): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(Google\Cloud\Core\Exception\ServiceException))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RestTrait.php(94): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Connection\Rest.php(104): Google\Cloud\BigQuery\Connection\Rest->send('datasets', 'get', Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\Dataset.p in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\RequestWrapper.php on line 362
+[16-Mar-2020 18:25:53 UTC] PHP Notice:  Undefined variable: response in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110
+[16-Mar-2020 18:25:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getGraphEdge() on null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php:110
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(177): Inc\FacebookConf\FacebookAuth->getUserPosts()
+#1 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(325): Inc\FacebookConf\FacebookAuth->renderShortcode('', '', 'facebook')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\socializer\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(facebo...', 'do_shortcode_ta...', '[twitter]\n[face...')
+#4 C:\xampp\htdocs\socializer\wp-includes\class-wp-hook.php(288): do_shortcode('[twitter]\n[face...')
+#5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
+#6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
+#7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 110

@@ -126,8 +126,7 @@ abstract class SocialNetwork{
 	protected abstract function getUserPosts();
 	protected function savePosts($payload){
 		foreach($payload as $post){
-			$postData = json_decode(json_encode($post), true);
-			$this->savePost($postData);
+			$this->savePost($post);
 
 		}
 	}
@@ -136,9 +135,9 @@ abstract class SocialNetwork{
 		$this->serializeDataForDB($postData, $post);
 		$saved = $post->savePost();
 
-		if(class_exists('VDBigQuery') and $saved) {
-			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
-		}
+//		if(class_exists('VDBigQuery') and $saved) {
+//			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
+//		}
 	}
 
 	public abstract function serializeDataForDB($postData,Post $post);

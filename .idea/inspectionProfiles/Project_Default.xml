@@ -6,6 +6,7 @@
         <language minSize="104" name="PHP" />
       </Languages>
     </inspection_tool>
+    <inspection_tool class="PhpUndefinedMethodInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PhpUndefinedNamespaceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>
