@@ -9,5 +9,7 @@ $payload = $rawData[0];
 	<img src=" <?php echo $payload['user_img'] ?>" style="display: block;  margin-right: auto;margin-bottom: 5%; width: 100px; height: 100px">
 	<p>Name: <?php echo $payload['name'] ?></p>
 	<p>Email: <?php echo $payload['email'] ?></p>
+    <p>Hometown: <?php echo $payload['hometown'] ?></p>
+    <p>Birthday: <?php echo $payload['birthday'] ?></p>
 	<p><a href="<?php echo PLUGIN_URL. '/inc/FacebookConf/facebookLogout.php'?>">Log Out from Facebook</a></p>
 </div>

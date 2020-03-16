@@ -171,9 +171,8 @@ class TwitterAuth extends SocialNetwork {
 		return $connection->get('statuses/user_timeline');
 	}
 
-
-
-	public function serializeDataForDB($postData,Post $post){
+	public function serializeDataForDB($postInfo,Post $post){
+		$postData = json_decode(json_encode($postInfo), true);
 
 		$post->setAuthor(get_current_user_id());
 		$post->setTitle($postData['text']);

@@ -6,15 +6,16 @@ namespace Inc\FacebookConf;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
+use Facebook\GraphNodes\GraphNode;
 use Inc\Base\Post;
 use Inc\Base\SocialNetwork;
 
 class FacebookAuth extends SocialNetwork {
 
 
-	protected $helper;
+	private $helper;
 
-	protected $permissions;
+	private $permissions;
 
 
 	public function __construct() {
@@ -28,8 +29,7 @@ class FacebookAuth extends SocialNetwork {
 
 			//Getting the helper
 			$this->helper = $this->getClient() -> getRedirectLoginHelper();
-			$this->permissions = ['public_profile', 'email', 'user_location', 'user_hometown','user_photos']; //you may change it according to your need.
-			var_dump($this->permissions);
+			$this->permissions = ['public_profile', 'email', 'user_location', 'user_hometown','user_birthday','user_photos', 'user_posts']; //you may change it according to your need.
 			//Used for CSRF
 			if ( isset( $_GET['state'] ) ) {
 			$this->helper->getPersistentDataHandler()->set( 'state', $_GET['state'] );
@@ -44,7 +44,7 @@ class FacebookAuth extends SocialNetwork {
 			return new Facebook( [
 				'app_id'                => $this->getAppId(),
 				'app_secret'            => $this->getAppSecret(),
-				'default_graph_version' => "v6.0",
+				'default_graph_version' => "v5.0",
 			] );
 	}
 
@@ -73,8 +73,8 @@ class FacebookAuth extends SocialNetwork {
 
 	public function getUserData() {
 		try {
-			$response = $this->getClient()->get('/me?fields=email,first_name,last_name,name,picture,hometown');
-			$userNode = $response->getGraphNode();
+			$response = $this->getClient()->get('/me?fields=email,first_name,last_name,name,picture,hometown,birthday');
+			$userNode = $response->getGraphUser();
 		} catch (FacebookResponseException $e) {
 			var_dump('Graph phase 1: error in processing your request while fetching token'); // you can add here your own error handling
 		} catch (FacebookSDKException $e) {
@@ -89,17 +89,23 @@ class FacebookAuth extends SocialNetwork {
 	}
 
 	protected function serializeUserData( $payload ) {
-		return array(
-			'name' => $payload['name'],
-			'social_id' => $payload['id'],
-			'email'=>$payload['email'],
-			'user_img'=>$payload['picture']['url']
+		$res =  array(
+			'name' => $payload->getName(),
+			'social_id' => $payload->getId(),
+			'email'=>$payload->getEmail(),
+			'user_img'=>$payload->getPicture()['url'],
+			'hometown' => $payload->getHometown()['name'],
+			'birthday' => $payload->getBirthday()->format('d/m/Y')
 		);
+		return $res;
 	}
 
 	protected function getUserPosts() {
 		try {
-			$response = $this->getClient()->get( '/me/photos' );
+			// create request on me/posts?fields=id,message,caption,shares,likes,created_time,picture,link,attachments and then check the fields
+			// you can use, because attachments is better than picture field in the request
+
+			$response = $this->getClient()->get( '/me/posts?fields=id,message,caption,shares,likes.summary(true),created_time,picture,link' );
 		} catch ( FacebookSDKException $e ) {
 			var_dump($e->getMessage());
 		}
@@ -109,11 +115,53 @@ class FacebookAuth extends SocialNetwork {
 			var_dump($e->getMessage());
 		}
 
-		//var_dump($graphNode);
-		return $graphNode;
+
+		$posts = $this->filterPosts($graphNode);
+		return $posts;
 	}
 
+	private function filterPosts($graphNode){
+		$result = array();
+
+		foreach ($graphNode as $post){
+			//var_dump($post);
+			if($post->getField('link') and ($post->getField('message') or $post->getField('caption'))){
+				$result[] = $post;
+			}
+		}
+		return $result;
+	}
+
+
 	public function serializeDataForDB( $postData, Post $post ) {
+		$post->setAuthor(get_current_user_id());
+		$post->setMetaData('social_id', $postData->getField('id'));
+		$post->setMetaData('post_link', $postData->getField('link'));
+
+		if($postData->getField('message')){
+			$post->setTitle($postData->getField('message'));
+			$post->setContent($postData->getField('message'));
+		}
+		if($postData->getField('caption')) {
+			$post->setTitle($postData->getField('message'));
+			$post->setContent( $postData->getField('caption') );
+		}
+		if($postData->getField('picture')){
+			$post->setMetaData('post_img', $postData->getField('picture'));
+		}
+
+		if($postData->getField( 'created_time')){
+			$post->setMetaData('post_date',$postData->getField( 'created_time'));
+		}
+
+		if($postData->getField('likes')){
+			$post->setMetaData('post_likes', $postData->getField('likes')->getTotalCount());
+		}
+
+		if($postData->getField('shares')){
+			$post->setMetaData('post_shares', $postData->getField('shares')['count']);
+		}
+		var_dump($post);
 
 	}
 
@@ -124,18 +172,19 @@ class FacebookAuth extends SocialNetwork {
 	public function renderShortcode(){
 		if(isset($_SESSION['facebook_access_token'])) {
 			$this->getClient()->setDefaultAccessToken($_SESSION['facebook_access_token']);
-			$userData = $this->getUserData();
-			var_dump($userData);
 
-			//var_dump($userData);
-			$this->saveUserData($userData->asArray());
-			//$this->savePosts($posts);
+			$userData = $this->getUserData();
+			$this->saveUserData($userData);
+
+
 			$posts = $this->getUserPosts();
-			var_dump($posts);
+			$this->savePosts($posts);
 			include( PLUGIN_PATH . '/inc/FacebookConf/facebookAccount.php' );
 		}else {
 			return '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';
 
 		}
 	}
+
+
 }

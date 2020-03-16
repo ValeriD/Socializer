@@ -3,4 +3,4 @@
 *.log
 # ignore config file
 C:\xampp\htdocs\socializer\wp-config.php
-
+C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\credentials.json

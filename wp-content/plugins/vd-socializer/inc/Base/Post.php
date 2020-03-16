@@ -22,6 +22,8 @@ class Post {
 		);
 
 		$this->setMetaData('post_likes', 0);
+		$this->setMetaData('post_shares', 0);
+
 	}
 
 	private function setId($postId){
