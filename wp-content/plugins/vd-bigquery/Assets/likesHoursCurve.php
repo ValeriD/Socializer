@@ -15,7 +15,7 @@
 				<?php
 				foreach($data as $row)
 				{
-					echo "['".$row['f0_']->format('H')."', ".$row["f1_"]."],";
+					echo "['".$row['f0_']->format('H')."', ".$row['f1_']."],";
 				}
 				?>
             ]);

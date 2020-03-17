@@ -133,9 +133,8 @@ class FacebookAuth extends SocialNetwork {
 
 
 	public function serializeDataForDB( $postData, Post $post ) {
-
 		$post->setAuthor(get_current_user_id());
-		$post->setMetaData('social_id', $postData['id']);
+		$post->setMetaData('social_id', explode('_',$postData['id'])[1]);
 		$post->setMetaData('post_link', $postData['attachments'][0]['url']);
 
 		if(isset($postData['attachments'][0]['description'])) {

@@ -30,19 +30,19 @@ class Post {
 		$this->data['ID'] = $postId;
 	}
 
-	/**
-	 * @return mixed
-	 */
-	public function getTitle() {
-		return $this->data['post_title'];
-	}
-
-	/**
-	 * @param mixed $title
-	 */
-	public function setTitle( $title ) {
-		$this->data['post_title'] = $title;
-	}
+//	/**
+//	 * @return mixed
+//	 */
+//	public function getTitle() {
+//		return $this->data['post_title'];
+//	}
+//
+//	/**
+//	 * @param mixed $title
+//	 */
+//	public function setTitle( $title ) {
+//		$this->data['post_title'] = $title;
+//	}
 
 	/**
 	 * @return mixed

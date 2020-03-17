@@ -114,10 +114,11 @@ class VDBigQuery {
 		}
 	}
 	public function addInTable($tableId, $datasetId, $row){
+
 		if($this->tableExist($tableId, $datasetId)){
-			//var_dump($row);
 			$insert = $this->getTable($tableId, $datasetId)->insertRows([['data' => $row]]);
 		}
+
 	}
 
 	public function vdRunQuery($sql){
