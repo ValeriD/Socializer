@@ -26,7 +26,7 @@ class TwitterAuth extends SocialNetwork {
 	{
 
 		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
-			SocialNetwork::__construct(home_url('/accounts'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
+			SocialNetwork::__construct(home_url('/wp-content/plugins/vd-socializer/inc/Twitter/twitterCallback.php'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
 
 			$this->setClient( new TwitterOAuth($this->getAppId(),$this->getAppSecret()));
 
@@ -105,7 +105,7 @@ class TwitterAuth extends SocialNetwork {
 		return $requestToken;
 	}
 
-	protected function storeToken() {
+	public function storeToken() {
 
 		$requestToken = $this->verifyToken();
 		if (!$this->verifyToken()) {
@@ -121,6 +121,7 @@ class TwitterAuth extends SocialNetwork {
 			var_dump('TwitterOAuthException: ' . $e->getMessage());
 		}
 		$this->setAccessToken($accessToken);
+		$_SESSION['twitter_access_token'] = $accessToken;
 
 	}
 
@@ -163,7 +164,7 @@ class TwitterAuth extends SocialNetwork {
 	}
 
 
-	protected function getUserPosts(){
+	public function getUserPosts(){
 		$accessToken = $this->getAccessToken();
 
 		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
@@ -175,7 +176,6 @@ class TwitterAuth extends SocialNetwork {
 		$postData = json_decode(json_encode($postInfo), true);
 
 		$post->setAuthor(get_current_user_id());
-		$post->setTitle($postData['text']);
 		$post->setContent($postData['text']);
 
 		$post->setMetaData('social_id', $postData['id']);
@@ -189,9 +189,9 @@ class TwitterAuth extends SocialNetwork {
 	protected function serializeDataForBQ(Post $post){
 		return [
 			'social_id' => $post->getMetaData('social_id'),
-			'post_text' => $post->getContent(),
+			'post_text' => $post->getTitle(),
 			'post_author' => get_current_user_id(),
-			'post_category' => 'twitter',
+			'post_category' => 'Twitter',
 			'post_img' => $post->getMetaData('post_img'),
 			'post_likes' => $post->getMetaData('post_likes'),
 			'post_shares' => $post->getMetaData('post_shares'),
@@ -204,30 +204,15 @@ class TwitterAuth extends SocialNetwork {
 	 */
 	public function renderShortcode(){
 		if(is_user_logged_in()) {
-			if ( isset( $_GET['oauth_token'] ) ) {
-				$this->storeToken();
 
-				$userData = $this->getUserData();
-				$posts = $this->getUserPosts();
 
-				$this->saveUserData( $userData );
-				$this->savePosts($posts);
-			}
 
-			$data = false;
-			if ( isset( $_SESSION['TwitterPayload'] ) ) {
-				$data = $_SESSION['TwitterPayload'];
-			}
-
-			if ( ! $data ) {
-				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with Twitter</a></p>';
+			if ( isset($_SESSION['twitter_access_token']) ) {
+				include( PLUGIN_PATH . '/inc/Twitter/twitterAccount.php' );
 
 			} else {
-				include( PLUGIN_PATH . '/inc/Twitter/twitterAccount.php' );
+				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with Twitter</a></p>';
 			}
-		}
-		else{
-			wp_redirect(home_url('/login'));
 		}
 	}
 

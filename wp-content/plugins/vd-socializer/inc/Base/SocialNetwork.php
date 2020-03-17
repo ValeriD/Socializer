@@ -119,12 +119,12 @@ abstract class SocialNetwork{
 	protected abstract function getLoginUrl();
 
 	public abstract function getUserData();
-	protected abstract function saveUserData($payload);
+	public abstract function saveUserData($payload);
 	protected abstract function serializeUserData($payload);
 
 
-	protected abstract function getUserPosts();
-	protected function savePosts($payload){
+	public abstract function getUserPosts();
+	public function savePosts($payload){
 		foreach($payload as $post){
 			$this->savePost($post);
 
@@ -135,12 +135,12 @@ abstract class SocialNetwork{
 		$this->serializeDataForDB($postData, $post);
 		$saved = $post->savePost();
 
-//		if(class_exists('VDBigQuery') and $saved) {
-//			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
-//		}
+		if(class_exists('VDBigQuery') and $saved) {
+			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
+		}
 	}
 
-	public abstract function serializeDataForDB($postData,Post $post);
+	protected abstract function serializeDataForDB($postData,Post $post);
 	protected abstract function serializeDataForBQ(Post $post);
 
 	public abstract function renderShortcode();

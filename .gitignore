@@ -1,6 +1,7 @@
 /vendor/
 # ignore all logs
-*.log
+/wp-content/debug.log
 # ignore config file
-C:\xampp\htdocs\socializer\wp-config.php
-C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\credentials.json
+wp-config.php
+
+/wp-content/plugins/vd-bigquery/credentials.json

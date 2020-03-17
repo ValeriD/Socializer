@@ -84,7 +84,7 @@ class FacebookAuth extends SocialNetwork {
 		return $userNode;
 	}
 
-	protected function saveUserData( $payload ) {
+	public function saveUserData( $payload ) {
 		update_user_meta(get_current_user_id(), 'facebook_account' ,$this->serializeUserData($payload));
 	}
 
@@ -100,12 +100,12 @@ class FacebookAuth extends SocialNetwork {
 		return $res;
 	}
 
-	protected function getUserPosts() {
+	public function getUserPosts() {
 		try {
 			// create request on me/posts?fields=id,message,caption,shares,likes,created_time,picture,link,attachments and then check the fields
 			// you can use, because attachments is better than picture field in the request
 
-			$response = $this->getClient()->get( '/me/posts?fields=id,message,caption,shares,likes.summary(true),created_time,picture,link' );
+			$response = $this->getClient()->get( '/me/posts?fields=id,shares,likes.summary(true),created_time,attachments,message' );
 		} catch ( FacebookSDKException $e ) {
 			var_dump($e->getMessage());
 		}
@@ -122,10 +122,9 @@ class FacebookAuth extends SocialNetwork {
 
 	private function filterPosts($graphNode){
 		$result = array();
-
+		$filter = ['cover_photo', 'photo', 'profile_media'];
 		foreach ($graphNode as $post){
-			//var_dump($post);
-			if($post->getField('link') and ($post->getField('message') or $post->getField('caption'))){
+			if( in_array($post['attachments'][0]['type'], $filter) and (isset($post['message']) or isset($post['attachments'][0]['description']))){
 				$result[] = $post;
 			}
 		}
@@ -134,51 +133,46 @@ class FacebookAuth extends SocialNetwork {
 
 
 	public function serializeDataForDB( $postData, Post $post ) {
+
 		$post->setAuthor(get_current_user_id());
-		$post->setMetaData('social_id', $postData->getField('id'));
-		$post->setMetaData('post_link', $postData->getField('link'));
+		$post->setMetaData('social_id', $postData['id']);
+		$post->setMetaData('post_link', $postData['attachments'][0]['url']);
 
-		if($postData->getField('message')){
-			$post->setTitle($postData->getField('message'));
-			$post->setContent($postData->getField('message'));
+		if(isset($postData['attachments'][0]['description'])) {
+			$post->setContent( $postData['attachments'][0]['description'] );
+		}else if(isset($postData['message'])){
+			$post->setContent( $postData['message'] );
 		}
-		if($postData->getField('caption')) {
-			$post->setTitle($postData->getField('message'));
-			$post->setContent( $postData->getField('caption') );
-		}
-		if($postData->getField('picture')){
-			$post->setMetaData('post_img', $postData->getField('picture'));
-		}
+		$post->setMetaData('post_img', $postData['attachments'][0]['media']['image']['src']);
+		$post->setMetaData('post_date',$postData['created_time']);
 
-		if($postData->getField( 'created_time')){
-			$post->setMetaData('post_date',$postData->getField( 'created_time'));
-		}
-
-		if($postData->getField('likes')){
+		if($postData->getField('likes')->getTotalCount()){
 			$post->setMetaData('post_likes', $postData->getField('likes')->getTotalCount());
 		}
-
-		if($postData->getField('shares')){
+		if( $postData->getField('shares')['count']){
 			$post->setMetaData('post_shares', $postData->getField('shares')['count']);
+
 		}
-		var_dump($post);
+
 
 	}
 
 	protected function serializeDataForBQ( Post $post ) {
-		// TODO: Implement serializeDataForBQ() method.
+		return [
+			'social_id' => $post->getMetaData('social_id'),
+			'post_text' => $post->getContent(),
+			'post_author' => get_current_user_id(),
+			'post_category' => 'Facebook',
+			'post_img' => $post->getMetaData('post_img'),
+			'post_likes' => $post->getMetaData('post_likes'),
+			'post_shares' => $post->getMetaData('post_shares'),
+			'post_date' => $post->getMetaData('post_date')
+		];
 	}
 
 	public function renderShortcode(){
 		if(isset($_SESSION['facebook_access_token'])) {
-			$this->getClient()->setDefaultAccessToken($_SESSION['facebook_access_token']);
 
-			$userData = $this->getUserData();
-			$this->saveUserData($userData);
-
-
-			$posts = $this->getUserPosts();
-			$this->savePosts($posts);
 			include( PLUGIN_PATH . '/inc/FacebookConf/facebookAccount.php' );
 		}else {
 			return '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';

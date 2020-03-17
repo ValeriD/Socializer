@@ -91,7 +91,7 @@ class Post {
 	 *
 	 */
 	public function savePost(){
-		$postId = post_exists($this->getTitle(), $this->getContent(), null, $this->getData()['post_type']);
+		$postId = post_exists(null, $this->getContent(), null, $this->getData()['post_type']);
 		if($postId > 0){
 			$this->setId($postId);
 			$error = wp_update_post($this->data);
