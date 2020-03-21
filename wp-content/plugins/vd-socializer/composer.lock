@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c457ac9589a03969dacafbee43eb12a5",
+    "content-hash": "c52427228702b2195934b659164cdd31",
     "packages": [
         {
             "name": "abraham/twitteroauth",
-            "version": "dev-master",
+            "version": "0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/abraham/twitteroauth.git",
-                "reference": "bd225538be8303a6607182e6ad6355912610cbd2"
+                "reference": "c6f9e692552dd037b2324ed0dfa28a4e60875acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/bd225538be8303a6607182e6ad6355912610cbd2",
-                "reference": "bd225538be8303a6607182e6ad6355912610cbd2",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/c6f9e692552dd037b2324ed0dfa28a4e60875acf",
+                "reference": "c6f9e692552dd037b2324ed0dfa28a4e60875acf",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "php": "^7.2 || ^7.3 || ^7.4"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
                 "phpmd/phpmd": "~2.6",
@@ -58,7 +58,7 @@
                 "social",
                 "twitter"
             ],
-            "time": "2019-12-16T03:18:22+00:00"
+            "time": "2017-06-30T22:02:01+00:00"
         },
         {
             "name": "facebook/graph-sdk",
@@ -122,11 +122,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "abraham/twitteroauth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

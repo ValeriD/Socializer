@@ -12,6 +12,7 @@ abstract class SocialNetwork{
 	private $app_secret;
 	private $accessToken;
 	private $bqClient;
+	private $socialNetwork;
 
 
 
@@ -22,12 +23,20 @@ abstract class SocialNetwork{
 	 * @param $app_id
 	 * @param $app_secret
 	 */
-	public function __construct( $clientCallback, $app_id, $app_secret ) {
-		$this->clientCallback = $clientCallback;
-		$this->app_id         = $app_id;
-		$this->app_secret     = $app_secret;
-		if(class_exists('VDBigQuery')) {
-			$this->bqClient = new \VDBigQuery();
+	public function __construct( $socialNetwork ) {
+		if ( get_option( 'vd_'. strtolower($socialNetwork) .'_app' ) and get_option( 'vd_'. strtolower($socialNetwork) .'_secret' )  ) {
+			$this->clientCallback = home_url('/wp-content/plugins/vd-socializer/inc/'. $socialNetwork .'/'. strtolower($socialNetwork) .'Callback.php');
+			$this->app_id         = get_option( 'vd_'. strtolower($socialNetwork) .'_app' );
+			$this->app_secret     = get_option( 'vd_'. strtolower($socialNetwork) .'_secret' );
+			$this->socialNetwork = $socialNetwork;
+
+			add_shortcode( strtolower($socialNetwork), array( $this, 'renderShortcode' ) );
+
+			$this->initialize();
+
+			if(class_exists('VDBigQuery')) {
+				$this->bqClient = new \VDBigQuery();
+			}
 		}
 	}
 
@@ -114,6 +123,22 @@ abstract class SocialNetwork{
 		$this->bqClient = $bqClient;
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function getSocialNetwork() {
+		return $this->socialNetwork;
+	}
+
+	/**
+	 * @param mixed $socialNetwork
+	 */
+	public function setSocialNetwork( $socialNetwork ) {
+		$this->socialNetwork = $socialNetwork;
+	}
+
+	protected abstract function initialize();
+
 	protected abstract function generateAccessToken();
 
 	protected abstract function getLoginUrl();
@@ -143,6 +168,16 @@ abstract class SocialNetwork{
 	protected abstract function serializeDataForDB($postData,Post $post);
 	protected abstract function serializeDataForBQ(Post $post);
 
-	public abstract function renderShortcode();
+	public function renderShortcode(){
+		if(is_user_logged_in()) {
+			if ( isset($_SESSION[strtolower($this->getSocialNetwork()) .'_access_token']) ) {
+
+				include( PLUGIN_PATH . '/inc/'. $this->getSocialNetwork() .'/'. strtolower($this->getSocialNetwork()) .'Account.php' );
+
+			} else {
+				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with '. $this->getSocialNetwork() .'</a></p>';
+			}
+		}
+	}
 
 }

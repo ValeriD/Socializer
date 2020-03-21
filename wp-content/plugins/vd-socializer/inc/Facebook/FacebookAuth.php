@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Inc\FacebookConf;
+namespace Inc\Facebook;
 
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
@@ -19,24 +19,20 @@ class FacebookAuth extends SocialNetwork {
 
 
 	public function __construct() {
-		if ( get_option( 'vd_facebook_app' ) !== "" && get_option( 'vd_facebook_secret' ) !== "" ) {
-
-			SocialNetwork::__construct( home_url( '/wp-content/plugins/vd-socializer/inc/FacebookConf/FacebookCallback.php' ), get_option( 'vd_facebook_app' ), get_option( 'vd_facebook_secret' ) );
-
-			add_shortcode( 'facebook', array( $this, 'renderShortcode' ) );
-
-			$this->setClient($this->apiInit());
-
-			//Getting the helper
-			$this->helper = $this->getClient() -> getRedirectLoginHelper();
-			$this->permissions = ['public_profile', 'email', 'user_location', 'user_hometown','user_birthday','user_photos', 'user_posts']; //you may change it according to your need.
-			//Used for CSRF
-			if ( isset( $_GET['state'] ) ) {
-			$this->helper->getPersistentDataHandler()->set( 'state', $_GET['state'] );
-			}
-		}
+			SocialNetwork::__construct( 'Facebook' );
 	}
 
+	protected function initialize() {
+		$this->setClient($this->apiInit());
+
+		//Getting the helper
+		$this->helper = $this->getClient() -> getRedirectLoginHelper();
+		$this->permissions = ['public_profile', 'email', 'user_location', 'user_hometown','user_birthday','user_photos', 'user_posts']; //you may change it according to your need.
+		//Used for CSRF
+		if ( isset( $_GET['state'] ) ) {
+			$this->helper->getPersistentDataHandler()->set( 'state', $_GET['state'] );
+		}
+	}
 
 
 
@@ -169,15 +165,6 @@ class FacebookAuth extends SocialNetwork {
 		];
 	}
 
-	public function renderShortcode(){
-		if(isset($_SESSION['facebook_access_token'])) {
-
-			include( PLUGIN_PATH . '/inc/FacebookConf/facebookAccount.php' );
-		}else {
-			return '<p><a href="' . $this->getLoginUrl() . '">Sign in with Facebook</a></p>';
-
-		}
-	}
 
 
 }

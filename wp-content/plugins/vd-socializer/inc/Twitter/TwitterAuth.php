@@ -4,6 +4,7 @@
 namespace Inc\Twitter;
 
 
+
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Abraham\TwitterOAuth\TwitterOAuthException;
 use Inc\Base\Post;
@@ -24,16 +25,12 @@ class TwitterAuth extends SocialNetwork {
 	 */
 	public function __construct()
 	{
-
-		if(get_option('vd_twitter_app')!=="" && get_option('vd_twitter_secret')!=="") {
-			SocialNetwork::__construct(home_url('/wp-content/plugins/vd-socializer/inc/Twitter/twitterCallback.php'), get_option('vd_twitter_app'),  get_option('vd_twitter_secret'));
-
-			$this->setClient( new TwitterOAuth($this->getAppId(),$this->getAppSecret()));
-
-			add_shortcode('twitter', array($this, 'renderShortcode'));
-		}
+		SocialNetwork::__construct( 'Twitter' );
 	}
 
+	protected function initialize() {
+		$this->setClient( new TwitterOAuth($this->getAppId(),$this->getAppSecret()));
+	}
 
 	/**
 	 * Function for generating the acceess token
@@ -198,27 +195,4 @@ class TwitterAuth extends SocialNetwork {
 			'post_date' => $post->getMetaData('post_date')
 		];
 	}
-
-	/**
-	 *
-	 */
-	public function renderShortcode(){
-		if(is_user_logged_in()) {
-
-
-
-			if ( isset($_SESSION['twitter_access_token']) ) {
-				include( PLUGIN_PATH . '/inc/Twitter/twitterAccount.php' );
-
-			} else {
-				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with Twitter</a></p>';
-			}
-		}
-	}
-
-
-
-
-
-
 }

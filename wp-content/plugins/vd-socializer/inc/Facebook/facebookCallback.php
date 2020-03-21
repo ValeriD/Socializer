@@ -2,7 +2,7 @@
 include_once '../../vendor/autoload.php';
 require 'C:\xampp\htdocs\socializer\wp-config.php';
 
-use Inc\FacebookConf\FacebookAuth;
+use Inc\Facebook\FacebookAuth;
 
 
 $facebook = new FacebookAuth();

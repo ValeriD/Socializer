@@ -20,9 +20,9 @@ class Activate{
 			'post_type' => 'page',
 			'post_title' => 'Accounts',
 			'post_name' => 'accounts',
-			'post_content' => '[twitter]',
+			'post_content' => '[twitter] [facebook]',
 			'post_status' => 'publish',
-			'guid' => 'https://socializer.com/accounts',
+			'guid' => 'https://social.izer..com/accounts',
 			'post_author' => get_current_user_id()
 
 		);

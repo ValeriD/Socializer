@@ -1,7 +1,9 @@
 /vendor/
 # ignore all logs
-/wp-content/debug.log
+./wp-content/debug.log
 # ignore config file
 wp-config.php
 
 /wp-content/plugins/vd-bigquery/credentials.json
+
+./.htaccess

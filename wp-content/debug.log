@@ -5400,3 +5400,606 @@ Stack trace:
 #5 C:\xampp\htdocs\socializer\wp-includes\plugin.php(206): WP_Hook->apply_filters('[twitter]\n[face...', Array)
 #6 C:\xampp\htdocs\socializer\wp-includes\post-template.php(253): apply_filters('the_content', '<p>[twitter]</p...')
 #7 C:\xampp\htdocs\socializer\wp- in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 113
+[21-Mar-2020 10:15:07 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:15:08 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:15:08 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:15:33 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: Given keyfile path C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\credentials.json does not exist in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:133
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(99): Google\Cloud\BigQuery\BigQueryClient->getKeyFile(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(39): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(60): VDBigQuery::registerDatasets()
+#5 C:\xampp\htdocs\social in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 133
+[21-Mar-2020 10:15:34 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: Given keyfile path C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\credentials.json does not exist in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:133
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(99): Google\Cloud\BigQuery\BigQueryClient->getKeyFile(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(39): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(60): VDBigQuery::registerDatasets()
+#5 C:\xampp\htdocs\social in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 133
+[21-Mar-2020 10:15:34 UTC] PHP Fatal error:  Uncaught Google\Cloud\Core\Exception\GoogleException: Given keyfile path C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\credentials.json does not exist in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php:133
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php(99): Google\Cloud\BigQuery\BigQueryClient->getKeyFile(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-bigquery\src\BigQueryClient.php(140): Google\Cloud\BigQuery\BigQueryClient->configureAuthentication(Array)
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(18): Google\Cloud\BigQuery\BigQueryClient->__construct(Array)
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\VDBigQuery.php(39): VDBigQuery->__construct()
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vd-bigquery.php(60): VDBigQuery::registerDatasets()
+#5 C:\xampp\htdocs\social in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\google\cloud-core\src\ClientTrait.php on line 133
+[21-Mar-2020 10:20:12 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:20:13 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:20:13 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:25:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(44): activate_plugin('vd-socializer/v...', 'https://social....', false)
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:25:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:25:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:26:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(44): activate_plugin('vd-socializer/v...', 'https://social....', false)
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:26:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:26:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:37:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(44): activate_plugin('vd-socializer/v...', 'https://social....', false)
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:37:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:37:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:38:14 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(44): activate_plugin('vd-socializer/v...', 'https://social....', false)
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:38:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:38:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:51
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#4 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 51
+[21-Mar-2020 10:41:24 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(46): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(27): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:41:25 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(46): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(27): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:41:25 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(46): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(27): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:47:04 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once( in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:47:04 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:47:05 UTC] PHP Fatal error:  Uncaught Facebook\Exceptions\FacebookSDKException: Required "app_id" key not supplied in config and could not find fallback environment variable "FACEBOOK_APP_ID" in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php:139
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(47): Facebook\Facebook->__construct(Array)
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php(28): Inc\FacebookConf\FacebookAuth->apiInit()
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\FacebookConf\FacebookAuth->__construct()
+#3 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\FacebookCon...')
+#4 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#5 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\ in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\facebook\graph-sdk\src\Facebook\Facebook.php on line 139
+[21-Mar-2020 10:47:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(650): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-admin\plugins.php(44): activate_plugin('vd-socializer/v...', 'https://social....', false)
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 10:47:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 10:47:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-admin\includes\plugin.php(2223): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-admin\plugins.php(175): plugin_sandbox_scrape('vd-socializer/v...')
+#5 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 10:48:38 UTC] PHP Notice:  Undefined index: vd_hidden in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\database_settings_template.php on line 4
+[21-Mar-2020 13:03:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\edit.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:03:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\edit.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:03:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\options-general.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:03:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\options-general.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:03:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\wp-admin\options-general.php(10): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:04:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:07:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:07:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:07:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:07:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:08:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(51): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(37): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:13:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:15:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:16:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php:31
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(49): Inc\Twitter\TwitterAuth->__construct()
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Twitter\\Twi...')
+#2 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(62): Inc\Init::register_services()
+#3 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 31
+[21-Mar-2020 13:20:23 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:23 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:25 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:25 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:47 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:47 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:54 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:54 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:56 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:56 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:57 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:57 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:58 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:20:58 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:21:03 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:21:03 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vendor\abraham\twitteroauth\src\SignatureMethod.php on line 61
+[21-Mar-2020 13:26:50 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 13:26:51 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 13:26:51 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 13:26:51 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 13:26:51 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 13:26:51 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\FacebookConf\FacebookAuth.php on line 150
+[21-Mar-2020 21:58:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\Facebook\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:49
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\Facebook\\Fa...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 49
+[21-Mar-2020 21:59:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Inc\FacebookConf\FacebookAuth' not found in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php:49
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php(35): Inc\Init::instantiate('Inc\\FacebookCon...')
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\vd-socializer.php(61): Inc\Init::register_services()
+#2 C:\xampp\htdocs\socializer\wp-settings.php(360): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\socializer\wp-config.php(91): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\socializer\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\socializer\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\socializer\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Init.php on line 49
+[21-Mar-2020 22:01:17 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:01:19 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:01:31 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:01:31 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:15:28 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:15:28 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:15:32 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:15:32 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:16:17 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:16:17 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:16:23 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:16:23 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:07 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:07 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:10 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:11 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:27 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:17:28 UTC] PHP Notice:  add_shortcode was called <strong>incorrectly</strong>. Invalid shortcode name: Empty name given. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.4.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:19:13 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 31
+[21-Mar-2020 22:19:13 UTC] PHP Warning:  var_dump() expects at least 1 parameter, 0 given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 31
+[21-Mar-2020 22:46:14 UTC] PHP Notice:  � извикана <strong>некоректно</strong>. Attempting to parse a shortcode without a valid callback: twitter За повече информация вижте <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a>. (Това съобщение беше добавено във версия 4.3.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:46:14 UTC] PHP Notice:  � извикана <strong>некоректно</strong>. Attempting to parse a shortcode without a valid callback: facebook За повече информация вижте <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a>. (Това съобщение беше добавено във версия 4.3.0.) in C:\xampp\htdocs\socializer\wp-includes\functions.php on line 4986
+[21-Mar-2020 22:47:10 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:47:11 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:47:11 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:47:11 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:47:12 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:47:12 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 22:49:19 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 85
+[21-Mar-2020 22:49:42 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 85
+[21-Mar-2020 22:50:45 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 85
+[21-Mar-2020 22:51:44 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 85
+[21-Mar-2020 23:05:06 UTC] PHP Notice:  Undefined index: oauth_token in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 85
+[21-Mar-2020 23:07:48 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 23:07:48 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 23:07:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 23:07:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 23:07:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147
+[21-Mar-2020 23:07:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Facebook\FacebookAuth.php on line 147

@@ -11,5 +11,5 @@ $payload = $rawData[0];
 	<p>Email: <?php echo $payload['email'] ?></p>
     <p>Hometown: <?php echo $payload['hometown'] ?></p>
     <p>Birthday: <?php echo $payload['birthday'] ?></p>
-	<p><a href="<?php echo PLUGIN_URL. '/inc/FacebookConf/facebookLogout.php'?>">Log Out from Facebook</a></p>
+	<p><a href="<?php echo PLUGIN_URL. '/inc/Facebook/facebookLogout.php'?>">Log Out from Facebook</a></p>
 </div>
