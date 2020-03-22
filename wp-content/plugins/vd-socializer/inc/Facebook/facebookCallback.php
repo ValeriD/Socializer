@@ -6,7 +6,6 @@ use Inc\Facebook\FacebookAuth;
 
 
 $facebook = new FacebookAuth();
-$facebook->apiInit();
 
 if (isset($_GET['code'])) {
 

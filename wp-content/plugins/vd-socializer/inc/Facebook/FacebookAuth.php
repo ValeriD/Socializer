@@ -14,9 +14,7 @@ class FacebookAuth extends SocialNetwork {
 
 
 	private $helper;
-
 	private $permissions;
-
 
 	public function __construct() {
 			SocialNetwork::__construct( 'Facebook' );
@@ -37,11 +35,15 @@ class FacebookAuth extends SocialNetwork {
 
 
 	public function apiInit(){
+		try {
 			return new Facebook( [
 				'app_id'                => $this->getAppId(),
 				'app_secret'            => $this->getAppSecret(),
 				'default_graph_version' => "v5.0",
 			] );
+		} catch ( FacebookSDKException $e ) {
+			die($e->getMessage());
+		}
 	}
 
 
@@ -80,9 +82,6 @@ class FacebookAuth extends SocialNetwork {
 		return $userNode;
 	}
 
-	public function saveUserData( $payload ) {
-		update_user_meta(get_current_user_id(), 'facebook_account' ,$this->serializeUserData($payload));
-	}
 
 	protected function serializeUserData( $payload ) {
 		$res =  array(

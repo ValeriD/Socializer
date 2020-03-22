@@ -55,8 +55,6 @@ class TwitterAuth extends SocialNetwork {
 	{
 
 		if (!isset($_SESSION['twitter_auth'])) {
-			//storing the token into the session.
-
 			$accessToken = $this->generateAccessToken();
 
 			$_SESSION['twitter_auth'] = "started";
@@ -64,11 +62,9 @@ class TwitterAuth extends SocialNetwork {
 			$_SESSION['oauth_token_secret'] = $accessToken['oauth_token'];
 
 			return $accessToken;
-
 		}
 
 		return false;
-
 	}
 
 	/**
@@ -105,11 +101,12 @@ class TwitterAuth extends SocialNetwork {
 	public function storeToken() {
 
 		$requestToken = $this->verifyToken();
-		if (!$this->verifyToken()) {
+		if (!$requestToken) {
 			return false;
 		}
 
-		$connection = new TwitterOAuth($this->getAppId(),$this->getAppSecret(), $requestToken['oauth_token'], $requestToken['oauth_token_secret']);
+		$connection = new TwitterOAuth($this->getAppId(),$this->getAppSecret(),
+			$requestToken['oauth_token'], $requestToken['oauth_token_secret']);
 
 
 		try {
@@ -122,6 +119,7 @@ class TwitterAuth extends SocialNetwork {
 
 	}
 
+
 	/**
 	 * @return array|bool|object
 	 *
@@ -130,7 +128,8 @@ class TwitterAuth extends SocialNetwork {
 	{
 		$accessToken = $this->getAccessToken();
 
-		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(),
+			$accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 
 		$payload = $connection->get('account/verify_credentials', ['include_email' => 'true']);
 
@@ -140,14 +139,7 @@ class TwitterAuth extends SocialNetwork {
 	/**
 	 * @param $payload
 	 */
-	public function saveUserData($payload)
-	{
-		$_SESSION['TwitterPayload'] = $payload;
 
-		update_user_meta(get_current_user_id(), 'twitter_account', $this->serializeUserData($payload));
-
-		return;
-	}
 
 	protected function serializeUserData($payload){
 		$data =  json_decode(json_encode($payload),true);

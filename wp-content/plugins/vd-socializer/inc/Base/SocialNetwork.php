@@ -14,15 +14,6 @@ abstract class SocialNetwork{
 	private $bqClient;
 	private $socialNetwork;
 
-
-
-	/**
-	 * SocialNetwork constructor.
-	 *
-	 * @param string $clientCallback
-	 * @param $app_id
-	 * @param $app_secret
-	 */
 	public function __construct( $socialNetwork ) {
 		if ( get_option( 'vd_'. strtolower($socialNetwork) .'_app' ) and get_option( 'vd_'. strtolower($socialNetwork) .'_secret' )  ) {
 			$this->clientCallback = home_url('/wp-content/plugins/vd-socializer/inc/'. $socialNetwork .'/'. strtolower($socialNetwork) .'Callback.php');
@@ -144,11 +135,32 @@ abstract class SocialNetwork{
 	protected abstract function getLoginUrl();
 
 	public abstract function getUserData();
-	public abstract function saveUserData($payload);
-	protected abstract function serializeUserData($payload);
-
-
 	public abstract function getUserPosts();
+
+	protected abstract function serializeUserData($payload);
+	protected abstract function serializeDataForDB($postData,Post $post);
+	protected abstract function serializeDataForBQ(Post $post);
+
+	public function renderShortcode(){
+		if(is_user_logged_in()) {
+			if ( isset($_SESSION[strtolower($this->getSocialNetwork()) .'_access_token']) ) {
+
+				include( PLUGIN_PATH . '/inc/'. $this->getSocialNetwork() .'/'. strtolower($this->getSocialNetwork()) .'Account.php' );
+
+			} else {
+				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with '. $this->getSocialNetwork() .'</a></p>';
+			}
+		}else{
+			return ;
+		}
+	}
+
+	public function saveUserData($payload)
+	{
+		update_user_meta(get_current_user_id(), strtolower($this->getSocialNetwork()) . '_account', $this->serializeUserData($payload));
+	}
+
+
 	public function savePosts($payload){
 		foreach($payload as $post){
 			$this->savePost($post);
@@ -165,19 +177,6 @@ abstract class SocialNetwork{
 		}
 	}
 
-	protected abstract function serializeDataForDB($postData,Post $post);
-	protected abstract function serializeDataForBQ(Post $post);
 
-	public function renderShortcode(){
-		if(is_user_logged_in()) {
-			if ( isset($_SESSION[strtolower($this->getSocialNetwork()) .'_access_token']) ) {
-
-				include( PLUGIN_PATH . '/inc/'. $this->getSocialNetwork() .'/'. strtolower($this->getSocialNetwork()) .'Account.php' );
-
-			} else {
-				echo '<p><a href="' . $this->getLoginUrl() . '">Sign In with '. $this->getSocialNetwork() .'</a></p>';
-			}
-		}
-	}
 
 }

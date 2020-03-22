@@ -17,3 +17,4 @@ if ( isset( $_GET['oauth_token'] ) ) {
 	$twitter->savePosts($posts);
 }
 wp_redirect(home_url('accounts'));
+
