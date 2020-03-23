@@ -156,7 +156,8 @@ class TwitterAuth extends SocialNetwork {
 	public function getUserPosts(){
 		$accessToken = $this->getAccessToken();
 
-		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(), $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+		$connection = new TwitterOAuth($this->getAppId(), $this->getAppSecret(),
+			$accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 
 		return $connection->get('statuses/user_timeline');
 	}
@@ -175,16 +176,5 @@ class TwitterAuth extends SocialNetwork {
 		$date = new \DateTime($postData['created_at']);
 		$post->setMetaData('post_date', $date);
 	}
-	protected function serializeDataForBQ(Post $post){
-		return [
-			'social_id' => $post->getMetaData('social_id'),
-			'post_text' => $post->getTitle(),
-			'post_author' => get_current_user_id(),
-			'post_category' => 'Twitter',
-			'post_img' => $post->getMetaData('post_img'),
-			'post_likes' => $post->getMetaData('post_likes'),
-			'post_shares' => $post->getMetaData('post_shares'),
-			'post_date' => $post->getMetaData('post_date')
-		];
-	}
+
 }

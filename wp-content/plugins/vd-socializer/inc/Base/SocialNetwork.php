@@ -139,7 +139,9 @@ abstract class SocialNetwork{
 
 	protected abstract function serializeUserData($payload);
 	protected abstract function serializeDataForDB($postData,Post $post);
-	protected abstract function serializeDataForBQ(Post $post);
+
+
+
 
 	public function renderShortcode(){
 		if(is_user_logged_in()) {
@@ -160,11 +162,9 @@ abstract class SocialNetwork{
 		update_user_meta(get_current_user_id(), strtolower($this->getSocialNetwork()) . '_account', $this->serializeUserData($payload));
 	}
 
-
 	public function savePosts($payload){
 		foreach($payload as $post){
 			$this->savePost($post);
-
 		}
 	}
 	protected function savePost($postData){
@@ -176,7 +176,16 @@ abstract class SocialNetwork{
 			$this->bqClient->addInTable( $this->getBqClient()->getTableId(), $this->getBqClient()->getDatasetId(), $this->serializeDataForBQ( $post ) );
 		}
 	}
-
-
-
+	private  function serializeDataForBQ(Post $post){
+		return [
+			'social_id' => $post->getMetaData('social_id'),
+			'post_text' => $post->getContent(),
+			'post_author' => get_current_user_id(),
+			'post_category' => $this->getSocialNetwork(),
+			'post_img' => $post->getMetaData('post_img'),
+			'post_likes' => $post->getMetaData('post_likes'),
+			'post_shares' => $post->getMetaData('post_shares'),
+			'post_date' => $post->getMetaData('post_date')
+		];
+	}
 }

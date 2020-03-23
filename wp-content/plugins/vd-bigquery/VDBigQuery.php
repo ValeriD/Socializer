@@ -10,9 +10,7 @@ class VDBigQuery {
 	private $datasetId;
 	private $tableId;
 	private $schema;
-	/**
-	 * VDBigQuery constructor.
-	 */
+
 	public function __construct() {
 		//Authenticating the service account
 		$this->client = new BigQueryClient(array('keyFilePath' => __DIR__.'\credentials.json'));
@@ -31,8 +29,6 @@ class VDBigQuery {
 			['name' => 'post_date', 'type' => 'datetime', 'mode' => 'nullable']
 		];
 		$this->setSchema($fields);
-
-
 	}
 
 	public static function registerDatasets(){
@@ -73,7 +69,7 @@ class VDBigQuery {
 		return $this->getClient()->dataset($datasetId)->exists();
 	}
 
-	private function createDataset($datasetId){
+	public function createDataset($datasetId){
 		if(!$this->datasetExist($datasetId)) {
 			$this->getClient()->createDataset( $datasetId );
 		}
@@ -84,7 +80,7 @@ class VDBigQuery {
 			return $this->getClient()->dataset( $datasetId );
 		}
 	}
-	private function deleteDataset($datasetId){
+	public function deleteDataset($datasetId){
 		if($this->datasetExist($datasetId)){
 			$this->getDataset($datasetId)->delete();
 		}
@@ -95,7 +91,7 @@ class VDBigQuery {
 		return $this->getDataset($datasetId)->table($tableId)->exists();
 	}
 
-	private function createTable($tableId, $datasetId){
+	public function createTable($tableId, $datasetId){
 		if(!$this->tableExist($tableId, $datasetId)) {
 			$this->getDataset($datasetId)->createTable( $tableId, ['schema' => $this->getSchema()] );
 		}else {
@@ -108,7 +104,7 @@ class VDBigQuery {
 		}
 	}
 
-	private function deleteTable($tableId, $datasetId){
+	public function deleteTable($tableId, $datasetId){
 		if($this->tableExist($tableId, $datasetId)){
 			$this->getTable($tableId, $datasetId)->delete();
 		}
@@ -117,15 +113,15 @@ class VDBigQuery {
 
 		if($this->tableExist($tableId, $datasetId)){
 			$insert = $this->getTable($tableId, $datasetId)->insertRows([['data' => $row]]);
+			if(!$insert->isSuccessful()){
+				var_dump('Error: Unsuccessful insertion in BigQuery table!');
+			}
 		}
-
 	}
 
 	public function vdRunQuery($sql){
 		$jobConfig = $this->client->query($sql);
 		return  $this->client->runQuery($jobConfig);
-
-
 	}
 
 

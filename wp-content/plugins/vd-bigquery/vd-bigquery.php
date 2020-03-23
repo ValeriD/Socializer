@@ -28,6 +28,12 @@ if(!defined('ABSPATH')){
 	die("Silence is golden");
 }
 
+
+require_once 'vendor/autoload.php';
+require_once 'VDBigQuery.php';
+require_once 'VDVisualization.php';
+
+
 function createPage(){
 	$page = array(
 		'post_type' => 'page',
@@ -45,6 +51,9 @@ function createPage(){
 function activate(){
 	flush_rewrite_rules();
 	createPage();
+	if(class_exists('VDBigQuery')){
+		VDBigQuery::registerDatasets();
+	}
 }
 register_activation_hook(__FILE__, 'activate');
 
@@ -53,12 +62,6 @@ function deactivate(){
 }
 register_deactivation_hook(__FILE__, 'deactivate');
 
-require_once 'vendor/autoload.php';
-require_once 'VDBigQuery.php';
-require_once 'VDVisualization.php';
-if(class_exists('VDBigQuery')){
-	VDBigQuery::registerDatasets();
-}
 if(class_exists('VDVisualization')){
 	new VDVisualization();
 }

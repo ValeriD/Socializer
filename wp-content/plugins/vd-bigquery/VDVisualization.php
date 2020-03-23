@@ -10,24 +10,27 @@ class VDVisualization {
 	 */
 	public function __construct() {
 		$this->bqClient = new \VDBigQuery();
-		//$sql = 'SELECT post_category, count(distinct social_id) FROM `socializer-270013.SocializerDataset1.SocializerDataset1` where post_author='. get_current_user_id() .' group by post_category';
+
 		add_shortcode('usageByCategory', array($this, 'usageByCategory'));
 		add_shortcode('likesHoursCurve', array($this, 'likesHoursCurve'));
 	}
 
 	public function usageByCategory(){
-		$sql = 'SELECT post_category, count(distinct social_id) FROM `socializer-270013.SocializerDataset1.SocializerDataset1` where post_author='. get_current_user_id() .' group by post_category';
-		$data = $this->serializQueryResults($sql);
+		$sql = 'SELECT post_category, COUNT(DISTINCT social_id) FROM `socializer-270013.SocializerDataset1.SocializerDataset1`
+ 				WHERE post_author='. get_current_user_id() .' GROUP BY post_category';
+		$data = $this->serializeQueryResults($sql);
 		include 'Assets/usageByCategory.php';
 	}
 
 	public function likesHoursCurve(){
-		$sql = 'select datetime_trunc(post_date,  HOUR), sum(post_likes) from (SELECT distinct social_id, post_likes, post_date FROM `socializer-270013.SocializerDataset1.SocializerDataset1` group by social_id, post_likes, post_date) group by post_date order by post_date asc';
-		$data = $this->serializQueryResults($sql);
+		$sql = 'SELECT datetime_trunc(post_date,  HOUR), SUM(post_likes) FROM 
+			(SELECT DISTINCT social_id, post_likes, post_date FROM `socializer-270013.SocializerDataset1.SocializerDataset1` 
+				GROUP BY social_id, post_likes, post_date) GROUP BY post_date ORDER BY post_date ASC';
+		$data = $this->serializeQueryResults($sql);
 		include 'Assets/likesHoursCurve.php';
 	}
 
-	private function serializQueryResults($sql){
+	private function serializeQueryResults($sql){
 		$results = $this->bqClient->vdRunQuery($sql);
 		$data = array();
 		foreach ($results as $row) {

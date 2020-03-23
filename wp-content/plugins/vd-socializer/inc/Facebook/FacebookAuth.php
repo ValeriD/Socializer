@@ -47,9 +47,6 @@ class FacebookAuth extends SocialNetwork {
 	}
 
 
-
-
-
 	public function generateAccessToken() {
 		try {
 			$accesstoken = $this->helper->getAccessToken();
@@ -74,7 +71,7 @@ class FacebookAuth extends SocialNetwork {
 			$response = $this->getClient()->get('/me?fields=email,first_name,last_name,name,picture,hometown,birthday');
 			$userNode = $response->getGraphUser();
 		} catch (FacebookResponseException $e) {
-			var_dump('Graph phase 1: error in processing your request while fetching token'); // you can add here your own error handling
+			var_dump('Graph phase 1: error in processing your request while fetching token');
 		} catch (FacebookSDKException $e) {
 			var_dump('Here ' . $e->getMessage());
 		}
@@ -84,7 +81,7 @@ class FacebookAuth extends SocialNetwork {
 
 
 	protected function serializeUserData( $payload ) {
-		$res =  array(
+		return  array(
 			'name' => $payload->getName(),
 			'social_id' => $payload->getId(),
 			'email'=>$payload->getEmail(),
@@ -92,33 +89,29 @@ class FacebookAuth extends SocialNetwork {
 			'hometown' => $payload->getHometown()['name'],
 			'birthday' => $payload->getBirthday()->format('d/m/Y')
 		);
-		return $res;
 	}
 
 	public function getUserPosts() {
 		try {
-			// create request on me/posts?fields=id,message,caption,shares,likes,created_time,picture,link,attachments and then check the fields
-			// you can use, because attachments is better than picture field in the request
-
 			$response = $this->getClient()->get( '/me/posts?fields=id,shares,likes.summary(true),created_time,attachments,message' );
 		} catch ( FacebookSDKException $e ) {
 			var_dump($e->getMessage());
 		}
 		try {
-			$graphNode = $response->getGraphEdge();
+			$graphEdge = $response->getGraphEdge();
 		} catch ( FacebookSDKException $e ) {
 			var_dump($e->getMessage());
 		}
 
 
-		$posts = $this->filterPosts($graphNode);
+		$posts = $this->filterPosts($graphEdge);
 		return $posts;
 	}
 
-	private function filterPosts($graphNode){
+	private function filterPosts($graphEdge){
 		$result = array();
 		$filter = ['cover_photo', 'photo', 'profile_media'];
-		foreach ($graphNode as $post){
+		foreach ($graphEdge as $post){
 			if( in_array($post['attachments'][0]['type'], $filter) and (isset($post['message']) or isset($post['attachments'][0]['description']))){
 				$result[] = $post;
 			}
@@ -147,23 +140,5 @@ class FacebookAuth extends SocialNetwork {
 			$post->setMetaData('post_shares', $postData->getField('shares')['count']);
 
 		}
-
-
 	}
-
-	protected function serializeDataForBQ( Post $post ) {
-		return [
-			'social_id' => $post->getMetaData('social_id'),
-			'post_text' => $post->getContent(),
-			'post_author' => get_current_user_id(),
-			'post_category' => 'Facebook',
-			'post_img' => $post->getMetaData('post_img'),
-			'post_likes' => $post->getMetaData('post_likes'),
-			'post_shares' => $post->getMetaData('post_shares'),
-			'post_date' => $post->getMetaData('post_date')
-		];
-	}
-
-
-
 }
