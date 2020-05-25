@@ -81,14 +81,26 @@ class FacebookAuth extends SocialNetwork {
 
 
 	protected function serializeUserData( $payload ) {
-		return  array(
-			'name' => $payload->getName(),
-			'social_id' => $payload->getId(),
-			'email'=>$payload->getEmail(),
-			'user_img'=>$payload->getPicture()['url'],
-			'hometown' => $payload->getHometown()['name'],
-			'birthday' => $payload->getBirthday()->format('d/m/Y')
-		);
+		$userData = array();
+		if($payload->getName()!= null){
+			$userData['name'] = $payload->getName();
+		}
+		if($payload->getId()!=null){
+			$userData['social_id'] = $payload->getId();
+		}
+		if($payload->getEmail()!=null){
+			$userData['email'] = $payload->getEmail();
+		}
+		if($payload->getPicture()!=null){
+			$userData['user_img'] = $payload->getPicture()['url'];
+		}
+		if($payload->getHometown()!=null){
+			$userData['hometown']=$payload->getHometown()['name'];
+		}
+		if($payload->getBirthday()!=null){
+			$userData['birthday'] = $payload->getBirthday()->format('d/m/Y');
+		}
+		return $userData;
 	}
 
 	public function getUserPosts() {
@@ -98,11 +110,12 @@ class FacebookAuth extends SocialNetwork {
 			var_dump($e->getMessage());
 		}
 		try {
-			$graphEdge = $response->getGraphEdge();
+			if(isset($response)){
+				$graphEdge = $response->getGraphEdge();
+			}
 		} catch ( FacebookSDKException $e ) {
 			var_dump($e->getMessage());
 		}
-
 
 		$posts = $this->filterPosts($graphEdge);
 		return $posts;

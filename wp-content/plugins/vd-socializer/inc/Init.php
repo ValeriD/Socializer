@@ -9,6 +9,7 @@ namespace Inc;
 use Inc\Admin\AdminMenu;
 use Inc\Base\Session;
 use Inc\Facebook\FacebookAuth;
+use Inc\Instagram\InstagramAuth;
 use Inc\Twitter\TwitterAuth;
 
 final class Init{
@@ -22,6 +23,7 @@ final class Init{
 			Session::class,
 			FacebookAuth::class,
 			TwitterAuth::class,
+			InstagramAuth::class,
 			AdminMenu::class
 		];
 	}

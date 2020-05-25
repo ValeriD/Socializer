@@ -59,6 +59,10 @@ register_activation_hook(__FILE__, 'activate');
 
 function deactivate(){
 	flush_rewrite_rules();
+	$postId = post_exists('Statistics', null, null, 'page');
+	if($postId){
+		wp_delete_post($postId);
+	}
 }
 register_deactivation_hook(__FILE__, 'deactivate');
 

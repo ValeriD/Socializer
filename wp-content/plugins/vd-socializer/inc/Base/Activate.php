@@ -13,9 +13,9 @@ class Activate{
 	}
 
 	public static function initialConfiguration(){
-		if(!post_exists('Accounts', null, null, 'page')){
+
 			wp_insert_post( self::pageArray() );
-		}
+		
 	}
 	public static function pageArray(){
 		return array(
