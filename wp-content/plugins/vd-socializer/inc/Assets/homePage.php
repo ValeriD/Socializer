@@ -7,7 +7,8 @@ get_header();
 		.socializer-post{
 			display: inline-block;
 			float: left;
-			width: 40%;
+			width: 20%;
+            height: 35%;
 			margin-left: 5%;
 			margin-right: 5%;
             margin-bottom: 5%;
@@ -26,7 +27,7 @@ get_header();
                  if(get_the_author_meta('ID') === get_current_user_id()){ ?>
 
                      <?php if(get_post_meta(get_the_ID(), 'post_img', true)) { ?>
-                         <img src="<?php echo get_post_meta( get_the_ID(), 'post_img', true ); ?>" style="display: block; margin-left: auto; margin-right: auto;width: 600px; height: 400px">
+                         <a href="<?php echo get_post_meta(get_the_ID(), 'post_url', true)?>"> <img src="<?php echo get_post_meta( get_the_ID(), 'post_img', true ); ?>" style="display: block; margin-left: auto; margin-right: auto;width: 600px; height: 300px"></a>
                     <?php
                      }?>
                      <p><?php the_content();?></p>

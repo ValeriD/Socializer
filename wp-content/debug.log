@@ -6061,3 +6061,39 @@ Stack trace:
 [25-May-2020 23:06:33 UTC] PHP Notice:  Undefined index: username in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 86
 [25-May-2020 23:06:33 UTC] PHP Notice:  Undefined index: media_count in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 87
 [25-May-2020 23:06:33 UTC] PHP Notice:  Undefined index: id in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 88
+[26-May-2020 07:03:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 166
+[26-May-2020 07:03:02 UTC] PHP Warning:  include(C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer//inc/Instagram/instagramAccount.php): failed to open stream: No such file or directory in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 150
+[26-May-2020 07:03:02 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer//inc/Instagram/instagramAccount.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Base\SocialNetwork.php on line 150
+[26-May-2020 07:20:57 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php:92
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php(88): Inc\Instagram\InstagramAuth->filterIGPosts(Object(stdClass))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\instagramCallback.php(14): Inc\Instagram\InstagramAuth->getUserPosts()
+#2 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 92
+[26-May-2020 07:21:56 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php:92
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php(88): Inc\Instagram\InstagramAuth->filterIGPosts(Object(stdClass))
+#1 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\instagramCallback.php(14): Inc\Instagram\InstagramAuth->getUserPosts()
+#2 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 92
+[26-May-2020 07:22:37 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php:87
+Stack trace:
+#0 C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\instagramCallback.php(14): Inc\Instagram\InstagramAuth->getUserPosts()
+#1 {main}
+  thrown in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 87
+[26-May-2020 07:24:09 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\guzzlehttp\guzzle\src\functions.php on line 305
+[26-May-2020 07:24:09 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 93
+[26-May-2020 07:24:49 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in C:\xampp\htdocs\socializer\wp-content\plugins\vd-bigquery\vendor\guzzlehttp\guzzle\src\functions.php on line 305
+[26-May-2020 07:24:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 93
+[26-May-2020 08:01:22 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Instagram\InstagramAuth.php on line 128
+[26-May-2020 08:23:05 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:23:05 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:23:05 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:23:20 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:23:20 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:23:20 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:27:42 UTC] PHP Parse error:  syntax error, unexpected '$post' (T_VARIABLE) in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Twitter\TwitterAuth.php on line 175
+[26-May-2020 08:29:03 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:29:03 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:31:58 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30
+[26-May-2020 08:31:58 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\socializer\wp-content\plugins\vd-socializer\inc\Assets\homePage.php on line 30

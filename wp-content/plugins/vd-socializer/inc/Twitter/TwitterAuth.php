@@ -171,6 +171,8 @@ class TwitterAuth extends SocialNetwork {
 		$post->setMetaData('social_id', $postData['id']);
 		$media = $postData['entities']['media'][0]['media_url'];
 		$post->setMetaData('post_img', $media);
+		preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $postData['text'], $match);
+		$post->setMetaData('post_url', $match[0][0]);
 		$post->setMetaData('post_likes', $postData['favorite_count']);
 		$post->setMetaData('post_shares', $postData['retweet_count']);
 		$date = new \DateTime($postData['created_at']);
