@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../vendor/autoload.php';
-require 'C:\xampp\htdocs\socializer\wp-config.php';
+require '../../../../../wp-config.php';
 
 use Inc\Instagram\InstagramAuth;
 

@@ -1,5 +1,5 @@
 <?php
-require_once 'C:\xampp\htdocs\socializer\wp-load.php';
+require_once '../../../../../wp-load.php';
 
 unset($_SESSION['twitter_auth']);
 unset($_SESSION['twitter_access_token']);

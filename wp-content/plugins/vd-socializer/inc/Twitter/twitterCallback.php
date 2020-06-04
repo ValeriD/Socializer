@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../vendor/autoload.php';
-require 'C:\xampp\htdocs\socializer\wp-config.php';
+require '../../../../../wp-config.php';
 
 use Inc\Twitter\TwitterAuth;
 
@@ -16,5 +16,6 @@ if ( isset( $_GET['oauth_token'] ) ) {
 	$twitter->saveUserData( $userData );
 	$twitter->savePosts($posts);
 }
+unset($_SESSION['twitter_auth']);
 wp_redirect(home_url('accounts'));
 
