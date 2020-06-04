@@ -1,6 +1,7 @@
 # Socializer
+You will need installed Composer in order to complete the following steps.
 
-###How to run the Socializer plugin
+#How to run the Socializer plugin
 1. Download the project as zip or clone it.
 2. Navigate to /wp-content/plugins
 3. Copy the folder vd-socializer
@@ -9,7 +10,7 @@
 6. Go to Settings -> Socializer Settings and enter your app id and app secret of the network you want to use
 7. Go to Pages -> Accounts and there you can add/delete the shortcodes - [facebook], [twitter], [instagram], so that the login buttons can be visible or not
 
-###How to run the BigQuery plugin
+#How to run the BigQuery plugin
 1. Download the project as zip or clone it.
 2. Navigate to /wp-content/plugins
 3. Copy the folder vd-bigquery
